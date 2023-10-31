@@ -1,20 +1,26 @@
 package ginhelper
 
 import (
+	"os"
 	"strings"
+	"taiyouxi/platform/planx/util/logs"
+
 	"time"
 
 	"github.com/gin-gonic/gin"
 	"github.com/timesking/seelog"
-	"os"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	//"github.com/timesking/seelog"
+	//"github.com/timesking/seelog"
+	//"vcs.taiyouxi.net/platform/planx/util/logs"
+	//"taiyouxi/platform/planx/util/logs"
 )
 
 // use http://goaccess.io/ to analysis log
 // how to make output is nginx common log format
-//    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-//											'$status $body_bytes_sent $request_time '
-//					                      '"$http_user_agent"' comment;
+//
+//	   log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+//												'$status $body_bytes_sent $request_time '
+//						                      '"$http_user_agent"' comment;
 func NginxLoggerWithWriter() gin.HandlerFunc {
 	return nginxLoggerWithWriter(nil)
 }
@@ -27,6 +33,7 @@ func NgixLoggerToFile(cfgName string) (gin.HandlerFunc, func()) {
 		os.Exit(1)
 		return nil, nil
 	}
+
 	return nginxLoggerWithWriter(logger), func() {
 		if logger != nil {
 			logger.Flush()
@@ -71,7 +78,7 @@ func nginxLoggerWithWriter(logger seelog.LoggerInterface) gin.HandlerFunc {
 		myLogger(`%s - - [%s] "%s %s %s" %d %d "%s" "%s"`,
 			clientIPonly,                             //$remote_addr - $remote_user
 			end.Format("02/Jan/2006:15:04:05 -0700"), //time_local
-			method, path, clientProto, //"$request"
+			method, path, clientProto,                //"$request"
 			//TODO body_bytes_sent is 0 here, maybe need it in future
 			// request time is seconds with millionsec precision, but golang float multiply is confuzing.
 			// so, I just use ns precision here!

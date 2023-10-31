@@ -13,9 +13,9 @@ import (
 
 	"github.com/BurntSushi/toml"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/signalhandler"
 )
 
 type LoadCmd int
@@ -27,8 +27,8 @@ const (
 	Unload          = 3 //The config file disapear, so just turn off your feature!. feature on->off
 )
 
-//Config 提供Reload能力
-//但是AppConfigPath只依赖于程序启动时NewConfigPath中发现的路径进行reload操作
+// Config 提供Reload能力
+// 但是AppConfigPath只依赖于程序启动时NewConfigPath中发现的路径进行reload操作
 type Config struct {
 	AppConfigPath string
 	Md5           string
@@ -68,10 +68,10 @@ func NewConfig(cfgname string, reload bool, loadf func(string, LoadCmd)) *Config
 }
 
 // NewConfigPath搜索
-//1. 应用程序可执行文件做在路径
-//  1.1 confd 目录：为了更容易支持etcd/confd方案
-//  1.2 conf 目录：正常手动配置模式
-//2. 当前work folder的路径下, confd, conf
+//  1. 应用程序可执行文件做在路径
+//     1.1 confd 目录：为了更容易支持etcd/confd方案
+//     1.2 conf 目录：正常手动配置模式
+//  2. 当前work folder的路径下, confd, conf
 func NewConfigPath(cfgname string) string {
 	workPath, _ := os.Getwd()
 	workPath, _ = filepath.Abs(workPath)
@@ -103,7 +103,7 @@ func NewConfigPath(cfgname string) string {
 	return appConfigPath
 }
 
-//config is the file name, ex: gate.toml
+// config is the file name, ex: gate.toml
 func NewConfigToml(cfgname string, v interface{}) *Config {
 	return NewConfig(cfgname, false, func(lcfgname string, loadStatus LoadCmd) {
 		if loadStatus == Load {
@@ -118,7 +118,7 @@ func NewConfigToml(cfgname string, v interface{}) *Config {
 	})
 }
 
-//Use for reload configuration
+// Use for reload configuration
 func (c *Config) Reload() {
 	if c == nil {
 		return

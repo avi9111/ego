@@ -7,6 +7,7 @@ import (
 
 	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/platform/planx/util/logs"
+
 	//"vcs.taiyouxi.net/platform/x/auth/config"
 
 	"vcs.taiyouxi.net/platform/planx/util/secure"
@@ -34,6 +35,7 @@ func isUserNameFormatOk(userName string) bool {
 	return true
 }
 
+// http://127.0.0.1:8789/auth/v1/user/login
 // LoginAsUser is used for login existing users
 func (uc *UserController) LoginAsUser() gin.HandlerFunc {
 	return func(c *gin.Context) {

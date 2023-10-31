@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type CommonConfig struct {
@@ -124,7 +124,7 @@ type SdkVNConfig struct {
 	IOSServerId     string `toml:"ios_serverId"`
 }
 type Sdk6wavesConfig struct {
-	Url string `toml:"url"`
+	Url     string `toml:"url"`
 	TestUrl string `toml:"test_url"`
 }
 

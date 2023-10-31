@@ -3,8 +3,9 @@ package config
 import (
 	"fmt"
 
+	"taiyouxi/platform/planx/metrics"
+
 	gm "github.com/rcrowley/go-metrics"
-	"vcs.taiyouxi.net/platform/planx/metrics"
 )
 
 const (

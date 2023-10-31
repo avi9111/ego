@@ -12,10 +12,12 @@ import (
 	"crypto/md5"
 	"io/ioutil"
 
+	//"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
+
 	"github.com/siddontang/go/timingwheel"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
 )
 
 type verUpdateConfStruct map[string]map[string]string

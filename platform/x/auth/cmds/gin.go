@@ -1,9 +1,11 @@
 package cmds
 
 import (
+	"taiyouxi/platform/planx/util/ginhelper"
+
+	ucfg "taiyouxi/platform/planx/util/config"
+
 	"github.com/gin-gonic/gin"
-	ucfg "vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/ginhelper"
 )
 
 func MakeGinGMEngine() *gin.Engine {
