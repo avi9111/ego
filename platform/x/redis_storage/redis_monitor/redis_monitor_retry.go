@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/storehelper"
 )
 
 func (r *RedisPubMonitor) checkConn() {

@@ -3,11 +3,12 @@ package core
 import (
 	"sync"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/gift_sender/config"
+
 	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/jws/gamex/models/mail/mailhelper"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
 )
 
 const (

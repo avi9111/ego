@@ -1,9 +1,10 @@
 package routers
 
 import (
+	"taiyouxi/platform/x/system_notice_server/config"
+	"taiyouxi/platform/x/system_notice_server/logic"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/x/system_notice_server/config"
-	"vcs.taiyouxi.net/platform/x/system_notice_server/logic"
 )
 
 func RegNotice(g *gin.Engine) {

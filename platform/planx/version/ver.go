@@ -3,10 +3,10 @@ package version
 import "fmt"
 
 /*
-export VERSION=vcs.taiyouxi.net/platform/planx/version.Version
-export BUILDCOUNTER=vcs.taiyouxi.net/platform/planx/version.BuildCounter
-export BUILDTIME=vcs.taiyouxi.net/platform/planx/version.BuildTime
-export GITHASH=vcs.taiyouxi.net/platform/planx/version.GitHash
+export VERSION=taiyouxi/platform/planx/version.Version
+export BUILDCOUNTER=taiyouxi/platform/planx/version.BuildCounter
+export BUILDTIME=taiyouxi/platform/planx/version.BuildTime
+export GITHASH=taiyouxi/platform/planx/version.GitHash
 export counter=0
 go build  -ldflags "-X ${VERSION} 1.5 -X ${GITHASH} `git rev-parse HEAD` -X ${BUILDTIME} `date -u '+%Y-%m-%d_%I:%M:%S%p'` -X ${BUILDCOUNTER} ${counter}"
 */

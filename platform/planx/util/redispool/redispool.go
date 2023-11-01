@@ -1,13 +1,13 @@
 package redispool
 
 import (
-	"vcs.taiyouxi.net/platform/planx/youtube/vitess/pools"
+	"taiyouxi/platform/planx/youtube/vitess/pools"
 	//"github.com/youtube/vitess/go/pools"
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type IPool interface {

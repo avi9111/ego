@@ -3,15 +3,15 @@ package helper
 import (
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
-	"vcs.taiyouxi.net/platform/x/redis_storage/config"
-	"vcs.taiyouxi.net/platform/x/redis_storage/onland"
-	"vcs.taiyouxi.net/platform/x/redis_storage/redis_monitor"
-	"vcs.taiyouxi.net/platform/x/redis_storage/restore"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
+	"taiyouxi/platform/x/redis_storage/config"
+	"taiyouxi/platform/x/redis_storage/onland"
+	"taiyouxi/platform/x/redis_storage/redis_monitor"
+	"taiyouxi/platform/x/redis_storage/restore"
 )
 
-//Add(s storehelper.IStore)
+// Add(s storehelper.IStore)
 func InitBackends(addFn func(storehelper.IStore)) {
 
 	backends := make(map[string]bool)

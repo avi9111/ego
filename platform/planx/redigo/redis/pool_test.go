@@ -22,7 +22,7 @@ import (
 	"testing"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 type poolTestConn struct {

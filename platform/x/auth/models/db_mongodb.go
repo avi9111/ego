@@ -6,11 +6,12 @@ import (
 
 	"fmt"
 
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/secure"
+
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
 )
 
 type MongoAuth struct {
@@ -251,7 +252,7 @@ func (mdb *DBByMongoDB) SetDeviceInfo(deviceID, name string, uid db.UserID,
 	return nil, nil
 }
 
-//IsNameExist 判断玩家是否使用了用户名模式
+// IsNameExist 判断玩家是否使用了用户名模式
 func (mdb *DBByMongoDB) IsNameExist(name string) (int, error) {
 	s := mdb.GetMongo()
 	defer s.Close()
@@ -276,7 +277,7 @@ func (mdb *DBByMongoDB) IsNameExist(name string) (int, error) {
 	return 1, nil
 }
 
-//返回逻辑错误：XErrAuthUsernameNotFound
+// 返回逻辑错误：XErrAuthUsernameNotFound
 func (mdb *DBByMongoDB) GetUnKey(name string, checkGM bool) (db.UserID, error, bool) {
 	s := mdb.GetMongo()
 	defer s.Close()
@@ -314,8 +315,8 @@ func (mdb *DBByMongoDB) GetUnInfo(uid db.UserID) (string, string, int64, int64, 
 	return ma.NameAuth, ma.NameAuthPwd, ma.BanTime, ma.GagTime, ma.BanReason, nil
 }
 
-//UpdateUnInfo 目前用在更新AuthToken
-//XXX by YZH UserInfoTable
+// UpdateUnInfo 目前用在更新AuthToken
+// XXX by YZH UserInfoTable
 func (mdb *DBByMongoDB) UpdateUnInfo(uid db.UserID, deviceID, authToken string) error {
 	s := mdb.GetMongo()
 	defer s.Close()
@@ -352,7 +353,7 @@ func (mdb *DBByMongoDB) SetUnInfo(uid db.UserID, name, deviceID, passwd, email, 
 	return mdb.SetUnInfoPass(uid, name, deviceID, dbpasswd, email, authToken)
 }
 
-//SetUnInfoPass GMTools中，用来乾坤大挪移。用来把一个accountid映射到一个有用户名密码的帐号下。方便查找问题。
+// SetUnInfoPass GMTools中，用来乾坤大挪移。用来把一个accountid映射到一个有用户名密码的帐号下。方便查找问题。
 func (mdb *DBByMongoDB) SetUnInfoPass(uid db.UserID, name, deviceID, dbpasswd, email, authToken string) error {
 	now_t := time.Now().Unix()
 	//FIXME by YZH UpdateDeviceCollection 使用了双索引,两个独立索引,能起到加速索引作用吗?

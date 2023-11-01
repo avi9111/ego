@@ -20,7 +20,7 @@ import (
 	"testing"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 func ExampleScript(c redis.Conn, reply interface{}, err error) {

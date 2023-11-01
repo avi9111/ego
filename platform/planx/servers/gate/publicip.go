@@ -1,6 +1,6 @@
 package gate
 
-import "vcs.taiyouxi.net/platform/planx/util"
+import "taiyouxi/platform/planx/util"
 
 func AwsGetPublicIP() (string, error) {
 	return util.AwsGetPublicIP()

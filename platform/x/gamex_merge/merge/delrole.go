@@ -5,11 +5,12 @@ import (
 
 	"encoding/json"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+
 	"vcs.taiyouxi.net/jws/gamex/models/account"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
 )
 
 var (

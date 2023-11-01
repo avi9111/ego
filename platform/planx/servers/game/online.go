@@ -4,8 +4,9 @@ import (
 	"sync"
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/siddontang/go/timingwheel"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

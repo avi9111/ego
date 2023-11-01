@@ -8,9 +8,10 @@ MongodDB使用_id默认作为主键索引。
 import (
 	"time"
 
+	"taiyouxi/platform/planx/util/tipay/pay"
+
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/pay"
 )
 
 const (

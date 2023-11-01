@@ -1,9 +1,10 @@
 package rules
 
 import (
-	"github.com/BurntSushi/toml"
+	"taiyouxi/platform/x/youmi_imcc/base"
 	"testing"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/base"
+
+	"github.com/BurntSushi/toml"
 )
 
 func TestIsLegal(t *testing.T) {

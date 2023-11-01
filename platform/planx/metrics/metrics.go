@@ -8,12 +8,13 @@ import (
 
 	"errors"
 
+	"taiyouxi/platform/planx/metrics/simplegraphite"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/BurntSushi/toml"
 	gm "github.com/rcrowley/go-metrics"
-	"vcs.taiyouxi.net/platform/planx/metrics/simplegraphite"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

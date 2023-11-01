@@ -10,13 +10,14 @@ import (
 	"strings"
 	"time"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gift_sender/core"
+	h5Config "taiyouxi/platform/x/h5_shop/config"
+
 	"github.com/astaxie/beego/httplib"
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
-	h5Config "vcs.taiyouxi.net/platform/x/h5_shop/config"
 )
 
 const ac_iota = "ac_iota"

@@ -4,7 +4,7 @@ import (
 	"testing"
 
 	"fmt"
-	"vcs.taiyouxi.net/platform/x/gainer_beholder/tools"
+	"taiyouxi/platform/x/gainer_beholder/tools"
 )
 
 func TestGetHotPackageData(t *testing.T) {

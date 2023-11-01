@@ -6,7 +6,7 @@ import (
 	"sync"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/funny/link"
+	"taiyouxi/platform/planx/funny/link"
 )
 
 func main() {

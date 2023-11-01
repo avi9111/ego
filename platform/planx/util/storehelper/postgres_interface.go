@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"hash/fnv"
 
-	"github.com/jackc/pgx"
 	"sync"
-	"vcs.taiyouxi.net/platform/planx/util/account_json"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	accountJson "taiyouxi/platform/planx/util/account_json"
+	"taiyouxi/platform/planx/util/logs"
+
+	"github.com/jackc/pgx"
 )
 
 const MAX_SUB_TABLE = 64 // 分表个数 不要改, 一旦修改会导致之前存的key找不到

@@ -11,10 +11,10 @@ import (
 
 	"compress/gzip"
 
-	"vcs.taiyouxi.net/platform/planx/client"
-	"vcs.taiyouxi.net/platform/planx/servers"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/client"
+	"taiyouxi/platform/planx/servers"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type Player interface {

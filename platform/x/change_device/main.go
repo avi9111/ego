@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 const (

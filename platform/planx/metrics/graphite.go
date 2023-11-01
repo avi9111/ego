@@ -6,7 +6,7 @@ import (
 	//"os"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
 	gm "github.com/rcrowley/go-metrics"
 )

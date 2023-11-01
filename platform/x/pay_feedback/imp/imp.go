@@ -12,14 +12,15 @@ import (
 
 	"encoding/json"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
+
 	"vcs.taiyouxi.net/jws/gamex/models/account"
 	"vcs.taiyouxi.net/jws/gamex/models/driver"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
 )
 
 func Run() error {

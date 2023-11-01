@@ -6,16 +6,17 @@ import (
 	"strings"
 	"time"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gift_sender/config"
+
 	"github.com/cenk/backoff"
 	"vcs.taiyouxi.net/jws/gamex/modules/herogacharace"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
 )
 
 /*
-	传入大区id和玩家id，查找玩家在redis的链接
+传入大区id和玩家id，查找玩家在redis的链接
 */
 func GetAuthRedisConn(gid, sid uint) (redis.Conn, error) {
 	// 203大区使用和200相同的auth
@@ -60,7 +61,7 @@ func GetAuthRedisConn(gid, sid uint) (redis.Conn, error) {
 }
 
 /*
-	传入大区id和玩家id，查找玩家在redis的链接
+传入大区id和玩家id，查找玩家在redis的链接
 */
 func GetGamexProfileRedisConn(gid, sid uint) (redis.Conn, error) {
 	//获取redis_url

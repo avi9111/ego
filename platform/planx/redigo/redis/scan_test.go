@@ -20,7 +20,7 @@ import (
 	"reflect"
 	"testing"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 var scanConversionTests = []struct {

@@ -1,6 +1,6 @@
 package models
 
-import "vcs.taiyouxi.net/platform/planx/servers/db"
+import "taiyouxi/platform/planx/servers/db"
 
 // LoginRegAuthToken
 func LoginRegAuthToken(authToken string, userID db.UserID) error {

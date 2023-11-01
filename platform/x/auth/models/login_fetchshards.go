@@ -10,14 +10,14 @@ import (
 
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
 
 	"sort"
 
-	"vcs.taiyouxi.net/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/config"
 )
 
 type ShardInfo struct {

@@ -6,7 +6,6 @@ import (
 	"os/signal"
 	"sync"
 	"syscall"
-	//"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type Stoper interface {
@@ -55,7 +54,10 @@ func SignalReloadHandler(r Reloader) {
 
 func signalReloadHandle() {
 	ch := make(chan os.Signal, 1)
-	signal.Notify(ch, syscall.SIGUSR2)
+
+	// todo 测试不通过
+	//signal.Notify(ch, syscall.SIGUSR2)
+
 	for {
 		select {
 		case <-quit:

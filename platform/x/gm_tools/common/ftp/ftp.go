@@ -3,8 +3,9 @@ package ftp
 import (
 	"bytes"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/dutchcoders/goftp"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func UploadToFtp(path string, filename string, data []byte) error {

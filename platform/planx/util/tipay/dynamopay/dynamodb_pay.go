@@ -4,9 +4,9 @@ import (
 	"github.com/aws/aws-sdk-go/aws"
 	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
 
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/pay"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/tipay/pay"
 )
 
 type DbPayDynamoDB struct {
@@ -75,7 +75,7 @@ const (
 	query_limit = 1000
 )
 
-//QueryByUid 只有GMTools在使用这个工呢功能
+// QueryByUid 只有GMTools在使用这个工呢功能
 func (s *DbPayDynamoDB) QueryByUid(ucid string) ([]pay.GateWay_Pay_Info, error) {
 	params := &DDB.QueryInput{
 		TableName:      aws.String(s.dbname),
@@ -85,8 +85,8 @@ func (s *DbPayDynamoDB) QueryByUid(ucid string) ([]pay.GateWay_Pay_Info, error) 
 			":u": dynamodb.CreateAttributeValue(ucid),
 		},
 		KeyConditionExpression: aws.String("uid = :u"),
-		Limit:            aws.Int64(query_limit),
-		ScanIndexForward: aws.Bool(true),
+		Limit:                  aws.Int64(query_limit),
+		ScanIndexForward:       aws.Bool(true),
 	}
 
 	resp, err := s.Client().Query(params)

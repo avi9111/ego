@@ -5,12 +5,12 @@ import (
 	"fmt"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/planx/util/uuid"
-	"vcs.taiyouxi.net/platform/x/auth/config"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/planx/util/uuid"
+	"taiyouxi/platform/x/auth/config"
 )
 
 func makeAuthUidKey(uid db.UserID) string {

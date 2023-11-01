@@ -1,9 +1,9 @@
 package etcd_redis
 
 import (
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
 	"testing"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func TestToGet(t *testing.T) {

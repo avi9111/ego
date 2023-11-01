@@ -2,7 +2,7 @@ package config
 
 import (
 	"fmt"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
+	"taiyouxi/platform/planx/util/storehelper"
 )
 
 type ElasticOnlandConfig struct {

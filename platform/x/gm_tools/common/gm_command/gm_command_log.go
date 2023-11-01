@@ -2,7 +2,7 @@ package gm_command
 
 import (
 	"encoding/json"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type CommandRecord struct {

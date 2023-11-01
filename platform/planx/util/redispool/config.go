@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"time"
 
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/util/logs"
+
 	gm "github.com/rcrowley/go-metrics"
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type Config struct {

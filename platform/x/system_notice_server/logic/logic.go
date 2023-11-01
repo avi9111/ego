@@ -7,8 +7,8 @@ import (
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/tools/sys_public"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/tools/sys_public"
 )
 
 type NoticeInfo struct {

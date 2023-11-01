@@ -7,12 +7,13 @@ import (
 	"fmt"
 	"strings"
 
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util/logs"
+	. "taiyouxi/platform/planx/util/timail"
+
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	. "vcs.taiyouxi.net/platform/planx/util/timail"
 )
 
 const (
@@ -57,7 +58,7 @@ func (mdb *DBByMongoDB) GetMongo() *DBByMongoDB {
 	}
 }
 
-//LoadAllMail 参考 func (d *DynamoDB) QueryMail, t,mail,begint,endt,isget,isread,acc2send,ctb2send,cte2send
+// LoadAllMail 参考 func (d *DynamoDB) QueryMail, t,mail,begint,endt,isget,isread,acc2send,ctb2send,cte2send
 func (mdb *DBByMongoDB) LoadAllMail(user_id string) ([]MailReward, error) {
 	//XXX by YZH LoadAllMail&LoadAllMailByGM ProjectionExpression中的一些映射不同
 	//应该是节省DynamoDB的Capacity, Mongodb不考虑

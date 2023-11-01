@@ -3,9 +3,9 @@ package models
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
-	"vcs.taiyouxi.net/platform/x/auth/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+	"taiyouxi/platform/x/auth/config"
 )
 
 const AUTHTOKEN_TIMEOUT = 24 * 60 * 60 //min

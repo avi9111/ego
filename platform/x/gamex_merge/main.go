@@ -5,12 +5,13 @@ import (
 
 	"runtime"
 
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/version"
+	"taiyouxi/platform/x/gamex_merge/cmds"
+	_ "taiyouxi/platform/x/gamex_merge/cmds/allinone"
+
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/version"
-	"vcs.taiyouxi.net/platform/x/gamex_merge/cmds"
-	_ "vcs.taiyouxi.net/platform/x/gamex_merge/cmds/allinone"
 )
 
 func main() {

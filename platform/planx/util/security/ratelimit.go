@@ -9,14 +9,15 @@ import (
 
 	"sync"
 
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/iplimitconfig"
+	"taiyouxi/platform/planx/util/iputil"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/ratelimit"
+
 	gm "github.com/rcrowley/go-metrics"
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/iplimitconfig"
-	"vcs.taiyouxi.net/platform/planx/util/iputil"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/ratelimit"
 )
 
 type internalIP struct {

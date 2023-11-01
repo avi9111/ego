@@ -5,11 +5,12 @@ import (
 
 	"time"
 
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/yyb_gift_sender/config"
+
 	"vcs.taiyouxi.net/jws/gamex/models/codec"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/config"
 )
 
 type DBByDynamoDB struct {

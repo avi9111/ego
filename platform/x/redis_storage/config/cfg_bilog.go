@@ -3,8 +3,9 @@ package config
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util/storehelper"
+
 	"vcs.taiyouxi.net/jws/gamex/bdclog"
 )
 

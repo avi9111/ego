@@ -6,8 +6,9 @@ import (
 
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/BurntSushi/toml"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func TestMuteInfoRecorder_SendMail(t *testing.T) {

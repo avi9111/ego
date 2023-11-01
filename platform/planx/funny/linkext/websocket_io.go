@@ -4,11 +4,11 @@ import (
 	"bytes"
 	"io"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
-//Read 通过转换websocket的读取接口适配原有接口
-//XXX: 因为golang.org/x/websocket库520af5de654dc4dd4f0f65aa40e66dbbd9043df1 [520af5d]
+// Read 通过转换websocket的读取接口适配原有接口
+// XXX: 因为golang.org/x/websocket库520af5de654dc4dd4f0f65aa40e66dbbd9043df1 [520af5d]
 // websocket.go 194行的代码应该去掉，导致io.Reader语意出现问题
 // 因此使用有效接口进行适配换算
 func (ws *websocketConn) Read(p []byte) (n int, err error) {

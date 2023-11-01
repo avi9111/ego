@@ -6,8 +6,8 @@ import (
 	"fmt"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/redispool"
 )
 
 func NewRedisPool(server, password string, dbSeleccted, cap int) redispool.IPool {

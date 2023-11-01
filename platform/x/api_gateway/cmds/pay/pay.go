@@ -3,18 +3,19 @@ package pay
 import (
 	"os"
 
+	"taiyouxi/platform/planx/util"
+	ucfg "taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/ginhelper"
+	"taiyouxi/platform/planx/util/logiclog"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/signalhandler"
+	"taiyouxi/platform/x/api_gateway/cmds"
+	"taiyouxi/platform/x/api_gateway/config"
+	"taiyouxi/platform/x/api_gateway/pay"
+
 	"github.com/codegangsta/cli"
 	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/platform/planx/util"
-	ucfg "vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/ginhelper"
-	"vcs.taiyouxi.net/platform/planx/util/logiclog"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
-	"vcs.taiyouxi.net/platform/x/api_gateway/cmds"
-	"vcs.taiyouxi.net/platform/x/api_gateway/config"
-	"vcs.taiyouxi.net/platform/x/api_gateway/pay"
 )
 
 func init() {

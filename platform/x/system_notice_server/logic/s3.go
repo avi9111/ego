@@ -3,9 +3,9 @@ package logic
 import (
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/cloud_db"
-	"vcs.taiyouxi.net/platform/planx/util/cloud_db/s3db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/cloud_db"
+	"taiyouxi/platform/planx/util/cloud_db/s3db"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 var (

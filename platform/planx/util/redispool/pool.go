@@ -5,10 +5,11 @@ import (
 
 	"sync"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timingwheel"
+	"taiyouxi/platform/planx/youtube/vitess/pools"
+
 	"golang.org/x/net/context"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timingwheel"
-	"vcs.taiyouxi.net/platform/planx/youtube/vitess/pools"
 )
 
 // 这个Pool是老版本
@@ -43,7 +44,7 @@ func (p *Pool) Stats() (capacity, available, maxCap, waitCount int64, waitTime, 
 	return p.resPool.Stats()
 }
 
-//Get 目前为了兼容Auth, storehelper, gmtools, redis_storage
+// Get 目前为了兼容Auth, storehelper, gmtools, redis_storage
 func (p *Pool) Get() RedisPoolConn {
 	return p.GetDBConn()
 }

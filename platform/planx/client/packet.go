@@ -10,10 +10,10 @@ import (
 	"reflect"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
 	"github.com/ugorji/go/codec"
-	// _ "vcs.taiyouxi.net/platform/planx/util/logs"
+	// _ "taiyouxi/platform/planx/util/logs"
 )
 
 type PacketID int32
@@ -135,7 +135,7 @@ const max_Msg_Size = 1024 * 1024
 var msg_size_err = errors.New("msg_size_err")
 var msg_read_err = errors.New("msg_read_err")
 
-//Instead of binary.LittleEndian.Uint32, better performance without reflect
+// Instead of binary.LittleEndian.Uint32, better performance without reflect
 func ReadLittleEndianUint32(r io.Reader) (uint32, error) {
 	var buf32 [4]byte
 	n, err := io.ReadFull(r, buf32[:])

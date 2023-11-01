@@ -5,10 +5,10 @@ import (
 	"crypto/x509"
 	"encoding/pem"
 	"errors"
-	"vcs.taiyouxi.net/platform/x/api_gateway/util/rsa/privatekey"
+	"taiyouxi/platform/x/api_gateway/util/rsa/privatekey"
 )
 
-//默认客户端，pkcs8私钥格式，pem编码
+// 默认客户端，pkcs8私钥格式，pem编码
 func NewDefault(privateKey, publicKey string) (Cipher, error) {
 	blockPri, _ := pem.Decode([]byte(privateKey))
 	if blockPri == nil {

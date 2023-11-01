@@ -3,7 +3,7 @@ package builderjson
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/x/tiprotogen/def"
+	dsl "taiyouxi/platform/x/tiprotogen/def"
 )
 
 type protoJson struct {

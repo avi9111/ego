@@ -5,12 +5,12 @@ import (
 
 	"github.com/gin-gonic/gin"
 
-	"vcs.taiyouxi.net/platform/planx/incode"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/x/auth/errorctl"
-	"vcs.taiyouxi.net/platform/x/auth/logiclog"
-	"vcs.taiyouxi.net/platform/x/auth/models"
+	"taiyouxi/platform/planx/incode"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/x/auth/errorctl"
+	"taiyouxi/platform/x/auth/logiclog"
+	"taiyouxi/platform/x/auth/models"
 )
 
 // DeviceIDController about object

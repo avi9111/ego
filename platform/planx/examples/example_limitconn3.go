@@ -6,7 +6,7 @@ import (
 	"net"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 //限定Connection数量会比设定数量大一倍，极限情况下，

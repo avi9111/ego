@@ -3,7 +3,7 @@ package mail
 import (
 	"strconv"
 
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
 )
 
 func delMail(c *gm_command.Context, server, accountid string, params []string) error {

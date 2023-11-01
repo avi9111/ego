@@ -2,14 +2,14 @@ package beegolog
 
 /*
 In beego project main.go
-import _ "vcs.taiyouxi.net/platform/planx/util/logs/beegolog"
+import _ "taiyouxi/platform/planx/util/logs/beegolog"
 beego.SetLogger("seelog", "")
 */
 
 import (
 	"github.com/astaxie/beego/logs"
 
-	xlog "vcs.taiyouxi.net/platform/planx/util/logs"
+	xlog "taiyouxi/platform/planx/util/logs"
 )
 
 type BeegoLogAdapter struct{}

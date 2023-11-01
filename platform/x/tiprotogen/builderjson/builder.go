@@ -5,7 +5,7 @@ import (
 	"errors"
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/x/tiprotogen/def"
+	dsl "taiyouxi/platform/x/tiprotogen/def"
 )
 
 type builderFromJson struct {

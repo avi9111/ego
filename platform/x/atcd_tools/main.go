@@ -3,12 +3,13 @@ package main
 import (
 	"os"
 
-	_ "vcs.taiyouxi.net/platform/x/atcd_tools/cmds/allinone"
+	_ "taiyouxi/platform/x/atcd_tools/cmds/allinone"
+
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/atcd_tools/cmds"
 
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/atcd_tools/cmds"
 )
 
 func main() {

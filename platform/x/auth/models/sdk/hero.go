@@ -7,9 +7,10 @@ import (
 	"strings"
 
 	"encoding/json"
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
+
 	"github.com/astaxie/beego/httplib"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
 )
 
 //const (

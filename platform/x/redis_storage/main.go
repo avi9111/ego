@@ -4,26 +4,27 @@ import (
 	"fmt"
 	"os"
 
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds" //放在这里试图让log配置尽早生效
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds/allinone"
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds/monitor"
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds/onlandall"
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds/onlandone"
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds/restoreall"
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds/restoreone"
-	_ "vcs.taiyouxi.net/platform/x/redis_storage/cmds/warm"
+	_ "taiyouxi/platform/x/redis_storage/cmds" //放在这里试图让log配置尽早生效
+	_ "taiyouxi/platform/x/redis_storage/cmds/allinone"
+	_ "taiyouxi/platform/x/redis_storage/cmds/monitor"
+	_ "taiyouxi/platform/x/redis_storage/cmds/onlandall"
+	_ "taiyouxi/platform/x/redis_storage/cmds/onlandone"
+	_ "taiyouxi/platform/x/redis_storage/cmds/restoreall"
+	_ "taiyouxi/platform/x/redis_storage/cmds/restoreone"
+	_ "taiyouxi/platform/x/redis_storage/cmds/warm"
+
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/version"
+	"taiyouxi/platform/x/redis_storage/cmds"
 
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/version"
-	"vcs.taiyouxi.net/platform/x/redis_storage/cmds"
 )
 
 //2016.5.18
 // 测试了onlandall/onlandone LevelDB/RedisBiLog/Stdout有效的
 // 测试了monitor模式下sync/sync_all LevelDB/RedisBiLog/Stdout是有效的
 
-//readme 请参考项目总文档区RedisStorage/redis_storage_readme.md
+// readme 请参考项目总文档区RedisStorage/redis_storage_readme.md
 func main() {
 	defer logs.Close()
 

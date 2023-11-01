@@ -3,11 +3,11 @@ package redis_monitor
 import (
 	"sync"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
-	"vcs.taiyouxi.net/platform/x/redis_storage/onland"
-	util2 "vcs.taiyouxi.net/platform/x/redis_storage/util"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+	"taiyouxi/platform/x/redis_storage/onland"
+	util2 "taiyouxi/platform/x/redis_storage/util"
 )
 
 const (

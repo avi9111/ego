@@ -11,7 +11,7 @@ import (
 
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 type fieldSpec struct {

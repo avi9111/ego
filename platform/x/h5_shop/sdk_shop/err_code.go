@@ -2,7 +2,7 @@ package sdk_shop
 
 import (
 	"encoding/json"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 const (

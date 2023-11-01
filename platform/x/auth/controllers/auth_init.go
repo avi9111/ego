@@ -5,10 +5,10 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
+	"taiyouxi/platform/planx/servers/db"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/auth/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/auth/config"
 
 	"github.com/astaxie/beego/httplib"
 )

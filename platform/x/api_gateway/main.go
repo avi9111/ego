@@ -6,12 +6,13 @@ import (
 
 	"runtime"
 
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/version"
+	"taiyouxi/platform/x/api_gateway/cmds"
+	_ "taiyouxi/platform/x/api_gateway/cmds/pay"
+
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/version"
-	"vcs.taiyouxi.net/platform/x/api_gateway/cmds"
-	_ "vcs.taiyouxi.net/platform/x/api_gateway/cmds/pay"
 )
 
 func main() {

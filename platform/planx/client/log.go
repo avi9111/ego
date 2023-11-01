@@ -15,10 +15,11 @@ import (
 
 	"compress/gzip"
 
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/timesking/seelog"
 	"github.com/ugorji/go/codec"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var mhr codec.MsgpackHandle
@@ -188,7 +189,7 @@ func MapToPkt(pktID PacketID, action string, mvalue map[string]interface{}) *Pac
 	return newPkt
 }
 
-//RRTime Request or Response Start Time
+// RRTime Request or Response Start Time
 const lTypeTime = "time"
 const lTypeRecord = "record"
 const lTypeInit = "init"

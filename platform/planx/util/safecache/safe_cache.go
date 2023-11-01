@@ -6,6 +6,7 @@ import (
 	"fmt"
 
 	"github.com/astaxie/beego/cache"
+	//"github.com/astaxie/beego/cache"
 )
 
 var (
@@ -23,7 +24,8 @@ func NewSafeCache(adapterName, config string) (adapter cache.Cache, err error) {
 		panic(fmt.Errorf("NewSafeCache name duplicate"))
 	}
 	regName[adapterName] = struct{}{}
-	cache.Register(adapterName, cache.NewMemoryCache())
+	//todo 测试不通过。。。
+	//cache.Register(adapterName, cache.NewMemoryCache())
 	ad, err := cache.NewCache(adapterName, config)
 	mutex.Unlock()
 	return ad, err

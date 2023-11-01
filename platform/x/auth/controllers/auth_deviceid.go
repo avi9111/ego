@@ -4,16 +4,16 @@ import (
 	"fmt"
 
 	"github.com/gin-gonic/gin"
-	//"vcs.taiyouxi.net/platform/planx/util/logs"
-	//"vcs.taiyouxi.net/platform/x/auth/config"
+	//"taiyouxi/platform/planx/util/logs"
+	//"taiyouxi/platform/x/auth/config"
 
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/x/auth/errorctl"
-	"vcs.taiyouxi.net/platform/x/auth/logiclog"
-	"vcs.taiyouxi.net/platform/x/auth/models"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/x/auth/errorctl"
+	"taiyouxi/platform/x/auth/logiclog"
+	"taiyouxi/platform/x/auth/models"
 )
 
 // DeviceIDController about object
@@ -31,9 +31,9 @@ func (dic *DeviceIDController) Test() gin.HandlerFunc {
 
 // RegDeviceAndLogin 注册设备ID并登录，如果已经存在则直接登录
 // /auth/v1/device/:id
-//目前Unity客户端的实现是SystemInfo.deviceUniqueIdentifier@timestamp@channeid
-//C# SystemInfo.deviceUniqueIdentifier + "@" + Utils.GetTimeStamp() + "@apple.com";
-//例如:eb6b9e72e0a54dc1b9fe9f4f5d5992d102337525@07301558224760@apple.com
+// 目前Unity客户端的实现是SystemInfo.deviceUniqueIdentifier@timestamp@channeid
+// C# SystemInfo.deviceUniqueIdentifier + "@" + Utils.GetTimeStamp() + "@apple.com";
+// 例如:eb6b9e72e0a54dc1b9fe9f4f5d5992d102337525@07301558224760@apple.com
 // TODO 如何防止撞库？安全性极低，没有合理的方案能够确保ID冲突是什么引起的
 // TODO deviceID应该体现game id, did:{gid}:{deviceID}
 func (dic *DeviceIDController) RegDeviceAndLogin() gin.HandlerFunc {

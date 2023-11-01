@@ -5,8 +5,8 @@ import (
 
 	"sync"
 
-	"vcs.taiyouxi.net/platform/planx/util/iplimitconfig"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/iplimitconfig"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type internalIP_str struct {

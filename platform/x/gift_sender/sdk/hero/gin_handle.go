@@ -7,20 +7,21 @@ import (
 
 	"encoding/json"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util"
+	u_cfg "taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/iplimitconfig"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/core"
+	"taiyouxi/platform/x/gm_tools/common/hero_gag"
+	"time"
+
 	"github.com/astaxie/beego/httplib"
 	"github.com/gin-gonic/gin"
-	"time"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util"
-	u_cfg "vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/iplimitconfig"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/hero_gag"
 )
 
 const ac_iota = "ac_iota"

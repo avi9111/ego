@@ -4,7 +4,7 @@ import (
 	"encoding/json"
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type MailInJson struct {
@@ -27,7 +27,7 @@ type MailKey struct {
 	Idx int64  `bson:"t"`
 }
 
-//MailReward 数据结构，内存中的邮件数据结构
+// MailReward 数据结构，内存中的邮件数据结构
 type MailReward struct {
 	IdsID uint32
 	Param []string

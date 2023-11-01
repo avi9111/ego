@@ -4,13 +4,14 @@ import (
 	"sync"
 	"sync/atomic"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/syndtr/goleveldb/leveldb"
 	goleveldberrors "github.com/syndtr/goleveldb/leveldb/errors"
 	"github.com/syndtr/goleveldb/leveldb/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
-//TODO YZH: batch write optmization of LevelDB
+// TODO YZH: batch write optmization of LevelDB
 type StoreLevelDB struct {
 	dbPath        string
 	db            *leveldb.DB

@@ -10,10 +10,11 @@ import (
 
 	"github.com/aws/aws-sdk-go/aws"
 
+	"taiyouxi/platform/planx/util/awshelper"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/aws/aws-sdk-go/service/s3"
 	"github.com/cenk/backoff"
-	"vcs.taiyouxi.net/platform/planx/util/awshelper"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type BucketCannedACL string

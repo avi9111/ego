@@ -6,12 +6,12 @@ import (
 	"fmt"
 	"os"
 
-	"vcs.taiyouxi.net/platform/x/tiprotogen/builderjson"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/def"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/gen2csharp"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/gen2golang"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/log"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/util"
+	"taiyouxi/platform/x/tiprotogen/builderjson"
+	dsl "taiyouxi/platform/x/tiprotogen/def"
+	"taiyouxi/platform/x/tiprotogen/gen2csharp"
+	"taiyouxi/platform/x/tiprotogen/gen2golang"
+	"taiyouxi/platform/x/tiprotogen/log"
+	"taiyouxi/platform/x/tiprotogen/util"
 )
 
 func LoadFromFile(path string) ([]dsl.ProtoDef, error) {

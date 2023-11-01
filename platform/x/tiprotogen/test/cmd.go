@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/command"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/tiprotogen/command"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 package config
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
+	"taiyouxi/platform/planx/util/storehelper"
 )
 
 type S3OnlandConfig struct {

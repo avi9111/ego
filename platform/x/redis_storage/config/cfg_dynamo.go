@@ -1,6 +1,6 @@
 package config
 
-import "vcs.taiyouxi.net/platform/planx/util/storehelper"
+import "taiyouxi/platform/planx/util/storehelper"
 
 type DynamoDBOnlandConfig struct {
 	AWS_Region    string `mapstructure:"AWS_Region,omitempty"`

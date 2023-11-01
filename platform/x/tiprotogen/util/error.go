@@ -3,7 +3,7 @@ package util
 import (
 	"errors"
 	"fmt"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/log"
+	"taiyouxi/platform/x/tiprotogen/log"
 )
 
 func PanicInfo(format string, params ...interface{}) {

@@ -1,14 +1,15 @@
 package main
 
 import (
-	"github.com/codegangsta/cli"
 	"os"
 	"path/filepath"
 	"strings"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/command"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/def"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/log"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/util"
+	"taiyouxi/platform/x/tiprotogen/command"
+	dsl "taiyouxi/platform/x/tiprotogen/def"
+	"taiyouxi/platform/x/tiprotogen/log"
+	"taiyouxi/platform/x/tiprotogen/util"
+
+	"github.com/codegangsta/cli"
 )
 
 func getFilelist(path string, typ string) []string {

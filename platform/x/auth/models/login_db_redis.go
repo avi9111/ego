@@ -3,8 +3,8 @@ package models
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/servers/db"
 )
 
 func (d *DBByRedis) GetAuthToken(authToken string) (db.UserID, error) {

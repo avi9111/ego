@@ -13,11 +13,12 @@ import (
 
 	"strings"
 
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/BurntSushi/toml"
 	"github.com/bitly/go-simplejson"
 	"gopkg.in/cheggaaa/pb.v1"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type convertV func(tableName string, item string, json *simplejson.Json) interface{}

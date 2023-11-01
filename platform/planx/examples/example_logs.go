@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 func main() {

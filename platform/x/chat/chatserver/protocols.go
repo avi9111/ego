@@ -4,9 +4,9 @@ import (
 	"sync/atomic"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/chat/chatserver/proto/gen"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/chat/chatserver/proto/gen"
 )
 
 func Rec_RegReq(player *Player, data *gen.RegReq) {

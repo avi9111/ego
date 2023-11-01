@@ -7,10 +7,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/mailgun/oxy/utils"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/mailgun/timetools"
 	"github.com/mailgun/ttlmap"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+
+	"github.com/vulcand/oxy/utils"
+	//"github.com/mailgun/oxy/utils"
 )
 
 const DefaultCapacity = 65536
@@ -71,9 +74,11 @@ type TokenLimiter struct {
 	next         http.Handler
 }
 
-/* new ratelimit for http
-   1、若使用ServeHTTP进行限制，则next参数不能为nil
-   2、若使用Consume进行限制，则next参数为nil
+/*
+new ratelimit for http
+
+	1、若使用ServeHTTP进行限制，则next参数不能为nil
+	2、若使用Consume进行限制，则next参数为nil
 */
 func NewForHttp(next http.Handler, extract utils.SourceExtractor, defaultRates *RateSet, opts ...TokenLimiterOption) (*TokenLimiter, error) {
 	if defaultRates == nil || len(defaultRates.m) == 0 {

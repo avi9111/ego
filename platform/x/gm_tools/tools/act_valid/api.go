@@ -7,10 +7,10 @@ import (
 
 	"errors"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	gmConfig "vcs.taiyouxi.net/platform/x/gm_tools/config"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	gmConfig "taiyouxi/platform/x/gm_tools/config"
 )
 
 func RegCommands() {

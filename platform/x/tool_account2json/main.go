@@ -5,10 +5,10 @@ import (
 	"os"
 	"strconv"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
-	"vcs.taiyouxi.net/platform/planx/util/account_json"
-	"vcs.taiyouxi.net/platform/x/tool_account2json/account2json"
+	accountJson "taiyouxi/platform/planx/util/account_json"
+	"taiyouxi/platform/x/tool_account2json/account2json"
 )
 
 func main() {

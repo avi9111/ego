@@ -1,8 +1,8 @@
 package logiclog
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/logiclog"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logiclog"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 const BITag = "[BI]"

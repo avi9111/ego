@@ -1,8 +1,8 @@
 package gm_command
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/login"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/login"
 )
 
 func GetAccountByKey(key string) *login.Account {

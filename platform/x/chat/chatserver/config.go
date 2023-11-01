@@ -7,11 +7,12 @@ import (
 
 	"fmt"
 
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/planx/util/uuid"
+
 	"github.com/siddontang/go/timingwheel"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/planx/util/uuid"
 )
 
 type CommonConfig struct {

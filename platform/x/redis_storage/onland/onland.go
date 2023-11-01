@@ -5,11 +5,11 @@ import (
 	"fmt"
 	"sync"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
-	"vcs.taiyouxi.net/platform/x/redis_storage/util"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/util/storehelper"
+	"taiyouxi/platform/x/redis_storage/util"
 )
 
 type RedisDumpHandler func(con redispool.RedisPoolConn, key string) ([]byte, error)
@@ -146,7 +146,7 @@ func (o *OnlandStores) Stop() {
 	o.wg.Wait()
 }
 
-//TODO YZH OnlandStores restore 可以通过pipeline增加读性能, 但是也要小心存档过大导致传输问题
+// TODO YZH OnlandStores restore 可以通过pipeline增加读性能, 但是也要小心存档过大导致传输问题
 func (o *OnlandStores) restore(key string, stores []storehelper.IStore) {
 	res, ok := o.readData(key)
 	if !ok {

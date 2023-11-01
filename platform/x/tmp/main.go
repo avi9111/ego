@@ -3,9 +3,9 @@ package main
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/tipay"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/pay"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/tipay"
+	"taiyouxi/platform/planx/util/tipay/pay"
 )
 
 const (

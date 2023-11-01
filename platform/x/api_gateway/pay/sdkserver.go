@@ -7,12 +7,13 @@ import (
 
 	"strings"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/tipay"
+	"taiyouxi/platform/planx/util/tipay/pay"
+	"taiyouxi/platform/x/api_gateway/config"
+
 	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/tipay"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/pay"
-	"vcs.taiyouxi.net/platform/x/api_gateway/config"
 )
 
 const (

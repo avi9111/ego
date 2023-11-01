@@ -9,9 +9,9 @@ import (
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/tools/ban_account"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/base"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/tools/ban_account"
+	"taiyouxi/platform/x/youmi_imcc/base"
 )
 
 var (

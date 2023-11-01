@@ -2,9 +2,10 @@ package config
 
 import (
 	"fmt"
-	"github.com/BurntSushi/toml"
 	"os"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
+
+	"github.com/BurntSushi/toml"
 )
 
 type Config struct {

@@ -1,13 +1,14 @@
 package allinone
 
 import (
+	"os"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/atcd_tools/atc_mng"
+	"taiyouxi/platform/x/atcd_tools/cmds"
+
 	"github.com/codegangsta/cli"
 	"github.com/gin-gonic/gin"
-	"os"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/atcd_tools/atc_mng"
-	"vcs.taiyouxi.net/platform/x/atcd_tools/cmds"
 )
 
 func init() {

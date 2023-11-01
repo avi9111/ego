@@ -3,9 +3,10 @@ package accountJson
 import (
 	"errors"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/bitly/go-simplejson"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func MkTrueJsonFromRedis(data map[string]string, err error) (*simplejson.Json, error) {

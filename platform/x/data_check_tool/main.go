@@ -4,8 +4,9 @@ import (
 	"os"
 
 	"fmt"
+	"taiyouxi/platform/planx/util/logs"
+
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func main() {

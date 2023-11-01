@@ -9,9 +9,9 @@ import (
 
 	"unsafe"
 
-	"vcs.taiyouxi.net/platform/planx/funny/link"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/chat/chatserver/proto/gen"
+	"taiyouxi/platform/planx/funny/link"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/chat/chatserver/proto/gen"
 )
 
 type Player struct {

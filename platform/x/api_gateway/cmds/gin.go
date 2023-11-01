@@ -1,11 +1,12 @@
 package cmds
 
 import (
-	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/ginhelper"
-	"vcs.taiyouxi.net/platform/x/api_gateway/config"
+	"taiyouxi/platform/planx/util/ginhelper"
+	"taiyouxi/platform/x/api_gateway/config"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"github.com/gin-gonic/gin"
+
+	"taiyouxi/platform/planx/util/logs"
 )
 
 func MakeGinEngine() *gin.Engine {

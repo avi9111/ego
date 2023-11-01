@@ -9,11 +9,12 @@ import (
 	"fmt"
 	"strings"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/api_gateway/logiclog"
+	"taiyouxi/platform/x/api_gateway/util"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/api_gateway/logiclog"
-	"vcs.taiyouxi.net/platform/x/api_gateway/util"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
 )
 
@@ -139,7 +140,7 @@ func VivoPayNotify(typ string, data sdkPayData) gin.HandlerFunc {
 			// log
 			logiclog.LogPay(data.Name, uid, false, util.VivoChannel, param["uid"], hash_key, param["payTime"],
 				amount_str, tradeStatus, "", "", game_order_org, extr_info,
-				game_order, tistatus_delivered, payTime, productId, ver,fmt.Sprintf("%d:%d", pkgid, subpkgid))
+				game_order, tistatus_delivered, payTime, productId, ver, fmt.Sprintf("%d:%d", pkgid, subpkgid))
 			logs.Debug("VivoPayNotify order %s fail", hash_key)
 			c.String(http.StatusOK, resS)
 			return
@@ -218,7 +219,7 @@ func VivoPayNotify(typ string, data sdkPayData) gin.HandlerFunc {
 		// log
 		logiclog.LogPay(data.Name, uid, true, util.VivoChannel, param["uid"], hash_key, param["payTime"],
 			amount_str, tradeStatus, "", "", game_order_org, extr_info,
-			game_order, tistatus_delivered, payTime, productId, ver,fmt.Sprintf("%d:%d", pkgid, subpkgid))
+			game_order, tistatus_delivered, payTime, productId, ver, fmt.Sprintf("%d:%d", pkgid, subpkgid))
 
 		logs.Debug("VivoPayNotify order %s success", hash_key)
 		c.String(http.StatusOK, resS)

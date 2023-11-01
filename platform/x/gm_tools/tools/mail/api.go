@@ -7,19 +7,20 @@ import (
 
 	"encoding/csv"
 	"encoding/json"
-	"github.com/gin-gonic/gin"
 	"io/ioutil"
 	"strconv"
+	gmTimeUtil "taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/common/store"
+	gmConfig "taiyouxi/platform/x/gm_tools/config"
+	"taiyouxi/platform/x/gm_tools/tools/ban_account"
+	"taiyouxi/platform/x/gm_tools/util"
 	"time"
-	gmTimeUtil "vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/store"
-	gmConfig "vcs.taiyouxi.net/platform/x/gm_tools/config"
-	"vcs.taiyouxi.net/platform/x/gm_tools/tools/ban_account"
-	"vcs.taiyouxi.net/platform/x/gm_tools/util"
+
+	"github.com/gin-gonic/gin"
 )
 
 // 测试邮件显示BUG的数据, TODO 删除

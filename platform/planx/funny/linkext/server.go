@@ -4,8 +4,8 @@ import (
 	"net"
 	"sync"
 
-	"vcs.taiyouxi.net/platform/planx/funny/link"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/funny/link"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type serverAcceptHandle func(s *link.Session, err error) error

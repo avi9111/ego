@@ -4,10 +4,10 @@ package restore
 //     "errors"
 //     "sync"
 
-//     "vcs.taiyouxi.net/platform/planx/util/logs"
-//     "vcs.taiyouxi.net/platform/planx/util/redispool"
-//     "vcs.taiyouxi.net/platform/planx/util/storehelper"
-//     "vcs.taiyouxi.net/platform/x/redis_storage/util"
+//     "taiyouxi/platform/planx/util/logs"
+//     "taiyouxi/platform/planx/util/redispool"
+//     "taiyouxi/platform/planx/util/storehelper"
+//     "taiyouxi/platform/x/redis_storage/util"
 // )
 
 // // 目前只是测试用

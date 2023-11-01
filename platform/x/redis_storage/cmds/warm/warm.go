@@ -5,16 +5,16 @@ import (
 
 	"github.com/codegangsta/cli"
 
-	"vcs.taiyouxi.net/platform/x/redis_storage/api"
-	"vcs.taiyouxi.net/platform/x/redis_storage/cmds"
-	"vcs.taiyouxi.net/platform/x/redis_storage/config"
+	redisStorageApi "taiyouxi/platform/x/redis_storage/api"
+	"taiyouxi/platform/x/redis_storage/cmds"
+	"taiyouxi/platform/x/redis_storage/config"
 
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/signalhandler"
 )
 
 const ()

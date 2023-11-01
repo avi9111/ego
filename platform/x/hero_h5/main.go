@@ -1,15 +1,17 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
 	"os"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/x/hero_h5/serverinfo"
-	//"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
-	h5Config "vcs.taiyouxi.net/platform/x/hero_h5/config"
-	"vcs.taiyouxi.net/platform/x/hero_h5/roleinfo"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/x/hero_h5/serverinfo"
+
+	"github.com/gin-gonic/gin"
+
+	//"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
+	h5Config "taiyouxi/platform/x/hero_h5/config"
+	"taiyouxi/platform/x/hero_h5/roleinfo"
 )
 
 func main() {

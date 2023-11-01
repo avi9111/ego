@@ -1,9 +1,10 @@
 package profile_tool
 
 import (
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/util"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/util"
 )
 
 type ProfileValue struct {

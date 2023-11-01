@@ -10,12 +10,13 @@ import (
 
 	"strconv"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/api_gateway/logiclog"
+	"taiyouxi/platform/x/api_gateway/util"
+
 	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/api_gateway/logiclog"
-	"vcs.taiyouxi.net/platform/x/api_gateway/util"
 )
 
 const (
@@ -135,7 +136,7 @@ func VNPayNotify(typ string, data sdkPayData) gin.HandlerFunc {
 			// log
 			logiclog.LogPay(data.Name, uid, false, channelID, uid, hash_key, messages.Message.PayTime,
 				amountStr, "0", "", "", game_order_org, extr_info,
-				game_order, tistatus_delivered, payTime, productId, ver,fmt.Sprintf("%d:%d", pkgid, subpkgid))
+				game_order, tistatus_delivered, payTime, productId, ver, fmt.Sprintf("%d:%d", pkgid, subpkgid))
 			logs.Debug("VNPayNotify order %s fail", hash_key)
 			c.String(http.StatusBadRequest, "Status Failed")
 			return

@@ -4,8 +4,9 @@ import (
 	"fmt"
 	"time"
 
+	authConfig "taiyouxi/platform/x/auth/config"
+
 	"github.com/astaxie/beego/httplib"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
 )
 
 const (

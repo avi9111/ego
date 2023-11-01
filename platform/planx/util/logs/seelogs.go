@@ -6,9 +6,10 @@ import (
 	"fmt"
 	"runtime"
 	"strings"
+
 	//"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
+	"taiyouxi/platform/planx/util/signalhandler"
 
 	raven "github.com/getsentry/raven-go"
 	"github.com/timesking/seelog"
@@ -89,7 +90,7 @@ func (ar *SentryReceiver) Close() error {
 
 func init() {
 	seelog.RegisterReceiver("sentry", &SentryReceiver{
-	//client: _sentry,
+		//client: _sentry,
 	})
 	defaultConfig := `
 	<seelog>
@@ -228,7 +229,7 @@ func Critical(format string, v ...interface{}) {
 	}
 }
 
-//SentryLogicCritical 所有逻辑上不应该出现的错误，配置错误，或者基于某个玩家存档的特殊异常
+// SentryLogicCritical 所有逻辑上不应该出现的错误，配置错误，或者基于某个玩家存档的特殊异常
 // 都应该通过这个函数输出。
 func SentryLogicCritical(accountId string, format string, v ...interface{}) {
 	msg := fmt.Sprintf(format, v...)

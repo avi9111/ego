@@ -1,10 +1,11 @@
 package errorctl
 
 import (
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/x/auth/config"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/x/auth/config"
 )
 
 type ErrorCodeForClient int

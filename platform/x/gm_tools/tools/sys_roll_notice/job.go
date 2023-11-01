@@ -1,7 +1,7 @@
 package sys_roll_notice
 
 import (
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/plan_job"
+	"taiyouxi/platform/x/gm_tools/common/plan_job"
 )
 
 var (

@@ -7,11 +7,11 @@ import (
 
 	"sync"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/store"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
+	"taiyouxi/platform/x/gm_tools/common/store"
+	"taiyouxi/platform/x/gm_tools/config"
 )
 
 type sysPublic struct {
@@ -144,7 +144,7 @@ func (s *sysPublicMng) GetAll(ver string) []byte {
 		}
 	}
 	s.lock.RUnlock()
-	logs.Debug("func GetAll put copy to res using %v",time.Since(getAllTime))
+	logs.Debug("func GetAll put copy to res using %v", time.Since(getAllTime))
 
 	getAllTime = time.Now()
 	j, err := json.Marshal(res)
@@ -152,7 +152,7 @@ func (s *sysPublicMng) GetAll(ver string) []byte {
 		logs.Error("[sysPublicMng] GetAll Marshal Err by %s", err.Error())
 		return nil
 	}
-	logs.Debug("func GetAll marshal res using %v",time.Since(getAllTime))
+	logs.Debug("func GetAll marshal res using %v", time.Since(getAllTime))
 	return j[:]
 }
 
@@ -163,7 +163,7 @@ func (s *sysPublicMng) Add(n sysPublic) {
 	s.lock.Unlock()
 	logs.Trace("Add: begin:%v,end:%v", n.Begin, n.End)
 	s.Save(true, n.Gid, n.Version)
-	logs.Debug("Add Using %s time",time.Since(AddTime))
+	logs.Debug("Add Using %s time", time.Since(AddTime))
 }
 
 func (s *sysPublicMng) Del(id string) {
@@ -177,7 +177,7 @@ func (s *sysPublicMng) Del(id string) {
 	if ok {
 		s.Save(true, p.Gid, p.Version)
 	}
-	logs.Debug("Del using %v time",time.Since(DelTime))
+	logs.Debug("Del using %v time", time.Since(DelTime))
 }
 
 func (s *sysPublicMng) SetEndpoint(gid int64, ver string, end sysEndPoints) {
@@ -196,7 +196,7 @@ func (s *sysPublicMng) GetEndpoint(gid int64, ver string) *sysEndPoints {
 	e, ok := s.End[k]
 	s.endLock.RUnlock()
 
-	logs.Debug("GetEndpoint using %v time",time.Since(getEndpointTime))
+	logs.Debug("GetEndpoint using %v time", time.Since(getEndpointTime))
 	if !ok {
 		return nil
 	} else {

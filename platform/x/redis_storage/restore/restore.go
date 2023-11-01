@@ -8,14 +8,14 @@ import (
 
 	"golang.org/x/net/context"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
-	"vcs.taiyouxi.net/platform/x/redis_storage/config"
-	util2 "vcs.taiyouxi.net/platform/x/redis_storage/util"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/util/storehelper"
+	"taiyouxi/platform/x/redis_storage/config"
+	util2 "taiyouxi/platform/x/redis_storage/util"
 )
 
 type restoreOneResChan chan<- bool

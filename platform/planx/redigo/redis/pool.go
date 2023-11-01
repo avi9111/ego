@@ -25,7 +25,7 @@ import (
 	"sync"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/internal"
+	"taiyouxi/platform/planx/redigo/internal"
 )
 
 var nowFunc = time.Now // for testing
@@ -48,49 +48,48 @@ var (
 // application creates a pool at application startup and makes it available to
 // request handlers using a global variable.
 //
-//  func newPool(server, password string) *redis.Pool {
-//      return &redis.Pool{
-//          MaxIdle: 3,
-//          IdleTimeout: 240 * time.Second,
-//          Dial: func () (redis.Conn, error) {
-//              c, err := redis.Dial("tcp", server)
-//              if err != nil {
-//                  return nil, err
-//              }
-//              if _, err := c.Do("AUTH", password); err != nil {
-//                  c.Close()
-//                  return nil, err
-//              }
-//              return c, err
-//          },
-//          TestOnBorrow: func(c redis.Conn, t time.Time) error {
-//              _, err := c.Do("PING")
-//              return err
-//          },
-//      }
-//  }
+//	func newPool(server, password string) *redis.Pool {
+//	    return &redis.Pool{
+//	        MaxIdle: 3,
+//	        IdleTimeout: 240 * time.Second,
+//	        Dial: func () (redis.Conn, error) {
+//	            c, err := redis.Dial("tcp", server)
+//	            if err != nil {
+//	                return nil, err
+//	            }
+//	            if _, err := c.Do("AUTH", password); err != nil {
+//	                c.Close()
+//	                return nil, err
+//	            }
+//	            return c, err
+//	        },
+//	        TestOnBorrow: func(c redis.Conn, t time.Time) error {
+//	            _, err := c.Do("PING")
+//	            return err
+//	        },
+//	    }
+//	}
 //
-//  var (
-//      pool *redis.Pool
-//      redisServer = flag.String("redisServer", ":6379", "")
-//      redisPassword = flag.String("redisPassword", "", "")
-//  )
+//	var (
+//	    pool *redis.Pool
+//	    redisServer = flag.String("redisServer", ":6379", "")
+//	    redisPassword = flag.String("redisPassword", "", "")
+//	)
 //
-//  func main() {
-//      flag.Parse()
-//      pool = newPool(*redisServer, *redisPassword)
-//      ...
-//  }
+//	func main() {
+//	    flag.Parse()
+//	    pool = newPool(*redisServer, *redisPassword)
+//	    ...
+//	}
 //
 // A request handler gets a connection from the pool and closes the connection
 // when the handler is done:
 //
-//  func serveHome(w http.ResponseWriter, r *http.Request) {
-//      conn := pool.Get()
-//      defer conn.Close()
-//      ....
-//  }
-//
+//	func serveHome(w http.ResponseWriter, r *http.Request) {
+//	    conn := pool.Get()
+//	    defer conn.Close()
+//	    ....
+//	}
 type Pool struct {
 
 	// Dial is an application supplied function for creating and configuring a

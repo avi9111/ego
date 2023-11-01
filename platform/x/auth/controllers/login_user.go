@@ -6,21 +6,22 @@ import (
 	"net/rpc/jsonrpc"
 	"strconv"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/x/auth/config"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/x/auth/config"
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/servers/gate"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/uuid"
-	"vcs.taiyouxi.net/platform/x/auth/errorctl"
-	"vcs.taiyouxi.net/platform/x/auth/limit"
-	"vcs.taiyouxi.net/platform/x/auth/logiclog"
-	"vcs.taiyouxi.net/platform/x/auth/models"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/servers/gate"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/uuid"
+	"taiyouxi/platform/x/auth/errorctl"
+	"taiyouxi/platform/x/auth/limit"
+	"taiyouxi/platform/x/auth/logiclog"
+	"taiyouxi/platform/x/auth/models"
 )
 
 // LoginController is in charge of login process.
@@ -211,7 +212,7 @@ func (lc *LoginController) FetchShardsInfoV2() gin.HandlerFunc {
 	}
 }
 
-//防止同一个帐号多重login, 通知上一个登录的设备退出
+// 防止同一个帐号多重login, 通知上一个登录的设备退出
 func avoidMultipleLogin(gid uint, uid db.UserID, reason string, banTime int64) (status string) {
 	OldAccountID, OldLoginToken,
 		OldRpc, ok := models.GetLastLoginStatus(gid, uid)

@@ -9,14 +9,14 @@ import (
 
 	"taiyouxi/platform/x/chat/cmds"
 
-	//_ "vcs.taiyouxi.net/platform/x/auth/cmds/auth"
-	//_ "vcs.taiyouxi.net/platform/x/auth/cmds/login"
-	//_ "vcs.taiyouxi.net/platform/x/auth/cmds/verupdateurl"
+	//_ "taiyouxi/platform/x/auth/cmds/auth"
+	//_ "taiyouxi/platform/x/auth/cmds/login"
+	//_ "taiyouxi/platform/x/auth/cmds/verupdateurl"
 
 	//	"github.com/codegangsta/cli"
-	//"vcs.taiyouxi.net/platform/planx/util/logs"
-	//"vcs.taiyouxi.net/platform/planx/version"
-	//"vcs.taiyouxi.net/platform/x/auth/cmds"
+	//"taiyouxi/platform/planx/util/logs"
+	//"taiyouxi/platform/planx/version"
+	//"taiyouxi/platform/x/auth/cmds"
 
 	//"github.com/avi9111/ego/a"
 	"taiyouxi/a"

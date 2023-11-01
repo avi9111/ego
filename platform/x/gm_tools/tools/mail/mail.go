@@ -4,13 +4,14 @@ import (
 	//"encoding/json"
 	"errors"
 	//"time"
+	gmTimeUtil "taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/planx/util/tipay/dynamopay"
+	"taiyouxi/platform/x/gm_tools/util"
 	"time"
+
 	"vcs.taiyouxi.net/jws/gamex/models/mail/mailhelper"
-	gmTimeUtil "vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/dynamopay"
-	"vcs.taiyouxi.net/platform/x/gm_tools/util"
 )
 
 type privateMailReword struct {

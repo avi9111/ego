@@ -4,10 +4,11 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/gin-gonic/gin"
 	"io/ioutil"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/util"
+
+	"github.com/gin-gonic/gin"
 )
 
 type commandParams struct {

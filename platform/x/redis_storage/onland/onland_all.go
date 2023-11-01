@@ -4,8 +4,8 @@ import (
 	"errors"
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 //

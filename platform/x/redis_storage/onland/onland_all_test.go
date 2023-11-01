@@ -1,9 +1,9 @@
 package onland
 
 import (
+	"taiyouxi/platform/planx/redigo/redis"
 	"testing"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
 )
 
 var (

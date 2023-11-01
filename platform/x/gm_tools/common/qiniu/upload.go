@@ -2,9 +2,10 @@ package qiniu
 
 import (
 	"bytes"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/qiniu/api.v6/io"
 	"github.com/qiniu/api.v6/rs"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func uptoken(bucketName string) string {
@@ -25,10 +26,10 @@ func UpLoad(bucketName, key string, data []byte) error {
 	var err error
 	var ret io.PutRet
 	var extra = &io.PutExtra{
-	//Params:    params,
-	//MimeType:  mieType,
-	//Crc32:     crc32,
-	//CheckCrc:  CheckCrc,
+		//Params:    params,
+		//MimeType:  mieType,
+		//Crc32:     crc32,
+		//CheckCrc:  CheckCrc,
 	}
 
 	rsClient := rs.New(nil)

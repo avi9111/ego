@@ -1,6 +1,6 @@
 package gen2golang
 
-import "vcs.taiyouxi.net/platform/x/tiprotogen/def"
+import dsl "taiyouxi/platform/x/tiprotogen/def"
 
 func (g *genner2golang) GetReqBase(data *dsl.ProtoDef) string {
 	if data.Cheat {

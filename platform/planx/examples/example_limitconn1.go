@@ -6,7 +6,7 @@ import (
 	"net"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 // 接收链接到达max后，不会再有新链接建立

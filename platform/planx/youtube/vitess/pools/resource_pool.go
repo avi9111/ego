@@ -11,9 +11,11 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/youtube/vitess/go/sync2"
+	"taiyouxi/platform/planx/util/logs"
+
+	//"github.com/youtube/vitess/go/sync2"
+	"github.com/siddontang/go/sync2"
 	"golang.org/x/net/context"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

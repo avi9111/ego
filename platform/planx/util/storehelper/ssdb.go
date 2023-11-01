@@ -3,8 +3,8 @@ package storehelper
 // import (
 //     "strings"
 //     "time"
-//     "vcs.taiyouxi.net/platform/planx/util/logs"
-//     gossdb "vcs.taiyouxi.net/platform/planx/util/storehelper/ssdb"
+//     "taiyouxi/platform/planx/util/logs"
+//     gossdb "taiyouxi/platform/planx/util/storehelper/ssdb"
 // )
 
 // //YZH 这个StoreSSDB没有使用, 因此注释掉

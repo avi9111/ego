@@ -2,17 +2,17 @@ package account
 
 import (
 	//"github.com/gin-gonic/gin"
-	//"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	//∂"vcs.taiyouxi.net/platform/x/gm_tools/common/store"
+	//"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	//∂"taiyouxi/platform/x/gm_tools/common/store"
 	"errors"
 
-	"vcs.taiyouxi.net/platform/x/gm_tools/login"
-	//"vcs.taiyouxi.net/platform/x/gm_tools/util"
+	"taiyouxi/platform/x/gm_tools/login"
+	//"taiyouxi/platform/x/gm_tools/util"
 	"encoding/json"
 	"strconv"
 	"strings"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 func RegCommands() {
@@ -23,14 +23,14 @@ func RegCommands() {
 	gm_command.AddGmCommandHandle("getGrant", GetGrant)
 }
 
-//创建账号
+// 创建账号
 func AddUser(c *gm_command.Context, server, accountid string, params []string) error {
 	logs.Trace("AddUser得到的参数为:%v", params)
-	if len(params)!=4{
+	if len(params) != 4 {
 		return errors.New("错误的参数")
 	}
 	if _, ok := login.AccountManager.Accounts[params[0]]; !ok {
-		if params[0]==""||params[2]==""{
+		if params[0] == "" || params[2] == "" {
 			return errors.New("账户名或密码为空")
 		}
 		login.AccountManager.Add(login.NewAccount(params[0], params[1], params[2]))
@@ -40,7 +40,7 @@ func AddUser(c *gm_command.Context, server, accountid string, params []string) e
 	return errors.New("此账号已注册")
 }
 
-//设置权限
+// 设置权限
 func SetGrant(c *gm_command.Context, server, accountid string, params []string) error {
 	logs.Trace("SetGrant得到的参数为:%v", params)
 	if _, ok := login.AccountManager.Accounts[params[0]]; ok {
@@ -65,7 +65,7 @@ func SetGrant(c *gm_command.Context, server, accountid string, params []string) 
 	return errors.New("不存在的账号")
 }
 
-//权限查询
+// 权限查询
 func GetGrant(c *gm_command.Context, server, accountid string, params []string) error {
 	if _, ok := login.AccountManager.Accounts[params[0]]; ok {
 		err, grants := login.AccountManager.GetGrant(params[0])

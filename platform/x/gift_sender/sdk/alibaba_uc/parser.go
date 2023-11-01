@@ -19,13 +19,14 @@ import (
 
 	"bytes"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/auth/models"
+	"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/core"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/auth/models"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
 )
 
 // 网络数据 marshal struct

@@ -1,9 +1,10 @@
 package main
 
 import (
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/youmi_imcc/base"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/base"
 )
 
 func acceptHandle(c *gin.Context) {

@@ -3,13 +3,13 @@ package cmds
 import (
 	"log"
 
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
 
 	"github.com/codegangsta/cli"
 )
 
-//放在这里试图让log配置尽早生效
+// 放在这里试图让log配置尽早生效
 func init() {
 	logxml := config.NewConfigPath("log.xml")
 	logs.LoadLogConfig(logxml)

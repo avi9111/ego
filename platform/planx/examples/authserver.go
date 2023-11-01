@@ -4,8 +4,8 @@ import (
 	"flag"
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	// "vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/servers/game"
+	// "taiyouxi/platform/planx/util/logs"
 )
 
 func main() {

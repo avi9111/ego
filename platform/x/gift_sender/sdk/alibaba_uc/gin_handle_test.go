@@ -8,9 +8,11 @@ import (
 	"time"
 
 	"os"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/auth/models"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/auth/models"
+
+	"vcs.taiyouxi.net/platform/x/gift_sender/config"
 )
 
 func TestAesDecode(t *testing.T) {

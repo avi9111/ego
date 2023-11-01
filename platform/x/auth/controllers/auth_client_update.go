@@ -4,9 +4,10 @@ import (
 	"fmt"
 	"net/http"
 
+	"taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/errorctl"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/auth/errorctl"
 )
 
 func (dic *DeviceIDController) UpdateVer() gin.HandlerFunc {

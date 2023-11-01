@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"vcs.taiyouxi.net/platform/planx/util"
+	"taiyouxi/platform/planx/util"
 )
 
 var stdoutChan chan string

@@ -6,16 +6,18 @@ import (
 	"strconv"
 	"time"
 
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+
 	"vcs.taiyouxi.net/jws/gamex/models/helper"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	//"vcs.taiyouxi.net/platform/planx/util/logs"
-	//"vcs.taiyouxi.net/platform/x/gm_tools/util"
+
+	//"taiyouxi/platform/planx/util/logs"
+	//"taiyouxi/platform/x/gm_tools/util"
 	"encoding/json"
 	//"vcs.taiyouxi.net/jws/multiplayer/multiplay_server/server/data"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
 )
 
 func VirtualIAP(c *gm_command.Context, server, accountid string, params []string) error {

@@ -1,8 +1,8 @@
 package game
 
 import (
+	"taiyouxi/platform/planx/util"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util"
 )
 
 //

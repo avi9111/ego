@@ -4,9 +4,9 @@ import (
 	"errors"
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/auth/models"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/models"
 
 	"github.com/astaxie/beego/httplib"
 )

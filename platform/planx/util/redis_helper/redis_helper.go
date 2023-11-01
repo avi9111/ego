@@ -6,10 +6,10 @@ import (
 	"fmt"
 	"reflect"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
 )
 
 type ManualDBDump interface {
@@ -19,8 +19,8 @@ type ManualDBDump interface {
 	FromDB(data interface{}, obj reflect.Value) error
 }
 
-/////////////////
-//Helper function for DumpToHashDB of Redis
+// ///////////////
+// Helper function for DumpToHashDB of Redis
 func init() {
 }
 
@@ -38,7 +38,7 @@ func (args XArgs) AddFlat(v interface{}) XArgs {
 	return args
 }
 
-//语意上这个函数是只为了HMSET而存在的
+// 语意上这个函数是只为了HMSET而存在的
 func (args XArgs) AddHash(v interface{}, dirtyHash map[string]interface{}) (
 	res XArgs, newDirtyHash map[string]interface{}, chged []string) {
 

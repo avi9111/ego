@@ -3,8 +3,8 @@ package models
 import (
 	"strconv"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
 )
 
 func newRedisPool(pooName, server, password string, dbselectCfg string) redispool.IPool {

@@ -7,8 +7,8 @@ import (
 
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcdClient"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	client "taiyouxi/platform/planx/util/etcdClient"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 const (
@@ -25,7 +25,7 @@ type EtcdWatcher struct {
 }
 type Hander func(res *client.Response)
 
-//,quitChan chan bool
+// ,quitChan chan bool
 func NewWatcher(endpoints []string, watchKey string, res chan *client.Response) *EtcdWatcher {
 	cfg := client.Config{
 		Endpoints:               endpoints,

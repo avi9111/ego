@@ -3,8 +3,8 @@ package hero_gag
 import (
 	"encoding/json"
 	"fmt"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/authdb"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/x/gm_tools/common/authdb"
 )
 
 func GetAuthData(userID string) (string, error) {

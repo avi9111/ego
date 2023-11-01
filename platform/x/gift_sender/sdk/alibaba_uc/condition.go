@@ -5,10 +5,10 @@ import (
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/core"
 )
 
 const (

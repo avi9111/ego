@@ -4,8 +4,9 @@ import (
 	"strconv"
 	"strings"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/bitly/go-simplejson"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func convertMongoKV(tableName string, item string, json *simplejson.Json) interface{} {

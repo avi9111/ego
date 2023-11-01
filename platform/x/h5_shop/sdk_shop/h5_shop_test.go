@@ -4,12 +4,12 @@ import (
 	"encoding/base64"
 	"encoding/json"
 	"fmt"
+	"taiyouxi/platform/planx/util/logs"
 	"testing"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func TryUnmarshalqqq(bytes []byte) []byte {
-	logs.Debug("%s\n",bytes)
+	logs.Debug("%s\n", bytes)
 	bytLen := len(bytes)
 	if bytLen > 50 {
 		bytes[1], bytes[33] = bytes[33], bytes[1]

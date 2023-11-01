@@ -7,9 +7,10 @@ import (
 
 	"sync"
 
+	"taiyouxi/platform/planx/util/leaktest"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/leaktest"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 const (

@@ -1,7 +1,7 @@
 package storehelper
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/cloud_db/ossdb"
+	"taiyouxi/platform/planx/util/cloud_db/ossdb"
 )
 
 type StoreOSS struct {

@@ -15,10 +15,11 @@ import (
 	"os/signal"
 	"syscall"
 
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+
 	elastic "gopkg.in/olivere/elastic.v5"
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

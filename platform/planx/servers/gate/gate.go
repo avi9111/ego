@@ -15,15 +15,15 @@ import (
 
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/client"
-	"vcs.taiyouxi.net/platform/planx/metrics/modules"
-	"vcs.taiyouxi.net/platform/planx/servers"
-	"vcs.taiyouxi.net/platform/planx/servers/gate/ccumetrics"
-	"vcs.taiyouxi.net/platform/planx/servers/gate/rpc"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/client"
+	"taiyouxi/platform/planx/metrics/modules"
+	"taiyouxi/platform/planx/servers"
+	"taiyouxi/platform/planx/servers/gate/ccumetrics"
+	"taiyouxi/platform/planx/servers/gate/rpc"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 var mh codec.MsgpackHandle
@@ -209,10 +209,10 @@ func (g *GateServer) chooseGameServer(accountID string) string {
 //return g.loginStatusChan
 //}
 
-//建立玩家和后端服务器的链接，后段服务器可以有多个
-//玩家会被分配到固定的服务器上，所有后端服务器功能相同
-//暂时不会按照功能拆分
-//方便高效断线重连接模式的实现
+// 建立玩家和后端服务器的链接，后段服务器可以有多个
+// 玩家会被分配到固定的服务器上，所有后端服务器功能相同
+// 暂时不会按照功能拆分
+// 方便高效断线重连接模式的实现
 // zz 不支持短时间内多次连接，目前会有问题；实现方案也是现实10s内不能重复登录
 func (g *GateServer) handleConnection(con net.Conn) {
 	var AccountID, IpAddr string

@@ -9,14 +9,12 @@ import (
 	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
 
-	"vcs.taiyouxi.net/jws/gamex/protogen"
-
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/api_gateway/logiclog"
-	"vcs.taiyouxi.net/platform/x/api_gateway/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/api_gateway/logiclog"
+	"taiyouxi/platform/x/api_gateway/util"
 )
 
 const (

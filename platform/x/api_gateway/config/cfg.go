@@ -3,11 +3,12 @@ package config
 import (
 	"os"
 
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/tipay/pay"
+
 	"github.com/codegangsta/cli"
 	"vcs.taiyouxi.net/jws/gamex/models/mail/mailhelper"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/pay"
 )
 
 var (

@@ -1,3 +1,4 @@
+//go:build authredis
 // +build authredis
 
 package models
@@ -7,12 +8,12 @@ import (
 	"fmt"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/secure"
 )
 
 func (d *DBByRedis) Init(config DBConfig) error {
@@ -92,7 +93,7 @@ func (d *DBByRedis) IsNameExist(name string) (int, error) {
 	return redis.Int(_db.Do("EXISTS", userNameKey))
 }
 
-//返回逻辑错误：XErrAuthUsernameNotFound
+// 返回逻辑错误：XErrAuthUsernameNotFound
 func (d *DBByRedis) GetUnKey(name string) (db.UserID, error) {
 	_db := authRedisPool.Get()
 	defer _db.Close()

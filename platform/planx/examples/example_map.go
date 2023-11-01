@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/servers"
+	"taiyouxi/platform/planx/servers"
 	// "time"
 )
 

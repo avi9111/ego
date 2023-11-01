@@ -3,10 +3,11 @@ package merge
 import (
 	"fmt"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+
 	"vcs.taiyouxi.net/jws/gamex/models/driver"
 	"vcs.taiyouxi.net/jws/gamex/modules/gvg"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func MergeGVG() error {

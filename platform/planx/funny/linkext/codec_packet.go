@@ -21,7 +21,7 @@ import (
 	"math"
 	"sync"
 
-	"vcs.taiyouxi.net/platform/planx/funny/link"
+	"taiyouxi/platform/planx/funny/link"
 
 	"github.com/funny/slab"
 )

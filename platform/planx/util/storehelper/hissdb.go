@@ -2,10 +2,11 @@ package storehelper
 
 import (
 	"errors"
-	"github.com/lessos/lessgo/data/hissdb"
 	"strings"
+	"taiyouxi/platform/planx/util/logs"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+
+	"github.com/lessos/lessgo/data/hissdb"
 )
 
 type StoreHISSDB struct {
@@ -58,7 +59,7 @@ func (s *StoreHISSDB) Close() error {
 	return nil
 }
 
-//TODO YZH: batch write optmization of SSDB
+// TODO YZH: batch write optmization of SSDB
 func (s *StoreHISSDB) Put(key string, val []byte, rh ReadHandler) error {
 	res := s.pool.Cmd("set", key, val)
 	if res.State == "ok" {

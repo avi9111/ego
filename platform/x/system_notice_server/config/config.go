@@ -1,6 +1,6 @@
 package config
 
-import "vcs.taiyouxi.net/platform/planx/servers"
+import "taiyouxi/platform/planx/servers"
 
 type CommonConfig struct {
 	Runmode string `toml:"runmode"`

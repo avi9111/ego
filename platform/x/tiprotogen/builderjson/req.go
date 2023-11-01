@@ -1,6 +1,6 @@
 package builderjson
 
-import "vcs.taiyouxi.net/platform/x/tiprotogen/def"
+import dsl "taiyouxi/platform/x/tiprotogen/def"
 
 type protoReqJson struct {
 	Base   string     `json:"base"`

@@ -2,13 +2,14 @@ package serverinfo
 
 import (
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"sync"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/auth/models"
+	h5Config "taiyouxi/platform/x/hero_h5/config"
+	"taiyouxi/platform/x/tiprotogen/log"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/auth/models"
-	h5Config "vcs.taiyouxi.net/platform/x/hero_h5/config"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/log"
+
+	"github.com/gin-gonic/gin"
 )
 
 var (

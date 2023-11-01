@@ -6,13 +6,13 @@ import (
 	// "time"
 
 	gm "github.com/rcrowley/go-metrics"
-	// "vcs.taiyouxi.net/platform/planx/funny/link"
-	// "vcs.taiyouxi.net/platform/planx/metrics"
+	// "taiyouxi/platform/planx/funny/link"
+	// "taiyouxi/platform/planx/metrics"
 	"fmt"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 var (

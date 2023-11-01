@@ -8,15 +8,15 @@ import (
 	"time"
 
 	"errors"
+	"taiyouxi/platform/planx/util/etcd_redis"
+	"taiyouxi/platform/planx/util/logs"
+	redisStorageApiInterface "taiyouxi/platform/x/redis_storage/api/interface"
+	"taiyouxi/platform/x/redis_storage/cmds/helper"
+	"taiyouxi/platform/x/redis_storage/config"
+	"taiyouxi/platform/x/redis_storage/restore"
+
 	"github.com/gin-gonic/gin"
 	"golang.org/x/net/context"
-	"vcs.taiyouxi.net/jws/multiplayer/util/post_service_on_etcd"
-	"vcs.taiyouxi.net/platform/planx/util/etcd_redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/redis_storage/api/interface"
-	"vcs.taiyouxi.net/platform/x/redis_storage/cmds/helper"
-	"vcs.taiyouxi.net/platform/x/redis_storage/config"
-	"vcs.taiyouxi.net/platform/x/redis_storage/restore"
 )
 
 const (

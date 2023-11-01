@@ -1,10 +1,11 @@
 package routers
 
 import (
+	"taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/controllers"
+	"taiyouxi/platform/x/auth/limit"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/auth/controllers"
-	"vcs.taiyouxi.net/platform/x/auth/limit"
 )
 
 func RegLogin(g *gin.Engine) {

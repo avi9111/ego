@@ -9,12 +9,13 @@ import (
 	"strings"
 	"time"
 
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/config"
+	"taiyouxi/platform/x/gm_tools/tools/profile_tool"
+
 	"github.com/astaxie/beego/httplib"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
-	"vcs.taiyouxi.net/platform/x/gm_tools/tools/profile_tool"
 )
 
 func RegCommands() {

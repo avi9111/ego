@@ -1,14 +1,15 @@
 package main
 
 import (
-	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
-	h5Config "vcs.taiyouxi.net/platform/x/h5_shop/config"
-	"vcs.taiyouxi.net/platform/x/h5_shop/sdk_shop"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
+	h5Config "taiyouxi/platform/x/h5_shop/config"
+	"taiyouxi/platform/x/h5_shop/sdk_shop"
 
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
+	"github.com/gin-gonic/gin"
+
+	"taiyouxi/platform/x/gift_sender/config"
 )
 
 func main() {

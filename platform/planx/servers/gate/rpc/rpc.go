@@ -4,9 +4,9 @@ import (
 	"net/rpc"
 	"net/rpc/jsonrpc"
 
-	"vcs.taiyouxi.net/platform/planx/servers"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/servers"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type GateRPC struct {

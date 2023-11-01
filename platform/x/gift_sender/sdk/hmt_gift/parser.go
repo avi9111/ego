@@ -9,7 +9,7 @@ import (
 	"encoding/hex"
 	"fmt"
 	"net/url"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 var (
@@ -55,7 +55,7 @@ func CalSign(data string) (string, error) {
 
 	dataKey := n + "a5ced306175ff1deaff676da872c05c5"
 
-	logs.Debug("DateKey Date: %s",dataKey)
+	logs.Debug("DateKey Date: %s", dataKey)
 
 	_md5 := md5.New()
 	_md5.Write([]byte(dataKey))

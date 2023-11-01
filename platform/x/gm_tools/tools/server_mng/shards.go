@@ -3,7 +3,7 @@ package server_mng
 import (
 	"encoding/json"
 	"strconv"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type GameShard struct {
@@ -33,12 +33,11 @@ type GameShards struct {
 }
 
 /*
+0:[{"name":"4e7a46ff8e315a59ef1ad1c3af5ab98c","dn":"dev-shard10","lv":1,"auto":1},
 
-   0:[{"name":"4e7a46ff8e315a59ef1ad1c3af5ab98c","dn":"dev-shard10","lv":1,"auto":1},
-      {"name":"adf3546119027cd18ab136a2824334cf","dn":"dev-shard11","lv":0,"auto":0},
-      {"name":"0197d3267aec6845c2ff2f1c5d377c8f","dn":"dev-shard12","lv":0,"auto":0},
-      {"name":"6fcc13952f508a7c926c24f3fef5d32e","dn":"load-shard20","lv":0,"auto":0}]
-
+	{"name":"adf3546119027cd18ab136a2824334cf","dn":"dev-shard11","lv":0,"auto":0},
+	{"name":"0197d3267aec6845c2ff2f1c5d377c8f","dn":"dev-shard12","lv":0,"auto":0},
+	{"name":"6fcc13952f508a7c926c24f3fef5d32e","dn":"load-shard20","lv":0,"auto":0}]
 */
 func NewGameShardsFromRedis(gid, data string) (*GameShards, error) {
 	gameShards := GameShards{}
@@ -78,12 +77,11 @@ func (g *GameShards) LoadShardInRedis(data map[string]ShardInRedis) {
 }
 
 /*
-
 map[
+
 	a0c18ef1f5c378cad7a615c366d09e33:{"ID":15,"GID":1}
 	1132cb1511809fe680e393925e736aa3:{"ID":101,"GID":101}
 	666fb1aca8a9bd7e145195090367dd47:{"ID":17,"GID":1}]
-
 */
 func NewShardsFromRedis(data map[string]string) (map[string]ShardInRedis, error) {
 	res := make(map[string]ShardInRedis, 32)

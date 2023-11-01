@@ -3,8 +3,8 @@ package rules
 import (
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/base"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/youmi_imcc/base"
 )
 
 // 将20s之内在世界频道连续发言的人禁言

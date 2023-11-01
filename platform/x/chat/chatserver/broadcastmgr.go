@@ -1,6 +1,6 @@
 package chatserver
 
-import "vcs.taiyouxi.net/platform/planx/util/logs"
+import "taiyouxi/platform/planx/util/logs"
 
 const (
 	Typ_SysNotice  = "SysRollNotice"

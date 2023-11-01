@@ -6,9 +6,9 @@ import (
 	"net"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timingwheel"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timingwheel"
 )
 
 type PacketConn struct {

@@ -3,11 +3,12 @@ package account2json
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/bitly/go-simplejson"
 	"os"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/account_json"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/redigo/redis"
+	accountJson "taiyouxi/platform/planx/util/account_json"
+	"taiyouxi/platform/planx/util/redispool"
+
+	"github.com/bitly/go-simplejson"
 )
 
 func PrintErrInfo(format string, v ...interface{}) (res string) {

@@ -4,12 +4,13 @@ import (
 	"os"
 	"time"
 
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gamex_merge/cmds"
+	"taiyouxi/platform/x/gamex_merge/merge"
+
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gamex_merge/cmds"
-	"vcs.taiyouxi.net/platform/x/gamex_merge/merge"
 )
 
 func init() {

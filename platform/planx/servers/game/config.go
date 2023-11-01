@@ -16,11 +16,11 @@ import (
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	ver "vcs.taiyouxi.net/platform/planx/version"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	ver "taiyouxi/platform/planx/version"
 )
 
 //Config GameServer配置
@@ -123,7 +123,7 @@ type Config struct {
 	LocalDebug      bool                   // 是否本地调试
 }
 
-//type Hot_Value int
+// type Hot_Value int
 const ActCount = 50
 
 type AntiCheat struct {
@@ -149,7 +149,7 @@ var (
 	hot_update_mutex sync.RWMutex
 )
 
-//IsRunModeProd 是否当前处于生产模式
+// IsRunModeProd 是否当前处于生产模式
 func (c *Config) IsRunModeProd() bool {
 	return RunModeProd == c.RunMode
 }
@@ -190,7 +190,7 @@ func (c *Config) GetShardIdByMerge(shard uint) uint {
 	return shard
 }
 
-//Cfg game server 配置
+// Cfg game server 配置
 var Cfg Config
 
 func (c *Config) GetHotActValidData(sid uint, actType int) bool {
@@ -386,7 +386,7 @@ func (c *Config) GetGid() bool {
 }
 
 // SyncInfo2Etcdy一些GM工具需要的信息,需要写到ETCD然后在GMtool里面抓取
-//GMtools代码对应位置func (c *CfgByServer) LoadOneServerFromEtcd
+// GMtools代码对应位置func (c *CfgByServer) LoadOneServerFromEtcd
 func (c *Config) SyncInfo2Etcd() bool {
 	_ss := make([]uint, 0, 4)
 	_ss = append(_ss, c.ShardId...)

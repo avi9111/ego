@@ -1,10 +1,11 @@
 package hero_gag
 
 import (
+	"taiyouxi/platform/planx/util/logs"
+	"time"
+
 	"golang.org/x/net/context"
 	"gopkg.in/olivere/elastic.v5"
-	"time"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

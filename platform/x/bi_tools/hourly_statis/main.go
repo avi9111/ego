@@ -5,10 +5,10 @@ import (
 
 	"flag"
 
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/bi_tools/hourly_statis/imp"
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/bi_tools/hourly_statis/imp"
 )
 
 const (

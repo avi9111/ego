@@ -7,10 +7,10 @@ import (
 
 	"fmt"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/BurntSushi/toml"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/jws/gamex/protogen"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type Config struct {

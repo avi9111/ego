@@ -3,19 +3,20 @@ package verupdateurl
 import (
 	"os"
 
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/x/auth/cmds"
+	authConfig "taiyouxi/platform/x/auth/config"
+
 	"github.com/codegangsta/cli"
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/x/auth/cmds"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
 
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/iplimitconfig"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
-	"vcs.taiyouxi.net/platform/x/auth/limit"
-	"vcs.taiyouxi.net/platform/x/auth/routers"
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/iplimitconfig"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/signalhandler"
+	"taiyouxi/platform/x/auth/limit"
+	"taiyouxi/platform/x/auth/routers"
 )
 
 func init() {

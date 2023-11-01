@@ -6,9 +6,10 @@ import (
 	"sync"
 	"time"
 
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/cenk/backoff"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type StoreDynamoDB struct {
@@ -87,7 +88,7 @@ func (s *StoreDynamoDB) Close() error {
 	return nil
 }
 
-//TODO YZH: batch write optmization of DynamoDB
+// TODO YZH: batch write optmization of DynamoDB
 func (s *StoreDynamoDB) Put(key string, val []byte, rh ReadHandler) error {
 	if s.count_all >= 100 {
 		s.LogInfo()

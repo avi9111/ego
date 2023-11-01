@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"strconv"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
 	"github.com/aws/aws-sdk-go/aws"
 	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
@@ -96,7 +96,6 @@ func Unmarshal(item map[string]*DDB.AttributeValue) map[string]interface{} {
 	return data
 }
 
-//
 func GetFromAnys2String(typ, name string, data map[string]interface{}) (string, bool) {
 	data_any, name_ok := data[name]
 	if !name_ok {
@@ -113,7 +112,6 @@ func GetFromAnys2String(typ, name string, data map[string]interface{}) (string, 
 	return data_str, true
 }
 
-//
 func GetFromAnys2Bytes(typ, name string, data map[string]interface{}) ([]byte, bool) {
 	data_any, name_ok := data[name]
 	if !name_ok {
@@ -130,7 +128,6 @@ func GetFromAnys2Bytes(typ, name string, data map[string]interface{}) ([]byte, b
 	return data_bytes, true
 }
 
-//
 func GetFromAnys2int64(typ, name string, data map[string]interface{}) (int64, bool) {
 	data_any, name_ok := data[name]
 	if !name_ok {

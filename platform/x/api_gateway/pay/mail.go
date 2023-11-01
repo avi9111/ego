@@ -5,10 +5,11 @@ import (
 
 	"sync"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/api_gateway/config"
+
 	"vcs.taiyouxi.net/jws/gamex/models/mail/mailhelper"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/api_gateway/config"
 )
 
 const (

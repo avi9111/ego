@@ -3,17 +3,18 @@ package allinone
 import (
 	"os"
 
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/signalhandler"
+
 	"github.com/codegangsta/cli"
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
 
-	"vcs.taiyouxi.net/platform/x/auth/limit"
-	"vcs.taiyouxi.net/platform/x/clientlog/cmds"
-	ClientLogConfig "vcs.taiyouxi.net/platform/x/clientlog/config"
-	"vcs.taiyouxi.net/platform/x/clientlog/routers"
+	"taiyouxi/platform/x/auth/limit"
+	"taiyouxi/platform/x/clientlog/cmds"
+	ClientLogConfig "taiyouxi/platform/x/clientlog/config"
+	"taiyouxi/platform/x/clientlog/routers"
 )
 
 func init() {

@@ -4,7 +4,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type Request struct {
@@ -39,8 +39,8 @@ type RequestHook interface {
 	PostRequest(*Response)
 }
 
-//Mux 请给每个玩家配置一个该数据实例
-//nRequests代表了每个玩家的单调增长的统计，可以采样这个数据然后利用这个数据计算出玩家QPS
+// Mux 请给每个玩家配置一个该数据实例
+// nRequests代表了每个玩家的单调增长的统计，可以采样这个数据然后利用这个数据计算出玩家QPS
 type Mux struct {
 	mu        sync.RWMutex
 	m         map[string]Handler

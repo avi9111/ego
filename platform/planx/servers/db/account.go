@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/uuid"
+	"taiyouxi/platform/planx/util/uuid"
 )
 
 type UserID struct{ uuid.UUID }
@@ -13,17 +13,17 @@ type UserID struct{ uuid.UUID }
 var InvalidUserID = UserID{UUID: uuid.Nil}
 
 /*
-func (uid UserID) String() string {
-	return uid.UUID.String()
-}
+	func (uid UserID) String() string {
+		return uid.UUID.String()
+	}
 
-func (uid UserID) MarshalText() (text []byte, err error) {
-	return uid.UUID.MarshalText()
-}
+	func (uid UserID) MarshalText() (text []byte, err error) {
+		return uid.UUID.MarshalText()
+	}
 
-func (uid *UserID) UnmarshalText(text []byte) (err error) {
-	return uid.UUID.UnmarshalText(text)
-}
+	func (uid *UserID) UnmarshalText(text []byte) (err error) {
+		return uid.UUID.UnmarshalText(text)
+	}
 */
 func (uid UserID) IsValid() bool {
 	//return uint64(uid) > 0

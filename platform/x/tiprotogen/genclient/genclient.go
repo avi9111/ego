@@ -4,9 +4,9 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/command"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/log"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/util"
+	"taiyouxi/platform/x/tiprotogen/command"
+	"taiyouxi/platform/x/tiprotogen/log"
+	"taiyouxi/platform/x/tiprotogen/util"
 )
 
 func getFilelist(path string, typ string) []string {

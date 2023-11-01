@@ -1,8 +1,9 @@
 package cmds
 
 import (
+	"taiyouxi/platform/planx/util/ginhelper"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/ginhelper"
 )
 
 func InitSentry(DSN string) error {

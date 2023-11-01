@@ -6,14 +6,15 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/ratelimit"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/ratelimit"
 
 	"github.com/gin-gonic/gin"
 	"github.com/mailgun/oxy/utils"
 	"github.com/mailgun/timetools"
 	"golang.org/x/net/websocket"
-	// "vcs.taiyouxi.net/platform/planx/util/logs"
+
+	// "taiyouxi/platform/planx/util/logs"
 	"errors"
 	"strings"
 	"time"

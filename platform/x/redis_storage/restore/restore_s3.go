@@ -3,8 +3,8 @@ package restore
 import (
 	"errors"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
 )
 
 //
@@ -66,7 +66,7 @@ func (r *RestoreS3) SetStore(s storehelper.IStore) {
 	r.land = s.(*storehelper.StoreS3)
 }
 
-/// Interface
+// / Interface
 func (r *RestoreS3) cloneNewSafeReader() (storehelper.IStore, error) {
 	return r.land.Clone()
 }

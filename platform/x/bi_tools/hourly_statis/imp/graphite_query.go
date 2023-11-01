@@ -9,8 +9,9 @@ import (
 
 	"strconv"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/astaxie/beego/httplib"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func collectAPCU() error {

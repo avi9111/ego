@@ -5,15 +5,15 @@ import (
 
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
-	"vcs.taiyouxi.net/platform/x/redis_storage/onland"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+	"taiyouxi/platform/x/redis_storage/onland"
 )
 
 /*
-	将需要的表现dump到最终db中
-	并剔除需要删除角色表
+将需要的表现dump到最终db中
+并剔除需要删除角色表
 */
 func Prepare() error {
 	if err := prepareA(); err != nil {

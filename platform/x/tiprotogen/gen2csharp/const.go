@@ -1,6 +1,6 @@
 package gen2csharp
 
-import "vcs.taiyouxi.net/platform/x/tiprotogen/def"
+import dsl "taiyouxi/platform/x/tiprotogen/def"
 
 func (g *genner2Csharp) GetReqBase(data *dsl.ProtoDef) string {
 	if data.Cheat {

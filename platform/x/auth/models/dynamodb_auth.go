@@ -5,10 +5,11 @@ import (
 
 	"fmt"
 
+	. "taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/aws/aws-sdk-go/aws"
 	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
-	. "vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 const (

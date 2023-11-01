@@ -5,8 +5,8 @@ import (
 	"os"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type LimitConnServer struct {
@@ -129,7 +129,7 @@ func (server *LimitConnServer) GetMaxConn() uint {
 	return server.maxconn
 }
 
-//Only useful for LimitConn Server. OPTMIZE
+// Only useful for LimitConn Server. OPTMIZE
 func (server *LimitConnServer) ReleaseConnChan(con net.Conn) {
 	//server.quitingConn <- con
 	server.spaces <- struct{}{}

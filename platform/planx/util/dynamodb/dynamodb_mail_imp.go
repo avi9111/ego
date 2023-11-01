@@ -6,11 +6,12 @@ import (
 
 	"fmt"
 
+	"taiyouxi/platform/planx/util/logs"
+	. "taiyouxi/platform/planx/util/timail"
+
 	"github.com/aws/aws-sdk-go/aws"
 	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/cenk/backoff"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	. "vcs.taiyouxi.net/platform/planx/util/timail"
 )
 
 func (d *DynamoDB) QueryMail(
@@ -174,8 +175,8 @@ func (d *DynamoDB) SendMail(table_name, user_id string, mail MailRes) error {
 	item := genMailItem(user_id, mail)
 
 	put_input := &DDB.PutItemInput{
-		TableName: aws.String(table_name),
-		Item:      item,
+		TableName:              aws.String(table_name),
+		Item:                   item,
 		ReturnConsumedCapacity: aws.String("TOTAL"),
 		ReturnValues:           aws.String("ALL_OLD"),
 	}

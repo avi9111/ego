@@ -5,9 +5,10 @@ import (
 
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"golang.org/x/net/context"
 	"gopkg.in/olivere/elastic.v5"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 const timeout = 60

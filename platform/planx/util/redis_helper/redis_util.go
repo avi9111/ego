@@ -3,8 +3,8 @@ package redis_helper
 import (
 	"errors"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type redisKeysHander func(keys []string, values []string) error

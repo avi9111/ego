@@ -5,10 +5,10 @@ import (
 	"strconv"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/config"
 )
 
 func RegCommands() {
@@ -104,9 +104,7 @@ func updateSysRollNotice(c *gm_command.Context, server, accountid string, params
 	return nil
 }
 
-//
 // 触发一个跑马灯
-//
 func activitySysRollNotice(c *gm_command.Context, server, accountid string, params []string) error {
 	logs.Info("activitySysRollNotice %s %v", server, params)
 

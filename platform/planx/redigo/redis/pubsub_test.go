@@ -20,7 +20,7 @@ import (
 	"sync"
 	"testing"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 func publish(channel, value interface{}) {

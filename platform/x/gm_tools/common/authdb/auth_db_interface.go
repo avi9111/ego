@@ -1,10 +1,10 @@
 package authdb
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authCfg "vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/auth/models"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
+	"taiyouxi/platform/planx/util/logs"
+	authCfg "taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/models"
+	"taiyouxi/platform/x/gm_tools/config"
 )
 
 var (

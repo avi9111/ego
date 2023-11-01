@@ -6,7 +6,7 @@ import (
 	"crypto"
 	"encoding/base64"
 
-	"vcs.taiyouxi.net/platform/x/api_gateway/util/rsa"
+	"taiyouxi/platform/x/api_gateway/util/rsa"
 )
 
 const SamsungChannel = "5000"

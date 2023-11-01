@@ -1,8 +1,9 @@
 package gin
 
 import (
+	"taiyouxi/platform/x/platform_http_service/config"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/x/platform_http_service/config"
 )
 
 type Platform interface {

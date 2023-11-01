@@ -3,9 +3,10 @@ package json2account
 import (
 	"encoding/json"
 	"fmt"
+	accountJson "taiyouxi/platform/planx/util/account_json"
+	"taiyouxi/platform/planx/util/redispool"
+
 	"github.com/bitly/go-simplejson"
-	"vcs.taiyouxi.net/platform/planx/util/account_json"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
 )
 
 func PrintErrInfo(format string, v ...interface{}) (res string) {

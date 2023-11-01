@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"testing"
 
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/config"
 )
 
 func TestDecodeJson(t *testing.T) {

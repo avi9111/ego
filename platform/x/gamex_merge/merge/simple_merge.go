@@ -3,12 +3,13 @@ package merge
 import (
 	"fmt"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+
 	"vcs.taiyouxi.net/jws/gamex/models/driver"
 	"vcs.taiyouxi.net/jws/gamex/models/helper"
 	"vcs.taiyouxi.net/jws/gamex/modules/dest_gen_first"
 	"vcs.taiyouxi.net/jws/gamex/modules/guild"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func GuildSimpleMerge() error {

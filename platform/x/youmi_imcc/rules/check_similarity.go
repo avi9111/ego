@@ -5,8 +5,8 @@ import (
 
 	"math"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/base"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/youmi_imcc/base"
 )
 
 var whiteList map[string]struct{}

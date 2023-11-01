@@ -4,12 +4,13 @@ import (
 	"encoding/json"
 	"strings"
 
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	gmConfig "taiyouxi/platform/x/gm_tools/config"
+	"taiyouxi/platform/x/gm_tools/tools/profile_tool"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	gmConfig "vcs.taiyouxi.net/platform/x/gm_tools/config"
-	"vcs.taiyouxi.net/platform/x/gm_tools/tools/profile_tool"
 )
 
 const (

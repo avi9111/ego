@@ -1,6 +1,6 @@
 package game
 
-import "vcs.taiyouxi.net/platform/planx/servers"
+import "taiyouxi/platform/planx/servers"
 
 type PreparePlayer func(accountid, ip string) Player
 

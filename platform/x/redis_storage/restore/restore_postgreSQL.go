@@ -3,9 +3,9 @@ package restore
 import (
 	"errors"
 
-	"vcs.taiyouxi.net/platform/planx/util/account_json"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
+	accountJson "taiyouxi/platform/planx/util/account_json"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
 )
 
 type RestorePostgreSQL struct {

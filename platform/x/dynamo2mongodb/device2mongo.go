@@ -9,8 +9,8 @@ import (
 	"path/filepath"
 
 	"strconv"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	. "vcs.taiyouxi.net/platform/x/auth/models"
+	"taiyouxi/platform/planx/util/logs"
+	. "taiyouxi/platform/x/auth/models"
 )
 
 var mdb DBByMongoDB

@@ -1,6 +1,6 @@
 package anticheatlog
 
-import "vcs.taiyouxi.net/platform/planx/util/eslogger"
+import "taiyouxi/platform/planx/util/eslogger"
 
 var PAntiCheatLogger *eslogger.ESLogger
 

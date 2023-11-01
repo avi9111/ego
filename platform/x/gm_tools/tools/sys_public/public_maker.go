@@ -3,6 +3,7 @@ package sys_public
 import (
 	"encoding/json"
 	"fmt"
+
 	//"time"
 
 	"strings"
@@ -13,12 +14,12 @@ import (
 	"os"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/ftp"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/qiniu"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
+	"taiyouxi/platform/x/gm_tools/common/ftp"
+	"taiyouxi/platform/x/gm_tools/common/qiniu"
+	"taiyouxi/platform/x/gm_tools/config"
 )
 
 var (
@@ -84,7 +85,7 @@ func (s *sysPublicMng) MkPublicForOneVersion(gid int64, ver string) ([]byte, err
 	res.Forceupdate = make([]PublicToServer, 0, pubLen)
 	res.Endpoint = "http://54.223.177.52:8081"
 
-	logs.Debug("MkPublicForOneVersion Init using %v time",time.Since(mkPublicForOneVersionTime))
+	logs.Debug("MkPublicForOneVersion Init using %v time", time.Since(mkPublicForOneVersionTime))
 	mkPublicForOneVersionTime = time.Now()
 
 	//now_t := time.Now().Unix()
@@ -123,7 +124,7 @@ func (s *sysPublicMng) MkPublicForOneVersion(gid int64, ver string) ([]byte, err
 		}
 	}
 	s.lock.RUnlock()
-	logs.Debug("MkPublicForOneVersion read data using %v time",time.Since(mkPublicForOneVersionTime))
+	logs.Debug("MkPublicForOneVersion read data using %v time", time.Since(mkPublicForOneVersionTime))
 	mkPublicForOneVersionTime = time.Now()
 
 	ends := s.GetEndpoint(gid, ver)
@@ -183,7 +184,7 @@ func (s *sysPublicMng) MkPublicForOneVersion(gid int64, ver string) ([]byte, err
 		etcd.Set(key, fmt.Sprintf("%d", maintaince_end_time), 0)
 	}
 
-	logs.Debug("MkPublicForOneVersion etcd options using %v time",time.Since(mkPublicForOneVersionTime))
+	logs.Debug("MkPublicForOneVersion etcd options using %v time", time.Since(mkPublicForOneVersionTime))
 	mkPublicForOneVersionTime = time.Now()
 
 	j, err := json.Marshal(res)
@@ -191,7 +192,7 @@ func (s *sysPublicMng) MkPublicForOneVersion(gid int64, ver string) ([]byte, err
 		logs.Error("[sysPublicMng] MkPublicToServer Marshal Err by %s", err.Error())
 		return nil, err
 	}
-	logs.Debug("MkPublicForOneVersion marshal data using %v time",time.Since(mkPublicForOneVersionTime))
+	logs.Debug("MkPublicForOneVersion marshal data using %v time", time.Since(mkPublicForOneVersionTime))
 	return j[:], nil
 }
 
@@ -224,7 +225,7 @@ func (s *sysPublicMng) SendOnePublic(is_debug bool, gid int64, ver string) error
 	} else {
 		logs.Info("ReleasePublic %d %s %v", gid, ver, string(data))
 	}
-	logs.Debug("SendOnePublic get data using %v time",time.Since(sendOnePublicTime))
+	logs.Debug("SendOnePublic get data using %v time", time.Since(sendOnePublicTime))
 	sendOnePublicTime = time.Now()
 
 	path := fmt.Sprintf("public/%d/", gid)
@@ -234,7 +235,7 @@ func (s *sysPublicMng) SendOnePublic(is_debug bool, gid int64, ver string) error
 		logs.Error("save public sys notice to local err", err)
 		return err
 	}
-	logs.Debug("SendOnePublic save local using %v time",time.Since(sendOnePublicTime))
+	logs.Debug("SendOnePublic save local using %v time", time.Since(sendOnePublicTime))
 	sendOnePublicTime = time.Now()
 
 	if ftp.FtpAddress != "" {
@@ -244,7 +245,7 @@ func (s *sysPublicMng) SendOnePublic(is_debug bool, gid int64, ver string) error
 			return err
 		}
 	}
-	logs.Debug("SendOnePublic ftp using %v time",time.Since(sendOnePublicTime))
+	logs.Debug("SendOnePublic ftp using %v time", time.Since(sendOnePublicTime))
 	sendOnePublicTime = time.Now()
 
 	if qiniu.IsActivity() {
@@ -254,7 +255,7 @@ func (s *sysPublicMng) SendOnePublic(is_debug bool, gid int64, ver string) error
 			return err
 		}
 	}
-	logs.Debug("SendOnePublic upload data using %v time",time.Since(sendOnePublicTime))
+	logs.Debug("SendOnePublic upload data using %v time", time.Since(sendOnePublicTime))
 	sendOnePublicTime = time.Now()
 
 	if config.Cfg.S3_Buckets_GongGao != "" {
@@ -267,7 +268,7 @@ func (s *sysPublicMng) SendOnePublic(is_debug bool, gid int64, ver string) error
 		}
 		logs.Debug("notice save s3 ok ")
 	}
-	logs.Debug("SendOnePublic save data using %v time",time.Since(sendOnePublicTime))
+	logs.Debug("SendOnePublic save data using %v time", time.Since(sendOnePublicTime))
 	return nil
 }
 

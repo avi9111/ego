@@ -2,10 +2,12 @@ package sdk
 
 import (
 	"fmt"
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
 	"time"
-	"vcs.taiyouxi.net/Godeps/_workspace/src/github.com/astaxie/beego/httplib"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
+
+	"github.com/astaxie/beego/httplib"
+	//"vcs.taiyouxi.net/Godeps/_workspace/src/github.com/astaxie/beego/httplib"
 )
 
 func Check6waves(token string) error {

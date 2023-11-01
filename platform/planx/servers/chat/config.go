@@ -3,7 +3,7 @@ package chat
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/servers/gate"
+	"taiyouxi/platform/planx/servers/gate"
 )
 
 type Config struct {

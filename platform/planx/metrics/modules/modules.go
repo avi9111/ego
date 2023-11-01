@@ -6,12 +6,13 @@ import (
 	"sync"
 	"time"
 
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+
 	gm "github.com/rcrowley/go-metrics"
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
 )
 
 const (

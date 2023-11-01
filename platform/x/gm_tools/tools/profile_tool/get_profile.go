@@ -8,12 +8,12 @@ import (
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
-	gmConfig "vcs.taiyouxi.net/platform/x/gm_tools/config"
-	"vcs.taiyouxi.net/platform/x/redis_storage/restore"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/util/storehelper"
+	gmConfig "taiyouxi/platform/x/gm_tools/config"
+	"taiyouxi/platform/x/redis_storage/restore"
 )
 
 func InitDB() {

@@ -11,12 +11,12 @@ import (
 
 	gm "github.com/rcrowley/go-metrics"
 
-	"vcs.taiyouxi.net/platform/planx/client"
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/safecache"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
+	"taiyouxi/platform/planx/client"
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/safecache"
+	"taiyouxi/platform/planx/util/secure"
 )
 
 const defaultTokenAliveDur = 36 * 3600 //36 HOUR
@@ -67,7 +67,7 @@ func newLoginInfo() *loginInfo {
 	return l
 }
 
-//queryUserLoginInfo handshake用来调用查询是否这个Logintoken已经推送到当前gate
+// queryUserLoginInfo handshake用来调用查询是否这个Logintoken已经推送到当前gate
 func (l *loginInfo) queryUserLoginInfo(loginToken string, agent *client.PacketConnAgent) (*LoginNotify, int64) {
 	realLoginToken := loginToken
 	// 重登的话客户端发过来的是加过re前缀的
@@ -181,7 +181,7 @@ func (l *loginInfo) getAcidByLoginToken(loginToken string) *LoginNotify {
 	}
 }
 
-//RegisterLoginNotify 通过login server通知rpc方式注册进来
+// RegisterLoginNotify 通过login server通知rpc方式注册进来
 // 通常玩家**准备**登录，在login server成功获取getGate后，此接口会被调用
 func (l *loginInfo) RegisterLoginNotify(loginToken string, lt *LoginNotify) bool {
 	logs.Trace("<Gate> loginInfo.RegisterLoginInfo coming! token got:%s", loginToken)

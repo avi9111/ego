@@ -5,14 +5,15 @@ import (
 
 	"time"
 
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/auth/models"
+	"taiyouxi/platform/x/yyb_gift_sender/config"
+
 	"vcs.taiyouxi.net/jws/gamex/models/mail/mailhelper"
 	"vcs.taiyouxi.net/jws/gamex/modules/mail_sender"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/auth/models"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/config"
 )
 
 const (

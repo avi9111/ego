@@ -6,8 +6,8 @@ import (
 	"net"
 	"strings"
 	"sync"
+	"taiyouxi/platform/planx/util/logs"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type CmdHandler func(ud interface{}, args []string) (string, error)

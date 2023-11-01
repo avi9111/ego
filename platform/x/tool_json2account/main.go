@@ -7,9 +7,9 @@ import (
 
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/account_json"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/tool_json2account/json2account"
+	accountJson "taiyouxi/platform/planx/util/account_json"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/tool_json2account/json2account"
 )
 
 func readFile(filename string) ([]byte, error) {

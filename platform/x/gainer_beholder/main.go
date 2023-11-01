@@ -1,10 +1,10 @@
 package main
 
 import (
+	"taiyouxi/platform/planx/util/RW_xlsx"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gainer_beholder/tools"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/RW_xlsx"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gainer_beholder/tools"
 )
 
 const (

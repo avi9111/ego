@@ -5,7 +5,7 @@ import (
 	"reflect"
 
 	"github.com/ugorji/go/codec"
-	//"vcs.taiyouxi.net/platform/planx/client"
+	//"taiyouxi/platform/planx/client"
 )
 
 type ChatMsg struct {
@@ -21,7 +21,7 @@ type ChatMsg2 struct {
 	Num  int
 }
 
-//MUST Only can be *Struct
+// MUST Only can be *Struct
 func (c *ChatMsg2) UnmarshalBinary(data []byte) error {
 	var mh codec.MsgpackHandle
 	dec := codec.NewDecoderBytes(data, &mh)

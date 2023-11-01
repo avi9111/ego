@@ -1,13 +1,15 @@
 package login
 
 import (
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	//∂"vcs.taiyouxi.net/platform/x/gm_tools/common/store"
+
+	//∂"taiyouxi/platform/x/gm_tools/common/store"
 	"encoding/json"
 
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
-	"vcs.taiyouxi.net/platform/x/gm_tools/util"
+	"taiyouxi/platform/x/gm_tools/config"
+	"taiyouxi/platform/x/gm_tools/util"
 )
 
 type pass struct {

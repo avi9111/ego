@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/uuid"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/store"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/uuid"
+	"taiyouxi/platform/x/gm_tools/common/store"
 )
 
 const MaxGrantNum = 100
@@ -60,7 +60,7 @@ func (a *Account) IsCookiePass(cookie string) bool {
 	return cookie == a.Cookie
 }
 
-//判断账号是否拥有权限
+// 判断账号是否拥有权限
 func (a *Account) IsGrant(gid, p int) bool {
 	if gid < 0 || gid >= len(a.Grants) {
 		return false
@@ -68,7 +68,7 @@ func (a *Account) IsGrant(gid, p int) bool {
 	return a.Grants[gid] >= p
 }
 
-//添加权限
+// 添加权限
 func (a *Account) Grant(gid int) {
 	if gid < 0 || gid >= len(a.Grants) {
 		return
@@ -76,7 +76,7 @@ func (a *Account) Grant(gid int) {
 	a.Grants[gid] = 1
 }
 
-//删除权限
+// 删除权限
 func (a *Account) DisGrant(gid int) {
 	if gid < 0 || gid >= len(a.Grants) {
 		return
@@ -84,7 +84,7 @@ func (a *Account) DisGrant(gid int) {
 	a.Grants[gid] = 0
 }
 
-//创建账号，name：账号名、typ：账户类型、pass：密码
+// 创建账号，name：账号名、typ：账户类型、pass：密码
 func NewAccount(name, typ, pass string) Account {
 	new_id := time_begin_unix*1000 + int64(id_count)
 	id_count++
@@ -196,7 +196,7 @@ func (s *AccountMng) SetGrant(name string, ids ...int) {
 	s.Accounts[name] = *acc
 }
 
-//清空账号name的权限
+// 清空账号name的权限
 func cleanGrant(acc *Account) *Account {
 	for i := range acc.Grants {
 		acc.DisGrant(i)
@@ -204,7 +204,7 @@ func cleanGrant(acc *Account) *Account {
 	return acc
 }
 
-//查询账号name的权限
+// 查询账号name的权限
 func (s *AccountMng) GetGrant(name string) (error, []int) {
 	acc := s.Get(name)
 	if acc == nil {
@@ -215,7 +215,7 @@ func (s *AccountMng) GetGrant(name string) (error, []int) {
 	return nil, acc.Grants[:]
 }
 
-//  权限的值的意义请参考 grants.go
+// 权限的值的意义请参考 grants.go
 func (s *AccountMng) Load() {
 	err := store.GetFromJson(store.NormalBucket, "Accounts", s)
 	logs.Trace("[AccountMng]Load %v", *s)

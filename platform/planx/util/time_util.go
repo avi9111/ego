@@ -7,7 +7,7 @@ import (
 
 	"strconv"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 /*
@@ -171,13 +171,14 @@ func IsTimeBetweenUnix(begin, end, t int64) bool {
 	return (begin <= 0 || t > begin) && (end <= 0 || t <= end)
 }
 
-/* WeekTime
-   从每周一零点开始每个半点和整点的计数
-   如 0 - 周一 0:00
-      1 -      0:30
-	  2 -      1:00
-	  2 -      1:11
-	  3 -      1:30
+/*
+	 WeekTime
+	   从每周一零点开始每个半点和整点的计数
+	   如 0 - 周一 0:00
+	      1 -      0:30
+		  2 -      1:00
+		  2 -      1:11
+		  3 -      1:30
 */
 func WeekTime(u int64, offset_tm string) int64 {
 	return WeekTimeUnix(u, offset_tm)
@@ -238,7 +239,7 @@ func DailyTimeUnix(u int64) int64 {
 	return (u - nb) / TimeSlotSec
 }
 
-//DailyRealTimeUnix 当天零点开始的秒数
+// DailyRealTimeUnix 当天零点开始的秒数
 func DailyRealTimeUnix(u int64) int64 {
 	nb := DailyBeginUnix(u)
 	return u - nb
@@ -263,7 +264,7 @@ func DailyTimeFromString(s string) int64 {
 	return DailyTime(t_in_time)
 }
 
-//DailyRealTimeFromString 从字符串转成 DailyRealTime, 效率一般，适合读配置时预先转换
+// DailyRealTimeFromString 从字符串转成 DailyRealTime, 效率一般，适合读配置时预先转换
 // "05:00" -> 18000
 func DailyRealTimeFromString(s string) int64 {
 	pre := "2015/1/1 "
@@ -297,8 +298,8 @@ func DayOffsetFromString(s string, u int64) int64 {
 }
 
 /*
- 计算时先计算这一段时间中可以增加多少,
- 将结余的时间返回
+计算时先计算这一段时间中可以增加多少,
+将结余的时间返回
 */
 func AccountTime2Point(now_unix_sec, last_unix_sex, one_need int64) (int64, int64) {
 	/*
@@ -318,7 +319,7 @@ func AccountTime2Point(now_unix_sec, last_unix_sex, one_need int64) (int64, int6
 }
 
 /*
-	纳秒从2015年8月1日开始, 目前用在Log中标记时间(数值比较小)
+纳秒从2015年8月1日开始, 目前用在Log中标记时间(数值比较小)
 */
 func tiNowUnixNanoStartTime() int64 {
 	return time.Date(2015, 8, 1, 0, 0, 0, 0, time.UTC).UnixNano() // 这个直接用UTC
@@ -331,7 +332,7 @@ func TiNowUnixNano() int64 {
 }
 
 /*
-	转换weekday，time里周日为0，cfg一般为7
+转换weekday，time里周日为0，cfg一般为7
 */
 func TimeWeekDayTranslate(weekday time.Weekday) int {
 	ret := int(weekday)
@@ -342,7 +343,7 @@ func TimeWeekDayTranslate(weekday time.Weekday) int {
 }
 
 /*
-	转换weekday，time里周日为0，cfg一般为7
+转换weekday，time里周日为0，cfg一般为7
 */
 func TimeWeekDayTranslateFromCfg(weekdayCfg int) int {
 	ret := weekdayCfg
@@ -396,8 +397,8 @@ func Clock(t time.Time) (int, int, int) {
 	return t.In(ServerTimeLocal).Clock()
 }
 
-//输入参数：Unix时间戳字符串，输出当地时间time结构
-//警告：如果返回错误，不要使用返回值。
+// 输入参数：Unix时间戳字符串，输出当地时间time结构
+// 警告：如果返回错误，不要使用返回值。
 func UnixStringToTimeByLoacl(unixTimeString string) (time.Time, error) {
 	//将输入的字符串转换为int64
 	unixtimeint64, err := strconv.ParseInt(unixTimeString, 10, 64)

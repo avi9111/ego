@@ -13,16 +13,17 @@ import (
 
 	"strconv"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/planx/util/tipay"
+	"taiyouxi/platform/planx/util/tipay/pay"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/config"
+	gmConfig "taiyouxi/platform/x/gm_tools/config"
+
 	"gopkg.in/olivere/elastic.v2"
 	"vcs.taiyouxi.net/jws/gamex/models/mail/mailhelper"
 	"vcs.taiyouxi.net/jws/gamex/uutil"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/planx/util/tipay"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/pay"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
-	gmConfig "vcs.taiyouxi.net/platform/x/gm_tools/config"
 )
 
 const (

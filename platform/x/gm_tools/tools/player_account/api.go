@@ -5,10 +5,10 @@ import (
 
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/authdb"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/authdb"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
 )
 
 func RegCommands() {

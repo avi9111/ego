@@ -3,12 +3,13 @@ package controllers
 import (
 	"fmt"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/x/auth/errorctl"
+	"taiyouxi/platform/x/auth/models"
+	"taiyouxi/platform/x/auth/models/sdk"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/x/auth/errorctl"
-	"vcs.taiyouxi.net/platform/x/auth/models"
-	"vcs.taiyouxi.net/platform/x/auth/models/sdk"
 )
 
 func (dic *DeviceIDController) RegDeviceWithVivoAndLogin_v2() gin.HandlerFunc {

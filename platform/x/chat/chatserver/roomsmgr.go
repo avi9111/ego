@@ -7,7 +7,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
 	"github.com/serialx/hashring"
 )

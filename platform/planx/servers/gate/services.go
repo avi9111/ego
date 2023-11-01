@@ -1,7 +1,7 @@
 package gate
 
 import (
-	"vcs.taiyouxi.net/platform/planx/client"
+	"taiyouxi/platform/planx/client"
 )
 
 type GameServerManager interface {

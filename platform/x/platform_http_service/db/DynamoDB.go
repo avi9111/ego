@@ -1,9 +1,9 @@
 package db
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/platform_http_service/config"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/platform_http_service/config"
 )
 
 type DBByDynamoDB struct {

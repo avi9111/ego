@@ -5,13 +5,14 @@ import (
 	_ "net/http/pprof"
 	"os"
 
-	_ "vcs.taiyouxi.net/platform/x/gm_tools/cmds/allinone"
+	_ "taiyouxi/platform/x/gm_tools/cmds/allinone"
+
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/version"
+	"taiyouxi/platform/x/gm_tools/cmds"
 
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/version"
-	"vcs.taiyouxi.net/platform/x/gm_tools/cmds"
 )
 
 func main() {

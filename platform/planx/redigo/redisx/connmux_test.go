@@ -19,9 +19,9 @@ import (
 	"sync"
 	"testing"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/internal/redistest"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/redigo/redisx"
+	"taiyouxi/platform/planx/redigo/internal/redistest"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redisx"
 )
 
 func TestConnMux(t *testing.T) {

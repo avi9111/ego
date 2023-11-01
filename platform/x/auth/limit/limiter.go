@@ -7,15 +7,17 @@ import (
 	"regexp"
 	"time"
 
-	"github.com/mailgun/oxy/utils"
 	"github.com/mailgun/timetools"
-	//"vcs.taiyouxi.net/platform/planx/util/iputil"
-	"vcs.taiyouxi.net/platform/planx/util/iputil"
-	"vcs.taiyouxi.net/platform/planx/util/ratelimit"
+	"github.com/vulcand/oxy/utils"
+
+	//"taiyouxi/platform/planx/util/iputil"
+	"taiyouxi/platform/planx/util/iputil"
+	"taiyouxi/platform/planx/util/ratelimit"
+
+	"strings"
+	"taiyouxi/platform/planx/util/logs"
 
 	"github.com/gin-gonic/gin"
-	"strings"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

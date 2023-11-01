@@ -9,14 +9,15 @@ import (
 
 	"sync"
 
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/core"
+	"taiyouxi/platform/x/gift_sender/sdk/alibaba_uc"
+	"taiyouxi/platform/x/gift_sender/sdk/hero"
+	"taiyouxi/platform/x/gift_sender/sdk/hmt_gift"
+
 	"github.com/fvbock/endless"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
-	"vcs.taiyouxi.net/platform/x/gift_sender/sdk/alibaba_uc"
-	"vcs.taiyouxi.net/platform/x/gift_sender/sdk/hero"
-	"vcs.taiyouxi.net/platform/x/gift_sender/sdk/hmt_gift"
 )
 
 func main() {

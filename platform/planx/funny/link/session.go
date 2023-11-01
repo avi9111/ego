@@ -8,7 +8,7 @@ import (
 	"sync"
 	"sync/atomic"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 var ErrClosed = errors.New("link.Session closed")

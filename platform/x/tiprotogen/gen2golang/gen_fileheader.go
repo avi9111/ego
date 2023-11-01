@@ -1,8 +1,8 @@
 package gen2golang
 
 import (
-	"vcs.taiyouxi.net/platform/x/tiprotogen/def"
-	"vcs.taiyouxi.net/platform/x/tiprotogen/util"
+	dsl "taiyouxi/platform/x/tiprotogen/def"
+	"taiyouxi/platform/x/tiprotogen/util"
 )
 
 func (g *genner2golang) genFileHeader(

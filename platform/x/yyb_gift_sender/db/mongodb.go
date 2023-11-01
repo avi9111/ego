@@ -3,10 +3,11 @@ package db
 import (
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/yyb_gift_sender/config"
+
 	"gopkg.in/mgo.v2"
 	"gopkg.in/mgo.v2/bson"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/config"
 )
 
 type DBByMongoDB struct {

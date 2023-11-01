@@ -7,14 +7,16 @@ import (
 	"encoding/json"
 	"errors"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	gmConfig "vcs.taiyouxi.net/platform/x/gm_tools/config"
-	//"vcs.taiyouxi.net/platform/x/gm_tools/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	gmConfig "taiyouxi/platform/x/gm_tools/config"
+
+	//"taiyouxi/platform/x/gm_tools/util"
 	"strconv"
+	"taiyouxi/platform/x/tool_account2json/account2json"
+	"taiyouxi/platform/x/tool_json2account/json2account"
+
 	"vcs.taiyouxi.net/jws/gamex/models/bag"
-	"vcs.taiyouxi.net/platform/x/tool_account2json/account2json"
-	"vcs.taiyouxi.net/platform/x/tool_json2account/json2account"
 )
 
 func RegCommands() {

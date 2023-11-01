@@ -1,13 +1,14 @@
 package main
 
 import (
+	"taiyouxi/platform/planx/util"
+	pConfig "taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/platform_http_service/config"
+	"taiyouxi/platform/x/platform_http_service/db"
+	gin2 "taiyouxi/platform/x/platform_http_service/gin"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util"
-	pConfig "vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/platform_http_service/config"
-	"vcs.taiyouxi.net/platform/x/platform_http_service/db"
-	gin2 "vcs.taiyouxi.net/platform/x/platform_http_service/gin"
 )
 
 func main() {

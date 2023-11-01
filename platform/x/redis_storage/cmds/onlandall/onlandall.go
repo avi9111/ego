@@ -1,13 +1,14 @@
 package onlandall
 
 import (
-	"github.com/codegangsta/cli"
 	"os"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
-	"vcs.taiyouxi.net/platform/x/redis_storage/cmds"
-	"vcs.taiyouxi.net/platform/x/redis_storage/cmds/helper"
-	"vcs.taiyouxi.net/platform/x/redis_storage/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
+	"taiyouxi/platform/x/redis_storage/cmds"
+	"taiyouxi/platform/x/redis_storage/cmds/helper"
+	"taiyouxi/platform/x/redis_storage/config"
+
+	"github.com/codegangsta/cli"
 )
 
 const ()

@@ -18,8 +18,8 @@ import (
 	"errors"
 	"sync"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/internal"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/internal"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 // ConnMux multiplexes one or more connections to a single underlying

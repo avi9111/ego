@@ -2,9 +2,9 @@ package serverinfo
 
 import (
 	"fmt"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/auth/models"
-	CBConfig "vcs.taiyouxi.net/platform/x/cheat_beholder/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/auth/models"
+	CBConfig "taiyouxi/platform/x/cheat_beholder/config"
 )
 
 var (

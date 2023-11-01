@@ -1,9 +1,9 @@
 package redis_helper
 
 import (
-	"vcs.taiyouxi.net/platform/planx/servers/game"
-	"vcs.taiyouxi.net/platform/planx/util/dns_rand"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
+	"taiyouxi/platform/planx/servers/game"
+	"taiyouxi/platform/planx/util/dns_rand"
+	"taiyouxi/platform/planx/util/redispool"
 )
 
 type RedisPoolCfg struct {

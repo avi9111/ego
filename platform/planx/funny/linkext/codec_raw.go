@@ -17,7 +17,7 @@ import (
 	"io"
 	"io/ioutil"
 
-	"vcs.taiyouxi.net/platform/planx/funny/link"
+	"taiyouxi/platform/planx/funny/link"
 )
 
 func RawBytes() link.CodecType {

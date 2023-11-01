@@ -7,10 +7,10 @@ import (
 
 	"github.com/astaxie/beego/httplib"
 
-	//"vcs.taiyouxi.net/platform/planx/servers/gate"
+	//"taiyouxi/platform/planx/servers/gate"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type loginConnector struct {

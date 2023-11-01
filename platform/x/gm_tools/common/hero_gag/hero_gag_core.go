@@ -4,10 +4,11 @@ import (
 	"log"
 	"os"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/config"
+
 	"github.com/gin-gonic/gin"
 	"gopkg.in/olivere/elastic.v5"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
 )
 
 const GagCommand = "banAccount"

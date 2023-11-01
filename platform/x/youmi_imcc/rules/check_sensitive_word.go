@@ -8,9 +8,9 @@ import (
 
 	"fmt"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/youmi_imcc/base"
 	"unicode/utf8"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/base"
 )
 
 const (

@@ -5,8 +5,8 @@ import (
 	//"github.com/cenkalti/backoff"
 	//"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	. "vcs.taiyouxi.net/platform/planx/util/timail"
+	"taiyouxi/platform/planx/util/logs"
+	. "taiyouxi/platform/planx/util/timail"
 )
 
 type MailDynamoDB struct {

@@ -1,8 +1,8 @@
 package accountJson
 
 import (
+	"taiyouxi/platform/planx/util/logs"
 	"testing"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func TestPrueJsonBase(t *testing.T) {

@@ -1,6 +1,6 @@
 package config
 
-import "vcs.taiyouxi.net/platform/planx/util/storehelper"
+import "taiyouxi/platform/planx/util/storehelper"
 
 type PostgerSQLOnlandConfig struct {
 	Host string `mapstructure:"Host"`

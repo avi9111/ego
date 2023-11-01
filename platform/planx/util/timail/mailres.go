@@ -3,7 +3,7 @@ package timail
 import (
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type MailRes struct {

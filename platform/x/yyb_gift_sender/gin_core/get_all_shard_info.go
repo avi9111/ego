@@ -3,16 +3,17 @@ package gin_core
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/gin-gonic/gin"
 	"net/url"
 	"sort"
 	"strconv"
 	"strings"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/yyb_gift_sender/config"
+	"taiyouxi/platform/x/yyb_gift_sender/encode"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/encode"
+
+	"github.com/gin-gonic/gin"
 )
 
 const QQ_Wechat_Both = 3

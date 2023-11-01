@@ -1,7 +1,7 @@
 package restore
 
 import (
-	"vcs.taiyouxi.net/platform/x/redis_storage/command"
+	"taiyouxi/platform/x/redis_storage/command"
 )
 
 // 注册命令

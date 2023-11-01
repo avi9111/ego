@@ -3,11 +3,11 @@ package device
 import (
 	"errors"
 	"fmt"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/config"
 )
 
 var dyDb *dynamodb.DynamoDB

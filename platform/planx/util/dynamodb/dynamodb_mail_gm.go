@@ -2,10 +2,11 @@ package dynamodb
 
 import (
 	"encoding/json"
+	"taiyouxi/platform/planx/util/logs"
+	. "taiyouxi/platform/planx/util/timail"
+
 	"github.com/aws/aws-sdk-go/aws"
 	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	. "vcs.taiyouxi.net/platform/planx/util/timail"
 )
 
 // MAX_Mail_ONE_GET * 10 不限制数量

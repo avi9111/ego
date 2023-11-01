@@ -7,16 +7,17 @@ import (
 
 	"sync"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	authConfig "taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/models"
+	"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/core"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/auth/models"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
 )
 
 const dbName = "UCGift"

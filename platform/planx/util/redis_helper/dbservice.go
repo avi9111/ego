@@ -4,10 +4,11 @@ import (
 	"fmt"
 	"time"
 
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/servers/game"
+
 	gm "github.com/rcrowley/go-metrics"
 	"github.com/timesking/seelog"
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/servers/game"
 )
 
 type DBService struct {
@@ -22,7 +23,7 @@ func init() {
 	dbss = make(map[uint]*DBService, 4)
 }
 
-//TODO 时间可能需要调整稍微大一点
+// TODO 时间可能需要调整稍微大一点
 var defaultConfig1 = `
 	<seelog type="adaptive" mininterval="1000" maxinterval="1000000" critmsgcount="100">
 		<outputs formatid="common">
@@ -34,6 +35,7 @@ var defaultConfig2 = `
 		</formats>
 	</seelog>
 	`
+
 const account_dbsaves = "accountdbsaves"
 
 func InitDBService(ShardId uint) {

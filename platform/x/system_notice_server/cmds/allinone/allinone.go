@@ -7,22 +7,23 @@ import (
 
 	"net"
 
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/servers"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	ucfg "taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/iplimitconfig"
+	"taiyouxi/platform/planx/util/logiclog"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/signalhandler"
+	"taiyouxi/platform/x/auth/limit"
+	"taiyouxi/platform/x/system_notice_server/cmds"
+	noticeCfg "taiyouxi/platform/x/system_notice_server/config"
+	"taiyouxi/platform/x/system_notice_server/logic"
+	routers2 "taiyouxi/platform/x/system_notice_server/routers"
+
 	"github.com/codegangsta/cli"
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/servers"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	ucfg "vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/iplimitconfig"
-	"vcs.taiyouxi.net/platform/planx/util/logiclog"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
-	"vcs.taiyouxi.net/platform/x/auth/limit"
-	"vcs.taiyouxi.net/platform/x/system_notice_server/cmds"
-	noticeCfg "vcs.taiyouxi.net/platform/x/system_notice_server/config"
-	"vcs.taiyouxi.net/platform/x/system_notice_server/logic"
-	routers2 "vcs.taiyouxi.net/platform/x/system_notice_server/routers"
 )
 
 func init() {

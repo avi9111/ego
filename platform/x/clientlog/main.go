@@ -4,12 +4,13 @@ import (
 	"fmt"
 	"os"
 
-	_ "vcs.taiyouxi.net/platform/x/clientlog/cmds/allinone"
+	_ "taiyouxi/platform/x/clientlog/cmds/allinone"
+
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/version"
+	"taiyouxi/platform/x/clientlog/cmds"
 
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/version"
-	"vcs.taiyouxi.net/platform/x/clientlog/cmds"
 )
 
 /*

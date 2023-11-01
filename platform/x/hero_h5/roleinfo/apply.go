@@ -3,29 +3,30 @@ package roleinfo
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/astaxie/beego/utils"
-	"github.com/cenk/backoff"
-	"github.com/gin-gonic/gin"
-	"github.com/golang/protobuf/proto"
 	"io"
 	"os"
 	"path/filepath"
 	"strconv"
 	"strings"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/core"
+	h5Config "taiyouxi/platform/x/hero_h5/config"
+	"taiyouxi/platform/x/hero_h5/serverinfo"
 	"time"
+
+	"github.com/astaxie/beego/utils"
+	"github.com/cenk/backoff"
+	"github.com/gin-gonic/gin"
+	"github.com/golang/protobuf/proto"
 	"vcs.taiyouxi.net/jws/gamex/models/account"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
 	"vcs.taiyouxi.net/jws/gamex/models/helper"
 	"vcs.taiyouxi.net/jws/gamex/modules/herogacharace"
 	"vcs.taiyouxi.net/jws/gamex/modules/ws_pvp"
 	ProtobufGen "vcs.taiyouxi.net/jws/gamex/protogen"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
-	h5Config "vcs.taiyouxi.net/platform/x/hero_h5/config"
-	"vcs.taiyouxi.net/platform/x/hero_h5/serverinfo"
 )
 
 /*测试base.go中的函数*/
@@ -51,7 +52,7 @@ type severgroup struct {
 	XXX_unrecognized []byte `json:"-"`
 }
 
-//策划的通关次数表
+// 策划的通关次数表
 const (
 	releation0  = 148
 	releation1  = 168
@@ -98,7 +99,7 @@ type accountInfo struct {
 	Result    int `json:"result"`
 }
 
-//获取玩家的ACID,若未找到则报错
+// 获取玩家的ACID,若未找到则报错
 func getACID(name string, gid, sid int) (string, error) {
 	_realSid, err := etcd.Get(fmt.Sprintf("%s/%d/%d/gm/mergedshard", h5Config.CommonConfig.Etcd_Root, gid, sid))
 	if err != nil {
@@ -118,7 +119,7 @@ func getACID(name string, gid, sid int) (string, error) {
 	return acID, nil
 }
 
-//获取信息，通过acid将玩家所有信息查找出来，放在结构体内
+// 获取信息，通过acid将玩家所有信息查找出来，放在结构体内
 func getInfo(acid string, gid, sid int) (accountInfo, error) {
 	profileID := "profile:" + acid
 	var result accountInfo = accountInfo{}
@@ -443,7 +444,7 @@ func getEtcdCfg1(gid, sid uint) (string, error) {
 	return etcdString, nil
 }
 
-//用于解析servergroup.data文件
+// 用于解析servergroup.data文件
 func loadServeGroup(filepath string) {
 	errcheck := func(err error) {
 		if err != nil {
@@ -475,7 +476,7 @@ func loadServeGroup(filepath string) {
 	}
 }
 
-//用于解析level_info.data文件
+// 用于解析level_info.data文件
 func loadStageData(filepath string) {
 	errcheck := func(err error) {
 		if err != nil {
@@ -578,7 +579,7 @@ func getRedisConn(redisUrl string, redisDB int, redisAuth string) (redis.Conn, e
 	return redisConn, nil
 }
 
-//自用获取路径函数
+// 自用获取路径函数
 func getMyDataPath() string {
 	workPath, _ := os.Getwd()
 	workPath, _ = filepath.Abs(workPath)

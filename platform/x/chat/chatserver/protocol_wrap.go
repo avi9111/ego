@@ -1,9 +1,10 @@
 package chatserver
 
 import (
-	"github.com/google/flatbuffers/go"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/chat/chatserver/proto/gen"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/chat/chatserver/proto/gen"
+
+	flatbuffers "github.com/google/flatbuffers/go"
 )
 
 var (

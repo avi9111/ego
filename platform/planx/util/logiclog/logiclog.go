@@ -1,6 +1,6 @@
 package logiclog
 
-import "vcs.taiyouxi.net/platform/planx/util/eslogger"
+import "taiyouxi/platform/planx/util/eslogger"
 
 /*
 	log分级说明：

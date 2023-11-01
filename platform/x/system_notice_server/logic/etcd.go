@@ -5,8 +5,8 @@ import (
 
 	"golang.org/x/net/context"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcdClient"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	client "taiyouxi/platform/planx/util/etcdClient"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type EtcdWatcher struct {

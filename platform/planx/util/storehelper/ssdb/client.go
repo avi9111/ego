@@ -2,14 +2,15 @@ package gossdb
 
 import (
 	"encoding/json"
+	"strconv"
+	ssdb "taiyouxi/platform/planx/util/storehelper/ssdb/client"
+	"time"
+
 	"github.com/seefan/goerr"
 	"github.com/seefan/to"
-	"strconv"
-	"time"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper/ssdb/client"
 )
 
-//可关闭连接
+// 可关闭连接
 type Client struct {
 	ssdb.Client
 	pool     *Connectors //来源的连接池
@@ -17,7 +18,7 @@ type Client struct {
 	isOpen   bool        //是否已连接
 }
 
-//打开连接
+// 打开连接
 func (this *Client) Start() error {
 	if this.isOpen {
 		return nil
@@ -32,7 +33,7 @@ func (this *Client) Start() error {
 	return nil
 }
 
-//关闭连接
+// 关闭连接
 func (this *Client) Close() {
 	this.lastTime = time.Now()
 	if this.pool == nil { //连接池不存在，只关闭自己的连接
@@ -43,18 +44,18 @@ func (this *Client) Close() {
 	}
 }
 
-//检查连接情况
+// 检查连接情况
 //
-//  返回 bool，如果可以正常查询数据库信息，就返回true，否则返回false
+//	返回 bool，如果可以正常查询数据库信息，就返回true，否则返回false
 func (this *Client) Ping() bool {
 	_, err := this.Info()
 	return err == nil
 }
 
-//查询数据库大小
+// 查询数据库大小
 //
-//  返回 re，返回数据库的估计大小, 以字节为单位. 如果服务器开启了压缩, 返回压缩后的大小.
-//  返回 err，执行的错误
+//	返回 re，返回数据库的估计大小, 以字节为单位. 如果服务器开启了压缩, 返回压缩后的大小.
+//	返回 err，执行的错误
 func (this *Client) DbSize() (re int, err error) {
 	resp, err := this.Do("dbsize")
 	if err != nil {
@@ -66,10 +67,10 @@ func (this *Client) DbSize() (re int, err error) {
 	return -1, makeError(resp)
 }
 
-//返回服务器的信息.
+// 返回服务器的信息.
 //
-//  返回 re，返回数据库的估计大小, 以字节为单位. 如果服务器开启了压缩, 返回压缩后的大小.
-//  返回 err，执行的错误
+//	返回 re，返回数据库的估计大小, 以字节为单位. 如果服务器开启了压缩, 返回压缩后的大小.
+//	返回 err，执行的错误
 func (this *Client) Info() (re []string, err error) {
 	resp, err := this.Do("info")
 	if err != nil {
@@ -81,7 +82,7 @@ func (this *Client) Info() (re []string, err error) {
 	return nil, makeError(resp)
 }
 
-//对数据进行编码
+// 对数据进行编码
 func (this *Client) encoding(value interface{}, hasArray bool) string {
 	switch t := value.(type) {
 	case int, int8, int16, int32, int64, uint, uint8, uint16, uint32, uint64, float32, float64, complex64, complex128:
@@ -115,7 +116,7 @@ func (this *Client) encoding(value interface{}, hasArray bool) string {
 	}
 }
 
-//生成通过的错误信息，已经确定是有错误
+// 生成通过的错误信息，已经确定是有错误
 func makeError(resp []string, errKey ...interface{}) error {
 	if len(resp) < 1 {
 		return goerr.New("ssdb respone error")

@@ -5,7 +5,7 @@ import (
 	"crypto/md5"
 	"encoding/gob"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type DirtyChecker interface {

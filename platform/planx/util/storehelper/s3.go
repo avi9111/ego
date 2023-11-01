@@ -1,6 +1,6 @@
 package storehelper
 
-import "vcs.taiyouxi.net/platform/planx/util/cloud_db/s3db"
+import "taiyouxi/platform/planx/util/cloud_db/s3db"
 
 type BucketCannedACL string
 

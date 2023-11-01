@@ -4,7 +4,7 @@ import (
 	"math/rand"
 	"sort"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type RandSet struct {
@@ -336,9 +336,7 @@ func (r *RandSetMap) Rand(k string, rd *rand.Rand) (string, bool) {
 	return rander.Rand(rd), true
 }
 
-//
 // 随机判断是否触发， 按照 n / N 的概率判定一个事件是否为真
-//
 func RandIfTrue(rd *rand.Rand, n, N int64) bool {
 	if N <= 0 {
 		return false

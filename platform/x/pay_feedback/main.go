@@ -3,10 +3,11 @@ package main
 import (
 	"os"
 
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/pay_feedback/imp"
+
 	"vcs.taiyouxi.net/jws/gamex/models/driver"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/pay_feedback/imp"
 )
 
 const (

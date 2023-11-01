@@ -3,9 +3,11 @@ package main
 import (
 	"flag"
 	"net"
+
 	// "os"
-	"vcs.taiyouxi.net/platform/planx/client"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/client"
+	"taiyouxi/platform/planx/util/logs"
+
 	// "strconv"
 	"time"
 )

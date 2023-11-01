@@ -4,14 +4,14 @@ import (
 	"encoding/csv"
 	"fmt"
 	"os"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/cheat_beholder/accountinfo"
+	CBConfig "taiyouxi/platform/x/cheat_beholder/config"
+	"taiyouxi/platform/x/cheat_beholder/serverinfo"
+	"taiyouxi/platform/x/gift_sender/config"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/cheat_beholder/accountinfo"
-	CBConfig "vcs.taiyouxi.net/platform/x/cheat_beholder/config"
-	"vcs.taiyouxi.net/platform/x/cheat_beholder/serverinfo"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
 )
 
 func main() {

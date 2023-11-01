@@ -6,8 +6,8 @@ package storehelper
 //     "strings"
 //     "sync"
 //     "time"
-//     "vcs.taiyouxi.net/platform/planx/util/dynamodb"
-//     "vcs.taiyouxi.net/platform/planx/util/logs"
+//     "taiyouxi/platform/planx/util/dynamodb"
+//     "taiyouxi/platform/planx/util/logs"
 // )
 
 // type StoreBinaryDynamoDB struct {

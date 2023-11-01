@@ -6,11 +6,12 @@ import (
 	"sync"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+
+	"taiyouxi/platform/planx/servers/db"
 
 	"github.com/timesking/seelog"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
 )
 
 type ESLogger struct {
@@ -43,12 +44,14 @@ type ESLoggerInfo struct {
 https://github.com/cihub/seelog/wiki/Receiver-reference#rolling-file-writer-or-rotation-file-writer
 <!--conf/logiclog.xml-->
 <seelog>
-    <outputs formatid="common">
-        <rollingfile type="date" filename="logics" datepattern="02.01.2006.log" maxrolls="7" />
-	</outputs>
-	<formats>
-		<format id="common"  format="%Msg%n"/>
-	</formats>
+
+	    <outputs formatid="common">
+	        <rollingfile type="date" filename="logics" datepattern="02.01.2006.log" maxrolls="7" />
+		</outputs>
+		<formats>
+			<format id="common"  format="%Msg%n"/>
+		</formats>
+
 </seelog>
 */
 func (l *ESLogger) ReturnLoadLogger() func(n string, cmd config.LoadCmd) {

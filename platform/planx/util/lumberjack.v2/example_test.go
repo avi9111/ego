@@ -3,7 +3,7 @@ package lumberjack
 import (
 	"log"
 
-	"vcs.taiyouxi.net/platform/planx/util/lumberjack.v2"
+	"taiyouxi/platform/planx/util/lumberjack.v2"
 )
 
 // To use lumberjack with the standard library's log package, just pass it into

@@ -5,14 +5,14 @@ import (
 	"fmt"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	cfg "vcs.taiyouxi.net/platform/x/auth/config"
+	"taiyouxi/platform/planx/util/logs"
+	cfg "taiyouxi/platform/x/auth/config"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/secure"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 type DBByDynamoDB struct {
@@ -191,7 +191,7 @@ func (d *DBByDynamoDB) IsNameExist(name string) (int, error) {
 	}
 }
 
-//返回逻辑错误：XErrAuthUsernameNotFound
+// 返回逻辑错误：XErrAuthUsernameNotFound
 func (d *DBByDynamoDB) GetUnKey(name string, checkGM bool) (
 	user db.UserID, error error, isGM bool) {
 	// 首先去gm表查

@@ -5,8 +5,8 @@ import (
 
 	"fmt"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logiclog"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logiclog"
 )
 
 /*
@@ -24,7 +24,7 @@ type MNSelectorState struct {
 	DefaultSpace   int64 `json:"dm"`
 }
 
-//GoString GoStringer interface
+// GoString GoStringer interface
 func (m *MNSelectorState) GoString() string {
 	str := ""
 
@@ -69,9 +69,9 @@ func (m *MNSelectorState) LogicLog(acid, logTyp string, idx string) {
 }
 
 /*
-	N/M M次必中N次，
-	随机到true， M-- N--
-	随机到false, M--
+N/M M次必中N次，
+随机到true， M-- N--
+随机到false, M--
 */
 func (m *MNSelectorState) Selector(rd *rand.Rand) (selected bool) {
 	if m.Space <= 0 {

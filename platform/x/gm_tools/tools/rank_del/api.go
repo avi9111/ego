@@ -5,10 +5,11 @@ import (
 	"fmt"
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/config"
+
 	"github.com/astaxie/beego/httplib"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
 )
 
 const (
@@ -49,7 +50,7 @@ func delRank(c *gm_command.Context, server, accountid string, params []string) e
 	return nil
 }
 
-//伪造申请，调用delRank，删除希望删除的榜单
+// 伪造申请，调用delRank，删除希望删除的榜单
 func DelPlayerRanks(c *gm_command.Context, server, accountid string) error {
 	var flag bool
 	var targeterr error

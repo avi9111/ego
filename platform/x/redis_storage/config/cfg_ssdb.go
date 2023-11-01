@@ -1,8 +1,8 @@
 package config
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/storehelper"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/storehelper"
 )
 
 type SSDBOnlandConfig struct {

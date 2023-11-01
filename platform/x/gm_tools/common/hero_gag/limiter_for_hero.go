@@ -1,14 +1,15 @@
 package hero_gag
 
 import (
-	"github.com/gin-gonic/gin"
 	"net"
 	"net/http"
-	"vcs.taiyouxi.net/platform/planx/util/iputil"
+	"taiyouxi/platform/planx/util/iputil"
+
+	"github.com/gin-gonic/gin"
 
 	"sync"
-	"vcs.taiyouxi.net/platform/planx/util/iplimitconfig"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/iplimitconfig"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type internalIP struct {

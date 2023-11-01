@@ -3,12 +3,13 @@ package dynamodb
 import (
 	"fmt"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/aws/aws-sdk-go/aws"
 	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
-//TODO: YZH 这里扫描了所有的数据表,很奇怪
+// TODO: YZH 这里扫描了所有的数据表,很奇怪
 type TableInfo struct {
 	Name    string
 	Hash_t  string

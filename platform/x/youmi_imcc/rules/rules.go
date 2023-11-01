@@ -1,6 +1,6 @@
 package rules
 
-import "vcs.taiyouxi.net/platform/x/youmi_imcc/base"
+import "taiyouxi/platform/x/youmi_imcc/base"
 
 /*
 	0 represent pass, -1 represent infinite max

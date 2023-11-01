@@ -1,12 +1,12 @@
-//在etcd中注册游戏分服当前正在使用的redis数据库的地址端口等信息。
+// 在etcd中注册游戏分服当前正在使用的redis数据库的地址端口等信息。
 package etcd_redis
 
 import (
 	"fmt"
 	"strconv"
 	"strings"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 const (

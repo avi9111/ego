@@ -6,8 +6,8 @@ import (
 
 	"golang.org/x/net/websocket"
 
-	"vcs.taiyouxi.net/platform/planx/funny/link"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/funny/link"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 func WebsocketType() link.CodecType {
@@ -47,9 +47,9 @@ func (codecType websocketCodecType) NewDecoder(r io.Reader) link.Decoder {
 	return nil
 }
 
-//可以直接使用golang.org/x/net/websocket库的websocket.Conn，而不用使用这层封装。
-//这里依然使用了这个封装，是因为websocket.go文件中的GinWebSocketListen需要使用websocketConn这个类型
-//因此，如果使用websocket.Conn请自己封装新的GinWebSocketListen
+// 可以直接使用golang.org/x/net/websocket库的websocket.Conn，而不用使用这层封装。
+// 这里依然使用了这个封装，是因为websocket.go文件中的GinWebSocketListen需要使用websocketConn这个类型
+// 因此，如果使用websocket.Conn请自己封装新的GinWebSocketListen
 type websocketEnDecoder struct {
 	WSConn        *websocketConn
 	writeDeadLine time.Duration

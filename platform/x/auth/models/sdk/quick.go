@@ -5,11 +5,12 @@ import (
 
 	"time"
 
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
+
 	"github.com/astaxie/beego/httplib"
 	"github.com/cenk/backoff"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
 )
 
 const (

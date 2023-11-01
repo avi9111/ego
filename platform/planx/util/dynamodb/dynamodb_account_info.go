@@ -8,7 +8,7 @@ package dynamodb
 //
 //	"github.com/aws/aws-sdk-go/aws"
 //	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
-//	"vcs.taiyouxi.net/platform/planx/util/logs"
+//	"taiyouxi/platform/planx/util/logs"
 //)
 //
 //const (

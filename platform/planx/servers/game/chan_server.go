@@ -7,11 +7,11 @@ import (
 	"github.com/siddontang/go/timingwheel"
 	"github.com/ugorji/go/codec"
 
-	"vcs.taiyouxi.net/platform/planx/client"
-	//"vcs.taiyouxi.net/platform/planx/servers"
+	"taiyouxi/platform/planx/client"
+	//"taiyouxi/platform/planx/servers"
 	"strconv"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 var secondsTimer *timingwheel.TimingWheel
@@ -76,12 +76,12 @@ func (agent *ChanAgent) GetGoneChan() <-chan struct{} {
 	return agent.done
 }
 
-//AllinOne模式特有：
-//因为ChanAgent是GameServer的代理，模拟tcp模式下的使用
-//因此同一个实例的ChanAgent在Gate中被当成相反的读写模式
+// AllinOne模式特有：
+// 因为ChanAgent是GameServer的代理，模拟tcp模式下的使用
+// 因此同一个实例的ChanAgent在Gate中被当成相反的读写模式
 // GameServer(Write) --> ChanAgent.Out --> Gate(GetReadingChan)
 // GameServer(Read) <-- ChanAgent.In <-- Gate(SendPacket)
-//因此不得不使用独立的chan作为ChanAgent模拟断线的形式。
+// 因此不得不使用独立的chan作为ChanAgent模拟断线的形式。
 func (agent *ChanAgent) close() {
 	close(agent.done)
 }

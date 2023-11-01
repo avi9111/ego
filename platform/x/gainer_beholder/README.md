@@ -35,4 +35,4 @@
     则认定订单发生异常
 ##使用工具：
     Gainer_Beholder工具使用了planx/util的RW_xlsx包
-    进入"vcs.taiyouxi.net/platform/planx/util/RW_xlsx"以查看更多信息
+    进入"taiyouxi/platform/planx/util/RW_xlsx"以查看更多信息

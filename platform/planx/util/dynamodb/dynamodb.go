@@ -8,11 +8,12 @@ import (
 
 	"time"
 
+	"taiyouxi/platform/planx/util/awshelper"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/aws/aws-sdk-go/aws"
 	DDB "github.com/aws/aws-sdk-go/service/dynamodb"
 	"github.com/cenk/backoff"
-	"vcs.taiyouxi.net/platform/planx/util/awshelper"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type DynamoDB struct {
@@ -257,8 +258,8 @@ func (d *DynamoDB) SetByHashM(table_name string, hash interface{},
 	}
 
 	put_input := &DDB.PutItemInput{
-		TableName: aws.String(table_name),
-		Item:      items,
+		TableName:              aws.String(table_name),
+		Item:                   items,
 		ReturnConsumedCapacity: aws.String("TOTAL"),
 		Expected:               map[string]*DDB.ExpectedAttributeValue{},
 	}
@@ -281,8 +282,8 @@ func (d *DynamoDB) SetByHashM_IfNoExist(table_name string, hash interface{},
 	}
 
 	put_input := &DDB.PutItemInput{
-		TableName: aws.String(table_name),
-		Item:      items,
+		TableName:              aws.String(table_name),
+		Item:                   items,
 		ReturnConsumedCapacity: aws.String("TOTAL"),
 		//Expected:               map[string]*DDB.ExpectedAttributeValue{},
 

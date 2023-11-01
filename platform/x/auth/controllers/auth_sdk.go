@@ -3,16 +3,17 @@ package controllers
 import (
 	"fmt"
 
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/uuid"
+	"taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/errorctl"
+	"taiyouxi/platform/x/auth/logiclog"
+	"taiyouxi/platform/x/auth/models"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/uuid"
-	"vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/auth/errorctl"
-	"vcs.taiyouxi.net/platform/x/auth/logiclog"
-	"vcs.taiyouxi.net/platform/x/auth/models"
 )
 
 const (
@@ -29,9 +30,9 @@ func init() {
 }
 
 /*
-	韩国google和onestore互相冲突情况处理
-	1、5005的还继续在5005里玩
-	2、5006的先判断在5006里是否有账号，如果有继续在5006里玩；如果没有就去5005
+韩国google和onestore互相冲突情况处理
+1、5005的还继续在5005里玩
+2、5006的先判断在5006里是否有账号，如果有继续在5006里玩；如果没有就去5005
 */
 func ko_spec_channel(sdkFlag, sdkUid, _channelId string) string {
 	channelId := convertChannel(_channelId)

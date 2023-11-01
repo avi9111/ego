@@ -9,13 +9,13 @@ import (
 	"strconv"
 
 	"fmt"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/api_gateway/logiclog"
+	"taiyouxi/platform/x/api_gateway/util"
+
 	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/jws/gamex/protogen"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/api_gateway/logiclog"
-	"vcs.taiyouxi.net/platform/x/api_gateway/util"
 )
 
 const (
@@ -193,7 +193,7 @@ func QuickPayNotify(typ string, data sdkPayData) gin.HandlerFunc {
 			msg := messages.Message
 			logiclog.LogPay(data.Name, uid, false, msg.Channel, msg.ChannelUid, msg.Order_no, msg.Pay_time,
 				msg.Amount, msg.Status, msg.IsTest, msg.Note, msg.Game_order, msg.Extras_params,
-				game_order, tistatus_delivered, payTime, productId, ver,fmt.Sprintf("%d:%d", pkgid, subpkgid))
+				game_order, tistatus_delivered, payTime, productId, ver, fmt.Sprintf("%d:%d", pkgid, subpkgid))
 			logs.Debug("QuickPayNotify order %s fail", hash_key)
 			c.String(http.StatusBadRequest, "Status Failed")
 			return
@@ -282,7 +282,7 @@ func QuickPayNotify(typ string, data sdkPayData) gin.HandlerFunc {
 		msg := messages.Message
 		logiclog.LogPay(data.Name, uid, true, msg.Channel, msg.ChannelUid, msg.Order_no, msg.Pay_time,
 			msg.Amount, msg.Status, msg.IsTest, msg.Note, msg.Game_order, msg.Extras_params,
-			game_order, tistatus_delivered, payTime, productId, ver,fmt.Sprintf("%d:%d", pkgid, subpkgid))
+			game_order, tistatus_delivered, payTime, productId, ver, fmt.Sprintf("%d:%d", pkgid, subpkgid))
 
 		logs.Debug("QuickPayNotify order %s success", messages.Message.Order_no)
 		c.String(http.StatusOK, resS)

@@ -3,7 +3,7 @@ package models
 import (
 	"errors"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
+	"taiyouxi/platform/planx/servers/db"
 )
 
 type DBInterface interface {
@@ -34,7 +34,7 @@ type DBInterface interface {
 	SetPayFeedBackIfNot(uid string) (error, bool)
 }
 
-//XXX 曾经这里有Redis的使用接口，目前只使用DynamoDB
+// XXX 曾经这里有Redis的使用接口，目前只使用DynamoDB
 var db_interface DBInterface = &DBByDynamoDB{}
 
 var (

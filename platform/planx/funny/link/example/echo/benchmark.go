@@ -14,8 +14,9 @@ import (
 	"sync/atomic"
 	"time"
 
+	"taiyouxi/platform/planx/funny/link"
+
 	_ "github.com/funny/utest"
-	"vcs.taiyouxi.net/platform/planx/funny/link"
 )
 
 var (
@@ -87,14 +88,16 @@ const OutputFormat = "Send Count: %d, Recv Count: %d, Read Count: %d, Write Coun
 // This is an benchmark tool work with the echo_server.
 //
 // Start echo_server with 'bench' flag
-//     go run echo_server.go -bench
+//
+//	go run echo_server.go -bench
 //
 // Start benchmark with echo_server address
-//     go run echo_benchmark.go
-//     go run echo_benchmark.go -num=100
-//     go run echo_benchmark.go -size=1024
-//     go run echo_benchmark.go -time=20
-//     go run echo_benchmark.go -addr="127.0.0.1:10010"
+//
+//	go run echo_benchmark.go
+//	go run echo_benchmark.go -num=100
+//	go run echo_benchmark.go -size=1024
+//	go run echo_benchmark.go -time=20
+//	go run echo_benchmark.go -addr="127.0.0.1:10010"
 func main() {
 	flag.Parse()
 

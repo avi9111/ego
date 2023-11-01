@@ -5,8 +5,9 @@ import (
 
 	"errors"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/jackc/pgx"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 type StorePostgreSQL struct {

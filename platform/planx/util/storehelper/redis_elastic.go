@@ -10,9 +10,10 @@ import (
 
 	"time"
 
+	accountJson "taiyouxi/platform/planx/util/account_json"
+
 	"github.com/bitly/go-simplejson"
 	"gopkg.in/olivere/elastic.v2"
-	"vcs.taiyouxi.net/platform/planx/util/account_json"
 )
 
 const (

@@ -7,7 +7,7 @@ import (
 
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type PlayerMsgInfoFromNet struct {

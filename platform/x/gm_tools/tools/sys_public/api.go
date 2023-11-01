@@ -8,13 +8,13 @@ import (
 
 	"os/exec"
 
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/secure"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/config"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
 )
 
 func RegCommands() {
@@ -41,7 +41,7 @@ func getSysPublic(c *gm_command.Context, server, accountid string, params []stri
 	getSysPublicTime := time.Now()
 	res := sysPublicManager.GetAll(params[0])
 	c.SetData(string(res))
-	logs.Debug("loadSysPublic used %v time",time.Since(getSysPublicTime))
+	logs.Debug("loadSysPublic used %v time", time.Since(getSysPublicTime))
 	return nil
 }
 
@@ -85,7 +85,7 @@ func sendSysPublic(c *gm_command.Context, server, accountid string, params []str
 	logs.Trace("tb:%v te:%v", tb, te)
 
 	s := NewSysPublic(gid, p, typ, tb, te, is_sended, params[6], params[7], params[8], params[9], params[10], params[11])
-	logs.Debug("sendSysPublic read Params using %v time",time.Since(sendSysPublicTime))
+	logs.Debug("sendSysPublic read Params using %v time", time.Since(sendSysPublicTime))
 
 	sendSysPublicTime = time.Now()
 
@@ -100,7 +100,7 @@ func sendSysPublic(c *gm_command.Context, server, accountid string, params []str
 
 	sysPublicManager.Add(s)
 
-	logs.Debug("sendSysPublic Add NewSysPublic using %v time",time.Since(sendSysPublicTime))
+	logs.Debug("sendSysPublic Add NewSysPublic using %v time", time.Since(sendSysPublicTime))
 	return nil
 }
 

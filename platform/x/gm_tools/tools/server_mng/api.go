@@ -6,20 +6,20 @@ import (
 	"strconv"
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
 
 	"errors"
 	"fmt"
 
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/supervisord"
-	"vcs.taiyouxi.net/platform/x/gm_tools/config"
-	"vcs.taiyouxi.net/platform/x/gm_tools/tools/act_valid"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/supervisord"
+	"taiyouxi/platform/x/gm_tools/config"
+	"taiyouxi/platform/x/gm_tools/tools/act_valid"
 )
 
 func RegCommands() {
@@ -205,7 +205,7 @@ func getShardsFromEtcd(c *gm_command.Context, server, accountid string, params [
 	return nil
 }
 
-//只改变服务器状态
+// 只改变服务器状态
 func setShardStateEtcd(c *gm_command.Context, server, accountid string, params []string) error {
 	gid := params[0]
 	sid := params[1]

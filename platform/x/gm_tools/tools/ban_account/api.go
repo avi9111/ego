@@ -4,6 +4,7 @@ import (
 	"errors"
 	"fmt"
 	"strings"
+
 	//"strconv"
 	"crypto/sha1"
 	"encoding/json"
@@ -11,14 +12,15 @@ import (
 	"sync"
 	"time"
 
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/gm_tools/common/gm_command"
+	gmConfig "taiyouxi/platform/x/gm_tools/config"
+	"taiyouxi/platform/x/gm_tools/tools/rank_del"
+	"taiyouxi/platform/x/gm_tools/util"
+
 	"github.com/astaxie/beego/httplib"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/gm_tools/common/gm_command"
-	gmConfig "vcs.taiyouxi.net/platform/x/gm_tools/config"
-	"vcs.taiyouxi.net/platform/x/gm_tools/tools/rank_del"
-	"vcs.taiyouxi.net/platform/x/gm_tools/util"
 )
 
 type BatchDealResult struct {

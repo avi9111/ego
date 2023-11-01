@@ -1,10 +1,10 @@
 package tipay
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/dynamopay"
-	"vcs.taiyouxi.net/platform/planx/util/tipay/mongodbpay"
-	. "vcs.taiyouxi.net/platform/planx/util/tipay/pay"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/tipay/dynamopay"
+	"taiyouxi/platform/planx/util/tipay/mongodbpay"
+	. "taiyouxi/platform/planx/util/tipay/pay"
 )
 
 func NewPayDriver(mc PayDBConfig) (PayDB, error) {

@@ -1,8 +1,9 @@
 package gate
 
 import (
+	"taiyouxi/platform/planx/client"
+
 	"github.com/ugorji/go/codec"
-	"vcs.taiyouxi.net/platform/planx/client"
 )
 
 func sendKickNotify(sendpkt func(*client.Packet) bool,

@@ -4,8 +4,8 @@ package gen2golang
 package logics
 
 import (
-	"vcs.taiyouxi.net/platform/planx/servers"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/servers"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 // {{ProtoName}} : {{ProtoTitle}}
@@ -18,7 +18,7 @@ import (
 var headerTemplate string = `package logics
 
 import (
-	"vcs.taiyouxi.net/platform/planx/servers"
+	"taiyouxi/platform/planx/servers"
 )
 
 // %s : %s
@@ -29,7 +29,7 @@ import (
 var multiFileHeader string = `package logics
 
 import (
-	"vcs.taiyouxi.net/platform/planx/servers"
+	"taiyouxi/platform/planx/servers"
 )`
 var multiFileAnnotation string = `// %s : %s
 // %s
@@ -126,7 +126,7 @@ var paramTemplate string = "	%s %s `codec:\"%s\"` // %s"
 
 var pathRegBegin string = `package logics
 
-import "vcs.taiyouxi.net/platform/planx/servers"
+import "taiyouxi/platform/planx/servers"
 
 func handleAllGenFunc(r *servers.Mux, p *Account) {`
 

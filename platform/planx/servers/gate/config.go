@@ -1,9 +1,9 @@
 package gate
 
 import (
-	"vcs.taiyouxi.net/platform/planx/servers"
-	"vcs.taiyouxi.net/platform/planx/servers/gate/ccumetrics"
-	"vcs.taiyouxi.net/platform/planx/servers/gate/rpc"
+	"taiyouxi/platform/planx/servers"
+	"taiyouxi/platform/planx/servers/gate/ccumetrics"
+	"taiyouxi/platform/planx/servers/gate/rpc"
 )
 
 // Service ...
@@ -45,7 +45,7 @@ const (
 	RunModeProd = "prod"
 )
 
-//IsRunModeProd 是否当前处于生产模式
+// IsRunModeProd 是否当前处于生产模式
 func (c *Config) IsRunModeProd() bool {
 	return c.GateConfig.RunMode == RunModeProd
 }

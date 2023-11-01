@@ -1,10 +1,11 @@
 package routers
 
 import (
+	"taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/auth/controllers"
+	"taiyouxi/platform/x/auth/limit"
+
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/x/auth/controllers"
-	"vcs.taiyouxi.net/platform/x/auth/limit"
 )
 
 func statsCCU() gin.HandlerFunc {
@@ -38,7 +39,7 @@ func RegAuth(g *gin.Engine) {
 	auth_publicV2.POST("deviceWithEnjoy", device_id_controller.RegDeviceWithEnjoyAndLogin_v2())
 	auth_publicV2.POST("deviceWithJwsvn", device_id_controller.RegDeviceWithVNAndLogin_v2())
 	auth_publicV2.POST("deviceWithEnjoyKo", device_id_controller.RegDeviceWithEnjoyKoAndLogin_v2())
-	auth_publicV2.POST("deviceWithJwsja",device_id_controller.RegDeviceWith6wavesAndLogin_v2())
+	auth_publicV2.POST("deviceWithJwsja", device_id_controller.RegDeviceWith6wavesAndLogin_v2())
 	// 下面是测试接口
 	if config.Cfg.Runmode != "prod" {
 		g.GET("/auth/testsentry", user_controller.TestSentry())

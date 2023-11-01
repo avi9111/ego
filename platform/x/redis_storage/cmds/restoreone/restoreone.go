@@ -5,11 +5,11 @@ import (
 
 	"github.com/codegangsta/cli"
 
-	"vcs.taiyouxi.net/platform/x/redis_storage/cmds"
-	"vcs.taiyouxi.net/platform/x/redis_storage/cmds/helper"
-	"vcs.taiyouxi.net/platform/x/redis_storage/config"
+	"taiyouxi/platform/x/redis_storage/cmds"
+	"taiyouxi/platform/x/redis_storage/cmds/helper"
+	"taiyouxi/platform/x/redis_storage/config"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 func init() {

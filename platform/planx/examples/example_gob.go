@@ -6,7 +6,7 @@ import (
 	"fmt"
 	"log"
 
-	"vcs.taiyouxi.net/platform/planx/client"
+	"taiyouxi/platform/planx/client"
 )
 
 type P struct {

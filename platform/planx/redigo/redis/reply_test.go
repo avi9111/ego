@@ -19,7 +19,7 @@ import (
 	"reflect"
 	"testing"
 
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/redigo/redis"
 )
 
 type valueError struct {

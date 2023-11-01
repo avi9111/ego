@@ -8,9 +8,9 @@ import (
 
 	rp "github.com/dropbox/godropbox/resource_pool"
 
-	"vcs.taiyouxi.net/platform/planx/client"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/client"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type ServiceOptions struct {

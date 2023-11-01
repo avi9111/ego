@@ -1,12 +1,12 @@
 package hmt_gift
 
 import (
-	"fmt"
-	"testing"
-	"encoding/base64"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
 	"crypto/md5"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"encoding/base64"
+	"fmt"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/gift_sender/config"
+	"testing"
 )
 
 func TestDecodeJson(t *testing.T) {
@@ -39,13 +39,12 @@ func TestPropIDExist(t *testing.T) {
 	}
 }
 
-func TestCalSign(data string) (string,error) {
+func TestCalSign(data string) (string, error) {
 	n, err := base64.URLEncoding.DecodeString(data)
 	if err != nil {
 		return "", err
 	}
 	dataKey := string(n) + "a5ced306175ff1deaff676da872c05c5"
-
 
 	logs.Debug("data: %s", dataKey)
 
@@ -53,5 +52,5 @@ func TestCalSign(data string) (string,error) {
 	_md5.Write([]byte(dataKey))
 	ret := _md5.Sum(nil)
 
-	return string(ret),nil
+	return string(ret), nil
 }

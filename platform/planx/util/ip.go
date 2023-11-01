@@ -8,7 +8,7 @@ import (
 	"net/http"
 	"os"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 
 	"time"
 

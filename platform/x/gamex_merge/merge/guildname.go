@@ -1,21 +1,21 @@
 package merge
 
 import (
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/redispool"
+
 	"vcs.taiyouxi.net/jws/gamex/models/account/simple_info"
 	"vcs.taiyouxi.net/jws/gamex/models/driver"
 	"vcs.taiyouxi.net/jws/gamex/models/helper"
 	"vcs.taiyouxi.net/jws/gamex/modules/guild"
-	"vcs.taiyouxi.net/jws/gamex/modules/guild/info"
 	"vcs.taiyouxi.net/jws/gamex/modules/rank"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/redispool"
 )
 
 /*
-	工会重名修改
-	并删除工会里已经删除的角色，若工会已经空了，则删工会
+工会重名修改
+并删除工会里已经删除的角色，若工会已经空了，则删工会
 */
 var (
 	guild_name_old2new = make(map[string]string, 1)

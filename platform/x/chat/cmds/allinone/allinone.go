@@ -6,20 +6,21 @@ import (
 	"os"
 	"runtime"
 
+	"taiyouxi/platform/planx/funny/link"
+	"taiyouxi/platform/planx/funny/linkext"
+	"taiyouxi/platform/planx/metrics"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/signalhandler"
+	"taiyouxi/platform/planx/version"
+	"taiyouxi/platform/x/auth/limit"
+	"taiyouxi/platform/x/chat/chatserver"
+	"taiyouxi/platform/x/chat/cmds"
+
 	"github.com/codegangsta/cli"
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/funny/link"
-	"vcs.taiyouxi.net/platform/planx/funny/linkext"
-	"vcs.taiyouxi.net/platform/planx/metrics"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/signalhandler"
-	"vcs.taiyouxi.net/platform/planx/version"
-	"vcs.taiyouxi.net/platform/x/auth/limit"
-	"vcs.taiyouxi.net/platform/x/chat/chatserver"
-	"vcs.taiyouxi.net/platform/x/chat/cmds"
 )
 
 const (

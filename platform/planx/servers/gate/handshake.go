@@ -10,12 +10,12 @@ import (
 
 	"strconv"
 
-	"vcs.taiyouxi.net/platform/planx/client"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/secure"
-	ver "vcs.taiyouxi.net/platform/planx/version"
+	"taiyouxi/platform/planx/client"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/secure"
+	ver "taiyouxi/platform/planx/version"
 )
 
 type HandShake struct {
@@ -30,7 +30,7 @@ type HandShake struct {
 const MAX_LoginToken_Length = 512
 
 // handShake
-//TODO 所有异常都应该有监控并搜集玩家IP，防止恶意攻击服务器IP快速被发现 1095
+// TODO 所有异常都应该有监控并搜集玩家IP，防止恶意攻击服务器IP快速被发现 1095
 func (g *GateServer) handShake(con net.Conn, agent *client.PacketConnAgent) (success bool, ln LoginNotify, gzipLimit uint64, sessionId int64) {
 	success = false
 	clientID := con.RemoteAddr().String()

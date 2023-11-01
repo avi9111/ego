@@ -3,8 +3,7 @@ package tools
 import (
 	"path/filepath"
 
-	"vcs.taiyouxi.net/jws/gamex/protogen"
-	"vcs.taiyouxi.net/platform/planx/util/gamedata_load"
+	"taiyouxi/platform/planx/util/gamedata_load"
 )
 
 var Hot_package map[IDS]*ProtobufGen.HOTPACKAGE

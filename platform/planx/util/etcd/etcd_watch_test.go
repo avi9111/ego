@@ -3,10 +3,10 @@ package etcd
 import (
 	"context"
 	"sync"
+	client "taiyouxi/platform/planx/util/etcdClient"
+	"taiyouxi/platform/planx/util/logs"
 	"testing"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/etcdClient"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 const (

@@ -10,9 +10,10 @@ import (
 
 	"sync"
 
+	client "taiyouxi/platform/planx/util/etcdClient"
+	"taiyouxi/platform/planx/util/logs"
+
 	"golang.org/x/net/context"
-	"vcs.taiyouxi.net/platform/planx/util/etcdClient"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var etcdClient *client.Client = nil
@@ -21,7 +22,7 @@ var (
 	ErrByNoInit = errors.New("ErrByNoInit")
 )
 
-//初始化etcd
+// 初始化etcd
 func InitClient(ends []string) error {
 	etcdClient = nil
 	cfg := client.Config{
@@ -276,7 +277,7 @@ func FindServerGidBySid(root string, sid uint) (gid int, err error) {
 	return -1, nil
 }
 
-//模块内部缓冲变量, 减少sid转换显示名称时对etcd的访问
+// 模块内部缓冲变量, 减少sid转换显示名称时对etcd的访问
 var shareSid2DN map[uint]string
 var shareSid2DNLock sync.RWMutex
 

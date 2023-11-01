@@ -5,13 +5,13 @@ import (
 	"encoding/csv"
 	"encoding/json"
 	"fmt"
-	"github.com/codegangsta/cli"
 	"io"
 	"os"
 	"strconv"
+	"taiyouxi/platform/planx/redigo/redis"
 	"time"
-	"vcs.taiyouxi.net/jws/gamex/modules/guild/info"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+
+	"github.com/codegangsta/cli"
 )
 
 var ivyMap map[string]guild_info.GuildInventory

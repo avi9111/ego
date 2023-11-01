@@ -4,8 +4,9 @@ import (
 	"testing"
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/cenk/backoff"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

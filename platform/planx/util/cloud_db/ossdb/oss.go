@@ -3,11 +3,12 @@ package ossdb
 import (
 	"bytes"
 	"fmt"
-	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 	"io"
 	"strings"
+	"taiyouxi/platform/planx/util/logs"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+
+	"github.com/aliyun/aliyun-oss-go-sdk/oss"
 )
 
 type OSS struct {

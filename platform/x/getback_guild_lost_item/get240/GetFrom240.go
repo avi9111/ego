@@ -3,10 +3,11 @@ package main
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/codegangsta/cli"
 	"os"
+	"taiyouxi/platform/planx/redigo/redis"
 	"time"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
+
+	"github.com/codegangsta/cli"
 )
 
 var outputFile *os.File

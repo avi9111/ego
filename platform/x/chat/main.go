@@ -7,14 +7,16 @@ import (
 	//instead of pprof/http
 	"fmt"
 
+	_ "taiyouxi/platform/x/chat/cmds/allinone"
+
 	_ "github.com/rakyll/gom/http"
-	_ "vcs.taiyouxi.net/platform/x/chat/cmds/allinone"
+
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/version"
+	"taiyouxi/platform/x/chat/cmds"
 
 	"github.com/codegangsta/cli"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/version"
-	"vcs.taiyouxi.net/platform/x/chat/cmds"
 )
 
 const (
@@ -22,7 +24,7 @@ const (
 )
 
 /*
-	chattown配套机器人工具请使用 titools/chatroomrobot/client
+chattown配套机器人工具请使用 titools/chatroomrobot/client
 */
 func main() {
 	defer logs.Close()

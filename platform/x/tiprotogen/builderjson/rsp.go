@@ -1,6 +1,6 @@
 package builderjson
 
-import "vcs.taiyouxi.net/platform/x/tiprotogen/def"
+import dsl "taiyouxi/platform/x/tiprotogen/def"
 
 type protoRspJson struct {
 	Base   string     `json:"base"`

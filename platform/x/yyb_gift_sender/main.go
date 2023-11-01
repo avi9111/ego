@@ -1,11 +1,11 @@
 package main
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/config"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/yyb_gift_sender/config"
 
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/db"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/gin_core"
+	"taiyouxi/platform/x/yyb_gift_sender/db"
+	"taiyouxi/platform/x/yyb_gift_sender/gin_core"
 )
 
 func main() {

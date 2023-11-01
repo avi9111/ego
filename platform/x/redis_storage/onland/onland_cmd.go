@@ -1,7 +1,7 @@
 package onland
 
 import (
-	"vcs.taiyouxi.net/platform/x/redis_storage/command"
+	"taiyouxi/platform/x/redis_storage/command"
 )
 
 func help(ud interface{}, args []string) (result string, err error) {

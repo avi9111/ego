@@ -6,11 +6,12 @@ import (
 	"io/ioutil"
 	"net"
 	"os"
+
 	//"sync"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 const (
@@ -232,7 +233,7 @@ func (server *ConnServer) GetWaitingConnChan() <-chan net.Conn {
 	return server.waitingConn
 }
 
-//Only useful for LimitConn Server. OPTMIZE
+// Only useful for LimitConn Server. OPTMIZE
 func (server *ConnServer) ReleaseConnChan(con net.Conn) {
 	//server.quitingConn <- con
 }

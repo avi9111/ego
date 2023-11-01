@@ -5,9 +5,10 @@ import (
 
 	"encoding/json"
 
+	"taiyouxi/platform/planx/util/logs"
+	authConfig "taiyouxi/platform/x/auth/config"
+
 	"github.com/astaxie/beego/httplib"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	authConfig "vcs.taiyouxi.net/platform/x/auth/config"
 )
 
 //const (
@@ -50,7 +51,7 @@ func GetVNToken(authcode string, channelID string) (string, error) {
 	if err != nil {
 		return "", err
 	}
-	
+
 	var r retToken
 	if err := json.Unmarshal([]byte(str), &r); err != nil {
 		return "", fmt.Errorf("%s -- recmsg: %s", err.Error(), str)

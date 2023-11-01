@@ -2,11 +2,12 @@ package RW_xlsx
 
 import (
 	"fmt"
+	"taiyouxi/platform/planx/util/logs"
+
 	"vcs.taiyouxi.net/Godeps/_workspace/src/github.com/tealeg/xlsx"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
-//向文件XLSX_Name的sheet_name页签写入数据data
+// 向文件XLSX_Name的sheet_name页签写入数据data
 func WriteToXlsxFile(data [][]string, XLSX_Name, sheet_name string) {
 	file := xlsx.NewFile()
 	sheet, err := file.AddSheet(sheet_name)

@@ -4,9 +4,9 @@ import (
 	"sync"
 	"sync/atomic"
 
-	// "vcs.taiyouxi.net/platform/planx/funny/link"
-	"vcs.taiyouxi.net/platform/planx/funny/linkext"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	// "taiyouxi/platform/planx/funny/link"
+	"taiyouxi/platform/planx/funny/linkext"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type Room struct {

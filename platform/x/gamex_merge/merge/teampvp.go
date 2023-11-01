@@ -4,10 +4,11 @@ import (
 	"encoding/json"
 	"fmt"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util/logs"
+
 	"vcs.taiyouxi.net/jws/gamex/models/helper"
 	"vcs.taiyouxi.net/jws/gamex/modules/team_pvp"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func MergeTeamPvp() error {

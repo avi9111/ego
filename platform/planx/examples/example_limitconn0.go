@@ -4,7 +4,7 @@ import (
 	"flag"
 	"net"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 // 只Listen客户端尝试连接时，服务器是不会进行ESTABLISHED的。换句话说就是不消耗系统资源

@@ -2,9 +2,9 @@ package redis_helper
 
 import (
 	"fmt"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/uuid"
 	"testing"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/uuid"
 )
 
 func mkTestSet(key string, c int) {

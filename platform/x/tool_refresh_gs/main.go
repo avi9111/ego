@@ -15,6 +15,12 @@ import (
 
 	"bytes"
 
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/config"
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/codegangsta/cli"
 	"github.com/siddontang/go/sync2"
 	"vcs.taiyouxi.net/jws/gamex/models/account"
@@ -23,11 +29,6 @@ import (
 	"vcs.taiyouxi.net/jws/gamex/models/driver"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
 	"vcs.taiyouxi.net/jws/gamex/modules/rank"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/config"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 func main() {

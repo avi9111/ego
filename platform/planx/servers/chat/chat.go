@@ -4,13 +4,13 @@ package chat
 import (
 	"reflect"
 
-	"vcs.taiyouxi.net/platform/planx/servers"
+	"taiyouxi/platform/planx/servers"
 
 	"github.com/ugorji/go/codec"
 
-	"vcs.taiyouxi.net/platform/planx/client"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/client"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type reqest struct {

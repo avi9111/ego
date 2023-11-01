@@ -4,7 +4,7 @@ import (
 	//"github.com/aws/aws-sdk-go/aws"
 	//"github.com/aws/aws-sdk-go/service/s3"
 	"testing"
-	//"vcs.taiyouxi.net/platform/planx/util/logs"
+	//"taiyouxi/platform/planx/util/logs"
 )
 
 var (

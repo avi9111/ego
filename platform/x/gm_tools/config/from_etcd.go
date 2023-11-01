@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"strings"
 
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 type CfgByServer struct {
@@ -87,9 +87,9 @@ func (c *CfgByServer) AddCfg(common *CommonConfig) {
 
 }
 
-//LoadOneServerFromEtcd
-//ServerCfg 对应game/config.go
-//func (c *Config) SyncInfo2Etcd() bool {
+// LoadOneServerFromEtcd
+// ServerCfg 对应game/config.go
+// func (c *Config) SyncInfo2Etcd() bool {
 func (c *CfgByServer) LoadOneServerFromEtcd(name, gid, key, private_ip string, s ServerCfg) (*ServerCfg, error) {
 	gckeyValues, err := etcd.GetAllSubKeyValue(key + "/gm")
 	if err != nil {

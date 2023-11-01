@@ -7,12 +7,13 @@ import (
 
 	"strings"
 
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/planx/util/etcd"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/yyb_gift_sender/config"
+
 	"vcs.taiyouxi.net/jws/gamex/models/account"
 	"vcs.taiyouxi.net/jws/gamex/models/driver"
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/planx/util/etcd"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/yyb_gift_sender/config"
 )
 
 func loadProfile(acid string) *account.Account {

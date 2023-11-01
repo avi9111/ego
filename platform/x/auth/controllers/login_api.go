@@ -6,15 +6,17 @@ import (
 	"fmt"
 	"strconv"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	//"vcs.taiyouxi.net/platform/x/auth/config"
-	"vcs.taiyouxi.net/platform/planx/servers/gate"
 
-	"vcs.taiyouxi.net/platform/planx/servers/db"
-	"vcs.taiyouxi.net/platform/x/auth/errorctl"
-	"vcs.taiyouxi.net/platform/x/auth/models"
+	//"taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/planx/servers/gate"
+
+	"taiyouxi/platform/planx/servers/db"
+	"taiyouxi/platform/x/auth/errorctl"
+	"taiyouxi/platform/x/auth/models"
 )
 
 // APIController is in charge of internal communication with gate servers.

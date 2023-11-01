@@ -9,18 +9,19 @@ import (
 
 	"time"
 
-	"github.com/gin-gonic/gin"
 	"sort"
+	"sync/atomic"
+	"taiyouxi/platform/planx/redigo/redis"
+	"taiyouxi/platform/planx/util"
+	"taiyouxi/platform/planx/util/dynamodb"
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/timail"
+	"taiyouxi/platform/x/gift_sender/config"
+	"taiyouxi/platform/x/gift_sender/core"
+
+	"github.com/gin-gonic/gin"
 	"vcs.taiyouxi.net/jws/gamex/models/account"
 	"vcs.taiyouxi.net/jws/gamex/models/gamedata"
-	"vcs.taiyouxi.net/platform/planx/redigo/redis"
-	"vcs.taiyouxi.net/platform/planx/util"
-	"vcs.taiyouxi.net/platform/planx/util/dynamodb"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/planx/util/timail"
-	"vcs.taiyouxi.net/platform/x/gift_sender/config"
-	"vcs.taiyouxi.net/platform/x/gift_sender/core"
-	"sync/atomic"
 )
 
 const ac_iota = "ac_iota"
@@ -339,7 +340,7 @@ func getFormatItem(info []ItemInfo) ([]string, []uint32) {
 }
 
 func sendMail2Player(acID string, gift GiftInfomation, gid int) error {
-	atomic.AddInt64(&mailId,1)
+	atomic.AddInt64(&mailId, 1)
 	tm := core.GetTiMail(strconv.Itoa(gid))
 	if tm == nil {
 		return fmt.Errorf("No mailDB for gid: %v", gid)

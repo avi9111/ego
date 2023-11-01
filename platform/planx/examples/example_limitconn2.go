@@ -6,7 +6,7 @@ import (
 	"net"
 	"time"
 
-	"vcs.taiyouxi.net/platform/planx/util/logs"
+	"taiyouxi/platform/planx/util/logs"
 )
 
 // 接收链接到达max后，再进入链接会被accept然后Close，kick out。有效链接数在max

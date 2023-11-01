@@ -1,12 +1,12 @@
 package controllers
 
 import (
-	"testing"
-	"vcs.taiyouxi.net/platform/x/auth/models/sdk"
 	"fmt"
+	"taiyouxi/platform/x/auth/models/sdk"
+	"testing"
 )
 
-func TestCheck6waves(t *testing.T){
+func TestCheck6waves(t *testing.T) {
 	err := sdk.Check6waves("abcde")
 	fmt.Println(err)
 }

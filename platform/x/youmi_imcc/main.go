@@ -3,11 +3,12 @@ package main
 import (
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+	"taiyouxi/platform/x/youmi_imcc/base"
+	"taiyouxi/platform/x/youmi_imcc/rules"
+
 	"github.com/BurntSushi/toml"
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/base"
-	"vcs.taiyouxi.net/platform/x/youmi_imcc/rules"
 )
 
 /*

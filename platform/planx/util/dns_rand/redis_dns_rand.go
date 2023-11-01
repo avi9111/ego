@@ -5,8 +5,9 @@ import (
 	"net"
 	"time"
 
+	"taiyouxi/platform/planx/util/logs"
+
 	"github.com/miekg/dns"
-	"vcs.taiyouxi.net/platform/planx/util/logs"
 )
 
 var (

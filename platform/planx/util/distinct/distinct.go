@@ -1,9 +1,9 @@
 package distinct
 
 import (
-	"vcs.taiyouxi.net/platform/planx/util/distinct/set"
-	"fmt"
 	"errors"
+	"fmt"
+	"taiyouxi/platform/planx/util/distinct/set"
 )
 
 func disinct(info []interface{}) ([]interface{}, error) {
@@ -13,73 +13,74 @@ func disinct(info []interface{}) ([]interface{}, error) {
 	}
 	return set.List(), nil
 }
-//将任意类型转换为[]interface{},并调用Disinct
+
+// 将任意类型转换为[]interface{},并调用Disinct
 func ValuesAndDisinct(reply interface{}) ([]interface{}, error) {
 	switch reply := reply.(type) {
 	case []uint:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []uint8:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []uint16:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []uint32:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []uint64:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []int:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []int8:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []int16:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []int32:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []int64:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []string:
 		info := []interface{}{}
-		for _,v:=range reply{
-			info = append(info,v)
+		for _, v := range reply {
+			info = append(info, v)
 		}
 		return disinct(info)
 	case []interface{}:
