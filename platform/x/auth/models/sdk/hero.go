@@ -75,7 +75,7 @@ func GetUserInfo(token string) (int64, string, error) {
 	//	return -1, fmt.Errorf("test")
 
 	var r retUser
-	err := req.ToJson(&r)
+	err := req.ToJSON(&r)
 	if err != nil {
 		return -1, "", err
 	}

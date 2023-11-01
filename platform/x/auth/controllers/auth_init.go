@@ -36,7 +36,7 @@ func notifyLoginServer(authToken string, userID db.UserID) bool {
 		Result string `json:"result"`
 	}
 	req := httplib.Get(URL)
-	err = req.ToJson(&rst)
+	err = req.ToJSON(&rst)
 	if err != nil {
 		logs.Critical("Auth notify Login server failed, user can't log in", err.Error())
 		return false

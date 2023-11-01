@@ -28,7 +28,7 @@ func notifyLoginServerKick(uid, gid, reason string, banTime int64) error {
 		Result string `json:"result"`
 	}
 	req := httplib.Get(URL)
-	err := req.ToJson(&rst)
+	err := req.ToJSON(&rst)
 	if err != nil {
 		logs.Error("notifyLoginServerKick failed %s", err.Error())
 		return err

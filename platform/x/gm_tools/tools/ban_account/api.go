@@ -188,7 +188,7 @@ func muteHMT(bbdy []byte) error {
 	req.Body(bbdy)
 
 	var r ret
-	err := req.ToJson(&r)
+	err := req.ToJSON(&r)
 	if err != nil {
 		return err
 	}

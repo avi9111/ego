@@ -12,7 +12,7 @@ import (
 	"github.com/mailgun/timetools"
 	"github.com/mailgun/ttlmap"
 
-	"github.com/vulcand/oxy/utils"
+	"taiyouxi/platform/external/oxy/utils"
 	//"github.com/mailgun/oxy/utils"
 )
 
@@ -130,7 +130,8 @@ func (tl *TokenLimiter) ServeHTTP(w http.ResponseWriter, req *http.Request) {
 	}
 
 	if err := tl.consumeRates(req, source, amount); err != nil {
-		tl.log.Infof("limiting request %v %v, limit: %v", req.Method, req.URL, err)
+		//tl.log.Infof("limiting request %v %v, limit: %v", req.Method, req.URL, err)
+		tl.log.Info("limiting request %v %v, limit: %v", req.Method, req.URL, err)
 		tl.errHandler.ServeHTTP(w, req, err)
 		return
 	}
@@ -175,7 +176,7 @@ func (tl *TokenLimiter) resolveRates(req *http.Request) *RateSet {
 
 	rates, err := tl.extractRates.Extract(req)
 	if err != nil {
-		tl.log.Errorf("Failed to retrieve rates: %v", err)
+		tl.log.Error("Failed to retrieve rates: %v", err)
 		return tl.defaultRates
 	}
 
@@ -254,7 +255,7 @@ var defaultErrHandler = &RateErrHandler{}
 
 func setDefaults(tl *TokenLimiter) {
 	if tl.log == nil {
-		tl.log = &limiterLogger{}
+		//tl.log = &limiterLogger{}
 	}
 	if tl.capacity <= 0 {
 		tl.capacity = DefaultCapacity

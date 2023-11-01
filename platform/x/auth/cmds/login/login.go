@@ -6,9 +6,10 @@ import (
 	"taiyouxi/platform/planx/util/config"
 	"taiyouxi/platform/x/auth/cmds"
 	authConfig "taiyouxi/platform/x/auth/config"
+	"taiyouxi/platform/x/tiprotogen/log"
 
-	"github.com/codegangsta/cli"
 	"github.com/gin-gonic/gin"
+	"github.com/urfave/cli"
 
 	"taiyouxi/platform/planx/metrics"
 	"taiyouxi/platform/planx/util"
@@ -22,7 +23,8 @@ import (
 )
 
 func init() {
-	logs.Trace("login cmd loaded")
+
+	log.Trace("login cmd before Count=%d", cmds.GetCmdCount())
 	cmds.Register(&cli.Command{
 		Name:   "login",
 		Usage:  "Login",
@@ -35,12 +37,19 @@ func init() {
 			},
 		},
 	})
+
+	// for _, v := range cmds {
+	// 	*cmds = append(*cmds, *v)
+	// }
+	log.Trace("login cmd loaded cmdCount=%d", cmds.GetCmdCount())
+	//log.Trace(cmds.GetCmdCount())
 }
 
 var CommonCfg authConfig.CommonConfig
 var SuperUidCfg authConfig.SuperUidConfig
 
 func Start(c *cli.Context) {
+	log.Trace("login Start str=" + c.String("config"))
 	cfgName := c.String("config")
 	var common_cfg struct{ CommonConfig authConfig.CommonConfig }
 	cfgApp := config.NewConfigToml(cfgName, &common_cfg)

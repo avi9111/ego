@@ -8,6 +8,7 @@
 *.so
 *.dylib
 /备份
+main.exe
 
 # Test binary, built with `go test -c`
 *.test

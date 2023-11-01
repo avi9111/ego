@@ -44,7 +44,7 @@ func httppost(url, gameip, rpcip string, ccu int64, sid uint) (string, error) {
 	req.Param("shardid", fmt.Sprintf("%d", sid))
 
 	var str string
-	err := req.ToJson(&str)
+	err := req.ToJSON(&str)
 	if err != nil {
 		return "", fmt.Errorf("login server update error %s", err.Error())
 	}
@@ -70,7 +70,7 @@ func postLoginStatus(url, loginToken, accountId, RPCAddrPort string) {
 		url, loginToken, accountId, RPCAddrPort)
 
 	var str string
-	err := req.ToJson(&str)
+	err := req.ToJSON(&str)
 	if err != nil {
 		logs.Error("<Gate> postLoginStatus failed err with %v", err)
 		return

@@ -12,7 +12,7 @@ import (
 )
 
 func init() {
-	logs.Trace("allinone cmd loaded")
+	logs.Trace("(atcd_tools)allinone cmd loaded")
 	cmds.Register(&cli.Command{
 		Name:   "allinone",
 		Usage:  "开启所有功能",

@@ -88,7 +88,7 @@ func GetVNUserInfo(token string, channelID string) (*vnRetUser, error) {
 	//	return -1, fmt.Errorf("test")
 
 	var r vnRetUser
-	err := req.ToJson(&r)
+	err := req.ToJSON(&r)
 	if err != nil {
 		return nil, err
 	}

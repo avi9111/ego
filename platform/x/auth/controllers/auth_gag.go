@@ -27,7 +27,7 @@ func notifyLoginServerSendGagInfo(uid, gid string, time_to_ban int64) error {
 		Result string `json:"result"`
 	}
 	req := httplib.Get(URL)
-	err := req.ToJson(&rst)
+	err := req.ToJSON(&rst)
 	if err != nil {
 		logs.Error("notifyLoginServerSendGagInfo failed %s", err.Error())
 		return err

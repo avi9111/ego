@@ -2,6 +2,7 @@ package cmds
 
 import (
 	"taiyouxi/platform/planx/util/ginhelper"
+	"taiyouxi/platform/x/tiprotogen/log"
 
 	ucfg "taiyouxi/platform/planx/util/config"
 
@@ -9,6 +10,7 @@ import (
 )
 
 func MakeGinGMEngine() *gin.Engine {
+	log.Trace("MakeGinGMEngine()")
 	engine := gin.New()
 	engine.Use(gin.Recovery())
 	engine.Use(SentryGinLog())

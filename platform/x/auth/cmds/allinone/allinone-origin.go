@@ -15,18 +15,21 @@ import (
 	"taiyouxi/platform/planx/util/signalhandler"
 
 	//"taiyouxi/platform/x/auth/cmds"
+	"taiyouxi/platform/x/auth/cmds"
 	authConfig "taiyouxi/platform/x/auth/config"
 	"taiyouxi/platform/x/auth/limit"
 	"taiyouxi/platform/x/auth/models"
 	"taiyouxi/platform/x/auth/routers"
-	"taiyouxi/platform/x/system_notice_server/cmds"
+
+	//"taiyouxi/platform/x/system_notice_server/cmds"
+	"taiyouxi/platform/x/tiprotogen/log"
 
 	"github.com/gin-gonic/gin"
 	"github.com/urfave/cli"
 )
 
 func init() {
-	logs.Trace("allinone cmd loaded")
+	logs.Trace("(origin)allinone cmd loaded")
 	cmds.Register(&cli.Command{
 		Name:   "allinone",
 		Usage:  "开启所有功能",
@@ -61,6 +64,7 @@ var IPLimit iplimitconfig.IPLimits
 var SuperUidCfg authConfig.SuperUidConfig
 
 func Start(c *cli.Context) {
+	log.Trace("开启所有 allinone？？")
 	var logiclogName string = c.String("logiclog")
 	ucfg.NewConfig(logiclogName, true, logiclog.PLogicLogger.ReturnLoadLogger())
 	defer logiclog.PLogicLogger.StopLogger()

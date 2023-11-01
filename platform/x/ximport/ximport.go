@@ -5,5 +5,5 @@ import (
 )
 
 func LogXImport() {
-	fmt.Println("ffff")
+	fmt.Println("ffff LogXImport（）2")
 }

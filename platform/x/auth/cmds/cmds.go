@@ -11,6 +11,10 @@ var (
 	commands = make(map[string]*cli.Command)
 )
 
+func GetCmdCount() (n int) {
+	return len(commands)
+}
+
 // GetCommands
 func InitCommands(cmds *[]cli.Command) {
 	*cmds = make([]cli.Command, 0, len(commands))

@@ -4,6 +4,7 @@ import (
 	"taiyouxi/platform/x/auth/config"
 	"taiyouxi/platform/x/auth/controllers"
 	"taiyouxi/platform/x/auth/limit"
+	"taiyouxi/platform/x/tiprotogen/log"
 
 	"github.com/gin-gonic/gin"
 )
@@ -14,6 +15,7 @@ func statsCCU() gin.HandlerFunc {
 	}
 }
 func RegAuth(g *gin.Engine) {
+	log.Trace("Reg auth(engine)")
 	device_id_controller := controllers.DeviceIDController{}
 	user_controller := controllers.UserController{}
 

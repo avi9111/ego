@@ -16,7 +16,7 @@ func CheckEnjoy(token, uid string) error {
 	req.Param("uid", uid)
 
 	var r enjoyRet
-	err := req.ToJson(&r)
+	err := req.ToJSON(&r)
 	if err != nil {
 		return err
 	}

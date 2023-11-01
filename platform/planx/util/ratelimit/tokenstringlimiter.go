@@ -90,7 +90,7 @@ func (tsl *TokenStringLimiter) resolveRates(source string) *RateSet {
 
 	rates, err := tsl.stringExtractRates.Extract(source)
 	if err != nil {
-		tsl.log.Errorf("Failed to retrieve rates: %v", err)
+		tsl.log.Error("Failed to retrieve rates: %v", err)
 		return tsl.defaultRates
 	}
 

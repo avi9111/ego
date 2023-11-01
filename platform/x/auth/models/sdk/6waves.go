@@ -16,7 +16,7 @@ func Check6waves(token string) error {
 	req.Param("access_token", token)
 
 	var r ret6waves
-	err := req.ToJson(&r)
+	err := req.ToJSON(&r)
 	if err != nil {
 		logs.Error("toJson err:%v", err)
 		return err

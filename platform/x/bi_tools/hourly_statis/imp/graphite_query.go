@@ -56,9 +56,9 @@ func _graphite(url, channel, sid string) (float64, error) {
 	req := httplib.Get(url).SetTimeout(10*time.Second, 10*time.Second)
 
 	res := make([]graphite_res, 0, 10)
-	err := req.ToJson(&res)
+	err := req.ToJSON(&res)
 	if err != nil {
-		logs.Error("collectAPCU req.ToJson err %s", err.Error())
+		logs.Error("collectAPCU req.ToJSON err %s", err.Error())
 		return 0.0, err
 	}
 

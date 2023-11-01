@@ -20,7 +20,7 @@ func CheckVivo(token string) (error, string) {
 	req.Param("from", from_name)
 
 	var r ret
-	err := req.ToJson(&r)
+	err := req.ToJSON(&r)
 	if err != nil {
 		return err, ""
 	}

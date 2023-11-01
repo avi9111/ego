@@ -1,9 +1,12 @@
 package allinone
 
-import "fmt"
+import (
+	"taiyouxi/platform/x/tiprotogen/log"
+)
 
 func init() {
-	fmt.Println("fffff")
+	log.Trace("fffff allinone init()")
+
 }
 
 func Try() {
