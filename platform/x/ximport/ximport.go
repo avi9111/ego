@@ -1,7 +1,9 @@
 package ximport
-import(
+
+import (
 	"fmt"
 )
-func logXImport(){
+
+func LogXImport() {
 	fmt.Println("ffff")
 }

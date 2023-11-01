@@ -4,7 +4,11 @@ import (
 	"fmt"
 	"os"
 
-	//_ "vcs.taiyouxi.net/platform/x/auth/cmds/allinone"
+	_ "taiyouxi/platform/x/auth/cmds/allinone" //_ 下划线引入，会引入调用 init（）;另外路径上的所有 import 应该都会引入(allinone 几乎没有import也有大量import)
+	"taiyouxi/platform/x/auth/ximport"
+
+	"taiyouxi/platform/x/chat/cmds"
+
 	//_ "vcs.taiyouxi.net/platform/x/auth/cmds/auth"
 	//_ "vcs.taiyouxi.net/platform/x/auth/cmds/login"
 	//_ "vcs.taiyouxi.net/platform/x/auth/cmds/verupdateurl"
@@ -16,7 +20,6 @@ import (
 
 	//"github.com/avi9111/ego/a"
 	"taiyouxi/a"
-	"taiyouxi/platform/x/chat/cmds"
 
 	//"taiyouxi/platform/x/auth/cmds"
 	//"auth/cmds"
@@ -28,6 +31,9 @@ Auth系统使用Gin作为API访问框架;
 Gin可参考：https://blog.csdn.net/guo_zhen_qian/article/details/122654286
 */
 func main() {
+	//测试 ximport 的 import
+	ximport.LogXImport()
+
 	//defer logs.Close()
 	app := cli.NewApp()
 

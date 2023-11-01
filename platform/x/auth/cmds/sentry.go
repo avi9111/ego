@@ -2,7 +2,7 @@ package cmds
 
 import (
 	"github.com/gin-gonic/gin"
-	"vcs.taiyouxi.net/platform/planx/util/ginhelper"
+	"taiyouxi/platform/planx/util/ginhelper"
 )
 
 func InitSentry(DSN string) error {
