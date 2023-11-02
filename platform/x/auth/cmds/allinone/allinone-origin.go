@@ -7,7 +7,6 @@ import (
 	"taiyouxi/platform/planx/util"
 	"taiyouxi/platform/planx/util/config"
 	ucfg "taiyouxi/platform/planx/util/config"
-	"taiyouxi/platform/planx/util/etcd"
 
 	"taiyouxi/platform/planx/util/iplimitconfig"
 	"taiyouxi/platform/planx/util/logiclog"
@@ -64,12 +63,14 @@ var IPLimit iplimitconfig.IPLimits
 var SuperUidCfg authConfig.SuperUidConfig
 
 func Start(c *cli.Context) {
-	log.Trace("开启所有 allinone？？")
+
 	var logiclogName string = c.String("logiclog")
+	log.Trace("开启所有 allinone？？ logicName=%s", logiclogName)
 	ucfg.NewConfig(logiclogName, true, logiclog.PLogicLogger.ReturnLoadLogger())
 	defer logiclog.PLogicLogger.StopLogger()
 
 	cfgName := c.String("config")
+	log.Trace("开启 config=%s", cfgName)
 	var common_cfg struct{ CommonConfig authConfig.CommonConfig }
 	cfgApp := config.NewConfigToml(cfgName, &common_cfg)
 
@@ -162,20 +163,22 @@ func Start(c *cli.Context) {
 		logs.Close()
 		os.Exit(1)
 	}
-	err = etcd.InitClient(CommonCfg.EtcdEndPoint)
-	if err != nil {
-		logs.Error("etcd InitClient %s", err.Error())
-	}
+	//TODO etcd 和 sharedInfo 暂时搞不定
+	// err = etcd.InitClient(CommonCfg.EtcdEndPoint)
+	// if err != nil {
+	// 	logs.Error("etcd InitClient %s", err.Error())
+	// }
 
-	err = models.InitShardInfo()
-	if err != nil {
-		logs.Critical("init shard info err by %v", err.Error())
-		logs.Close()
-		os.Exit(1)
-	}
+	// err = models.InitShardInfo()
+	// if err != nil {
+	// 	logs.Critical("init shard info err by %v", err.Error())
+	// 	logs.Close()
+	// 	os.Exit(1)
+	//}
 
 	cmds.InitSentry(CommonCfg.SentryDSN)
 
+	log.Debug("启动 start() 111111111111")
 	r, exitfun := cmds.MakeGinEngine()
 	defer exitfun()
 	routers.RegAuth(r)

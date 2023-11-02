@@ -7,8 +7,9 @@ import (
 	"regexp"
 	"time"
 
+	"taiyouxi/platform/external/oxy/utils"
+
 	"github.com/mailgun/timetools"
-	"github.com/vulcand/oxy/utils"
 
 	//"taiyouxi/platform/planx/util/iputil"
 	"taiyouxi/platform/planx/util/iputil"
