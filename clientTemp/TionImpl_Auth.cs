@@ -526,11 +526,10 @@ public partial class TionManager : MonoBehaviour {
 											urlName, 
 											urlPwd);
 				URL = string.Format("{0}/auth/v1/user/login?{1}", AuthURLPrefix, param);
-				Debug.LogWarning("[RCD] Auth Step1 - Auth usrname/pwd [URL]: " + URL);
 				Logger.Warn("[RCD] Auth Step1 - Auth usrname/pwd [URL]: " + URL);
 			}
-
-			StartCoroutine(BestHttpRequest(URL, OnAuthComplete, OnAuthFail, OnAuthFailByBan));
+            Debug.LogWarning("[RCD] Auth Step1 - Auth usrname/pwd [URL]: " + URL);
+            StartCoroutine(BestHttpRequest(URL, OnAuthComplete, OnAuthFail, OnAuthFailByBan));
 		}
 		else
 		{
@@ -710,7 +709,6 @@ public partial class TionManager : MonoBehaviour {
 	public DelegateNoParam _onAuthCompleteDelegate;
 	void OnAuthComplete(Hashtable res)
 	{	
-		Debug.Log("complete 11111");
 		if (_onAuthCompleteDelegate != null)
 			_onAuthCompleteDelegate();
 
@@ -733,7 +731,7 @@ public partial class TionManager : MonoBehaviour {
 
 		_shardIdListHaveRole.Clear ();
         _shardRoleLevelList.Clear();
-Debug.Log("complete 222222");
+
 		if (res["shardrolev250"] != null)
 		{
             ArrayList shardArray = res["shardrolev250"] as ArrayList;
@@ -775,7 +773,7 @@ Debug.Log("complete 222222");
         }
 
 		_shardLastLogin = "";
-Debug.Log("complete 33333333333");
+
 		if (res["lastshard"] != null)
 		{
 			string shardLastLogin = res["lastshard"] as string;
@@ -829,13 +827,10 @@ Debug.Log("complete 33333333333");
 
 		//begin step2
 		GetShardList();
-		Debug.Log("complete done");
 	}
 
     void OnAuthFailByBan(int errorCode = -1, Hashtable res = null, string exception = null, string stackTrace = null)
 	{
-		Debug.LogWarning("[RCD] Auth Step1 - fail(by ban), code " + errorCode.ToString());
-		
 		Logger.Warn ("[RCD] Auth Step1 - fail, code " + errorCode.ToString());
 		
 		System.Collections.Generic.Dictionary<string, string> dic = new System.Collections.Generic.Dictionary<string, string> ();
@@ -892,9 +887,7 @@ Debug.Log("complete 33333333333");
 
     void OnAuthFail(int errorCode,string exception = null,string stackTrace = null)
     {
-		Debug.Log("fffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-		Debug.LogWarning("[RCD] Auth Step1 - fail（return), code " + errorCode.ToString());
-        Logger.Warn("[RCD] Auth Step1 - fail（return), code " + errorCode.ToString());
+        Logger.Warn("[RCD] Auth Step1 - fail, code " + errorCode.ToString());
         float stepTime = Time.time - _stepTime;
         AuthFailMsg(errorCode.ToString(), "OnAuthFail:Step2:" + stepTime, exception, stackTrace);
 
@@ -941,10 +934,27 @@ Debug.Log("complete 33333333333");
 								cheatCode);
 		}
 
-		Logger.Warn("[RCD] Auth Step2 - Start, get shard list. [URL]: " + URL);	
+		Logger.Warn("[RCD] Auth Step2 - Start, get shard list. [URL]: " + URL);
+		Debug.LogWarning("[RCD] Auth Step2 - Start, get shard list. [URL]: " + URL);
+		//todo 测试，直接跳过 get shardList （服务器暂时没调好）
+		//StartCoroutine(BestHttpRequest(URL, OnGetShardListComplete, OnGetShardListFail));
+		var res = new Hashtable();
+		var shardList = new ArrayList();
+		Hashtable shardOne = new Hashtable();
+		shardOne["multi_lang"] = "0";
+		shardOne["dn"] = "测服1-测1";
+		shardOne["lang"] = "服务器外文名字（ce fu 1)";
+		shardOne["name"] = "test Server 1";
+		shardOne["ss"] = 1;//服务器饱满状态，必须是数字
+		shardList.Add(shardOne);
+		shardOne["dn"] = "测服2-测2";
+		shardOne["name"] = "test Server2";
+		shardOne["ss"] = 2;
+		shardList.Add(shardOne);
+		res["shards"] = shardList;
+		OnGetShardListComplete(res);
 
-		StartCoroutine(BestHttpRequest(URL, OnGetShardListComplete, OnGetShardListFail));
-	}
+    }
 
 	public DelegateNoParam _onGetShardListCompleteDelegate;
 
@@ -974,7 +984,7 @@ Debug.Log("complete 33333333333");
                 }
             }
         }
-
+		// 不知道 截取这个服务器的名字有什么用。。。。。。
         index = 0;
         if (shardName.Contains("."))
         {
@@ -991,27 +1001,30 @@ Debug.Log("complete 33333333333");
 	void OnGetShardListComplete(Hashtable res)
 	{
 		Logger.Warn("[RCD] Auth Step2 - OK");
-		
+		Debug.LogWarning("[RCD] Auth Step2 - OK");
 		//deactive connecting UI
 		if (_authActiveConnectingUIDelegate != null)
 			_authActiveConnectingUIDelegate(false);
 		
 		_shardList.Clear();
         _yybShardList.Clear();
-        ArrayList shardArray = res["shards"] as ArrayList;
-		
-		foreach(Hashtable shard in shardArray)
-		{
-            int index = 0;
-            string name = GetServerName(shard, out index);
 
-			ShardInfo shardInfo = new ShardInfo((string)shard["name"], name, (string)shard["ss"], index);
-			if(shardInfo._order < 1000)
-				_shardList.Add(shardInfo);
-			else
-				_yybShardList.Add(shardInfo);
+		if (res != null &&res.ContainsKey("shards"))
+		{
+			ArrayList shardArray = res["shards"] as ArrayList;
+
+			foreach (Hashtable shard in shardArray)
+			{
+				int index = 0;
+				string name = GetServerName(shard, out index);
+
+				ShardInfo shardInfo = new ShardInfo(shard["name"].ToString(), name, shard["ss"].ToString(), index);
+				if (shardInfo._order < 1000)
+					_shardList.Add(shardInfo);
+				else
+					_yybShardList.Add(shardInfo);
+			}
 		}
-		
 		if (_onGetShardListCompleteDelegate != null)
 		{
 			_onGetShardListCompleteDelegate();
@@ -1021,7 +1034,6 @@ Debug.Log("complete 33333333333");
 
     void OnGetShardListFail(int errorCode = -1, string exception = null, string stackTrace = null)
 	{
-		Debug.LogError("OnGetShardListFail fail fail");
 		Logger.Warn("[RCD] Auth Step2 - fail! code " + errorCode.ToString());
 
 		System.Collections.Generic.Dictionary<string, string> dic = new System.Collections.Generic.Dictionary<string, string> ();
@@ -1071,10 +1083,10 @@ Debug.Log("complete 33333333333");
 				cheatCode);
 		}
 
-		Logger.Warn("[RCD] Auth Step3, enter shard. [URL]: " + URL);	
+		Logger.Warn("[RCD] Auth Step3, enter shard. [URL]: " + URL);
+        Debug.LogWarning("[RCD] Auth Step3, enter shard. [URL]: " + URL);
 
-
-		StartCoroutine(BestHttpRequest(URL, OnEnterShardComplete, OnEnterShardFail));
+        StartCoroutine(BestHttpRequest(URL, OnEnterShardComplete, OnEnterShardFail));
 	}
 	
 	public DelegateNoParam _onEnterShardCompleteDelegate;
@@ -1230,9 +1242,9 @@ Debug.Log("complete 33333333333");
 		}	
 		
 		URL = string.Format("{0}/auth/v1/user/reg/{1}?{2}", AuthURLPrefix, info._deviceId, param);
-		Logger.Debug(" [TiOn] Register with [URL]: " + URL);		
-		
-		if (completeCallback == null)
+		Logger.Debug(" [TiOn] Register with [URL]: " + URL);
+        Debug.LogError(" [TiOn] Register with [URL]: " + URL);
+        if (completeCallback == null)
 			StartCoroutine(BestHttpRequest(URL, OnRegisterComplete, OnRegisterFail));
 		else
 			StartCoroutine(BestHttpRequest(URL, completeCallback, failCallBack));	

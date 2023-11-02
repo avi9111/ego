@@ -36,5 +36,6 @@ platform/ 主目录
 
 | 操作 | 结果
 | ------------------ | ---------- |
-|修改了下客户端，登录时会有这个 Warn|[RCD] Auth Step1 - Auth usrname/pwd [URL]: 192.168.0.124:8080/auth/v1/user/login?name=YXZpOTExMQ==&passwd=C4RlHXlZtMtG0jlx2oD9m-==|
-|11111111111111111111| 2222 |
+|修改了下客户端，登录时会有这个 Warn|[RCD] Auth Step1 - Auth usrname/pwd [URL]: http://192.168.0.124:8080/auth/v1/user/login?name=YXZpOTExMQ==&passwd=C4RlHXlZtMtG0jlx2oD9m-==|
+|登录后马上回请求 sharelist|[RCD] Auth Step2 - Start, get shard list. [URL]: http://127.0.0.1:8081/login/v2/shards/0?at=a4d56741-2d41-4c54-b2ad-a775c2aab740|
+|（修复从服务器获取shard),选择服务器后| [RCD] Auth Step3, enter shard. [URL]: http://127.0.0.1:8081/login/v1/getgate?at=127d2542-6e2c-4553-8837-04c640a48efd&sn=test Server2&ver=0.0.0 |

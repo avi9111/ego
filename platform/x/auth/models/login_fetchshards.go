@@ -175,9 +175,14 @@ func GetUserLastShard(uid string) (string, error) {
 	if err != nil {
 		return "", err
 	}
+	//测试，todo 直接空gidsid也给过
+	if gidsid == "" {
+		return "ceshi-gidsid", nil
+	}
+
 	gid, sid, err := parse_gid_sid_str(gidsid)
 	if err != nil {
-		logs.Warn("[GetUserLastShard] parse_gid_sid_str err %s", err.Error())
+		logs.Warn("[GetUserLastShard] parse_gid_sid_str err %s gidsid=%s", err.Error(), gidsid)
 		return "", err
 	}
 	shardName, err := GetShardName(sid, gid)
